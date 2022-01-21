@@ -7,8 +7,6 @@
 
     {%- render 'breadcrumbs' -%}
 
-    {% render 'empty' %}
-
     <header class="section-header{% if section.settings.blog_show_tag_filter and blog.tags.size > 0 %} section-header--with-link{% endif %}">
       <h1 class="section-header__title">
         {{ blog.title }}
