@@ -1,0 +1,501 @@
+{% comment %} code change per 4.1.1 customization. added and modified code {% endcomment %}
+{%- paginate blog.articles by 21 -%}
+{% render 'page-block-blog-hero', block: section %}
+
+<div data-section-id="{{ section.id }}" data-section-type="blog">
+  <div class="page-width page-content">
+
+    {%- render 'breadcrumbs' -%}
+
+    {% render 'empty' %}
+
+    <header class="section-header{% if section.settings.blog_show_tag_filter and blog.tags.size > 0 %} section-header--with-link{% endif %}">
+      <h1 class="section-header__title">
+        {{ blog.title }}
+
+        {%- if section.settings.blog_show_rss -%}
+          <a href="{{ shop.url }}{{ blog.url }}.atom" class="rss-link">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-rss" viewBox="0 0 20 20"><path fill="#444" d="M5.903 16.586a2.489 2.489 0 1 1-4.977 0 2.489 2.489 0 0 1 4.977 0zM12.956 19.075H9.43c0-4.688-3.817-8.505-8.505-8.505V7.044c6.638 0 12.031 5.393 12.031 12.031z"/><path fill="#444" d="M15.445 19.075c0-8.028-6.493-14.52-14.52-14.52V.925c10.019 0 18.15 8.131 18.15 18.15h-3.63z"/></svg>
+            <span class="icon__fallback-text">RSS</span>
+          </a>
+        {%- endif -%}
+      </h1>
+
+      {%- if section.settings.blog_show_tag_filter and blog.tags.size > 0 -%}
+        <select id="BlogTagFilter">
+          <option value="/blogs/{{ blog.handle }}">All</option>
+          {%- for tag in blog.all_tags -%}
+            {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
+            <option value="/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}" {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
+          {%- endfor -%}
+        </select>
+      {%- endif -%}
+    </header>
+
+    <div class="grid grid--uniform">
+      {%- for article in blog.articles -%}
+        {%- render 'article-grid-item', article: article, grid_item_width: 'medium-up--one-third', per_row: '3', image_size: section.settings.blog_image_size -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+
+  </div>
+</div>
+
+{% comment %} code change - am. added Google APIs {% endcomment %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.7/parsley.js"></script>
+    <script src="https://superphone.io/f/assets/javascripts/intlTelInput.js"></script>
+    <link rel="stylesheet" href="https://superphone.io/f/assets/stylesheets/intlTelInput.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+    
+            // Set up phone widget
+            $("#phone").intlTelInput({
+                utilsScript: 'https://superphone.io/f/assets/javascripts/utils.js',
+                numberType: "MOBILE",
+                nationalMode: false,
+                autoFormat: true,
+                autoPlaceholder: true
+            });
+    
+            // Click on button send
+            $('#addContact').submit(function (event) {
+                event.preventDefault();
+                var formData = $("#addContact").serializeArray();
+                $('#submitButton').prop('disabled', true);
+                $('.form-error').hide();
+    
+                // Convert the form data to backend format
+                var requestData = {};
+                formData.map(function (element) {
+                    requestData[element.name] = element.value;
+                });
+    
+                // Send post to API
+                $.ajax({
+                    url: 'https://superphone.io/w/WqqeJW', // Url where to submit the request
+                    type: "POST",
+                    beforeSend: function (request) {
+                        request.setRequestHeader("Access-Control-Allow-Origin", "*");
+                    },
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify(requestData),
+                    success: function (result) {
+                        // You can see the result from the console
+                        // tab of the developer tools
+                        console.log(result);
+                        $('.custom-form').hide();
+                        $('.form-success').show();
+                    },
+                    error: function (xhr, resp, text) {
+                        $('.form-error').show();
+                        $('#submitButton').prop('disabled', false);
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
+    <style>
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: 38px;
+        }
+    
+        .form-error {
+            padding-left: 12px;
+            display: none;
+            color: #D85959;
+        }
+    
+        .form-success {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 5px;
+            display: none;
+        }
+    
+        .parsley-required {
+            padding-top: 5px;
+            color: #D85959;
+        }
+    
+        .parsley-minlength {
+            padding-top: 5px;
+            color: #D85959;
+        }
+    
+        .iti-flag {
+            background-image: url("https://superphone.io/f/assets/images/flags.png");
+        }
+
+        .custom-form {
+          padding: 100px 0 75px 0;
+          background-color: #f4f4f4;
+        }
+
+        #submitButton {
+          background: #f6c12f;
+          border: none;
+          border-radius: 50px;
+          color: #fff;          
+        }
+
+        .container {
+          margin: 0 auto !important;
+        }
+
+        @media only screen and (max-width: 768px){
+          .google-button, .google-form {
+            margin: 0 auto;
+            float:none;
+          }
+          .google-form, .form-group {
+            width: 100%;
+            }
+          .google-form {
+            position: absolute;
+          }
+          .google-button {
+            margin-top: 50px !important;
+          }
+        }
+    
+    </style>
+    
+    <div class="custom-form">
+        <div class="container" style="margin: 15px 20px 15px 30px">
+            <form id="addContact" class="form-horizontal" style="min-width: 100%" method="POST" action="#" autocomplete="false" data-parsley-validate>
+                <div class="form-group">
+                    <div class="col-xs-8 col-xs-offset-1 google-form">
+                        <input autocomplete="off" tabindex="4" type="tel" class="form-control" id="phone" name="mobile"
+                                placeholder="Mobile # (w/ country code)" data-parsley-trigger="focusout"
+                                data-parsley-minlength="9" data-parsley-required>
+                    </div>
+                    <div class="col-xs-3 google-button">
+                        <button type="submit" id="submitButton" class="btn btn-default"> Send</button>
+                    </div>
+                </div>
+    
+                <div class="form-group" style="padding-left: 12px">
+                    <div class="form-error container">
+                        <div class="col-xs-offset-1">Something went wrong. Please check your mobile and try again.</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="form-success">
+        <div class="jumbotron" style="text-align:center; background-color:initial;">
+            <h1>Thanks for subscribing!</h1>
+        </div>
+    </div>
+{% comment %} end Google APIs {% endcomment %}
+
+
+{%- endpaginate -%} 
+
+{% schema %}
+  {
+    "name": "Blog pages",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "blog_show_tag_filter",
+        "label": "Show tag filter"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_rss",
+        "label": "Show RSS link"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_tags",
+        "label": "Show tags"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_date",
+        "label": "Show date",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_comments",
+        "label": "Show comment count",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_author",
+        "label": "Show author"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_show_excerpt",
+        "label": "Show excerpt"
+      },
+      {
+        "type": "select",
+        "id": "blog_image_size",
+        "label": "Image size",
+        "default": "wide",
+        "options": [
+          {
+            "value": "natural",
+            "label": "Natural"
+          },
+          {
+            "value": "square",
+            "label": "Square (1:1)"
+          },
+          {
+            "value": "landscape",
+            "label": "Landscape (4:3)"
+          },
+          {
+            "value": "portrait",
+            "label": "Portrait (2:3)"
+          },
+          {
+            "value": "wide",
+            "label": "Wide (16:9)"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Hero Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "parallax",
+        "label": "Enable parallax",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Heading",
+        "default": "Two line title image"
+      },
+      {
+        "type": "range",
+        "id": "title_size",
+        "label": "Heading text size",
+        "default": 80,
+        "min": 40,
+        "max": 100,
+        "unit": "px"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "And optional subtext"
+      },
+      {
+        "type": "checkbox",
+        "id": "chat_widget",
+        "label": "First button opens the chat widget",
+        "default": false,
+        "info": "Leave link url below blank if you'd like to open the chat widget."
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link text",
+        "default": "Optional button"
+      },
+      {
+        "type": "url",
+        "id": "link_2",
+        "label": "Second link"
+      },
+      {
+        "type": "text",
+        "id": "link_text_2",
+        "label": "Second link text 2"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Buttons",
+        "default": "rgba(0,0,0,0)"
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text alignment",
+        "default": "vertical-center horizontal-center",
+        "options": [
+          {
+            "value": "vertical-center horizontal-left",
+            "label": "Center left"
+          },
+          {
+            "value": "vertical-center horizontal-center",
+            "label": "Center"
+          },
+          {
+            "value": "vertical-center horizontal-right",
+            "label": "Center right"
+          },
+          {
+            "value": "vertical-bottom horizontal-left",
+            "label": "Bottom left"
+          },
+          {
+            "value": "vertical-bottom horizontal-center",
+            "label": "Bottom center"
+          },
+          {
+            "value": "vertical-bottom horizontal-right",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "focal_point",
+        "label": "Image focal point",
+        "info": "Used to keep the subject of your photo in view.",
+        "default": "center center",
+        "options": [
+          {
+            "value": "20% 0",
+            "label": "Top left"
+          },
+          {
+            "value": "top center",
+            "label": "Top center"
+          },
+          {
+            "value": "80% 0",
+            "label": "Top right"
+          },
+          {
+            "value": "20% 50%",
+            "label": "Left"
+          },
+          {
+            "value": "center center",
+            "label": "Center"
+          },
+          {
+            "value": "80% 50%",
+            "label": "Right"
+          },
+          {
+            "value": "20% 100%",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom center",
+            "label": "Bottom center"
+          },
+          {
+            "value": "80% 100%",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "section_height",
+        "label": "Desktop height",
+        "default": "650px",
+        "options": [
+          {
+            "label": "Natural",
+            "value": "natural"
+          },
+          {
+            "label": "450px",
+            "value": "450px"
+          },
+          {
+            "label": "550px",
+            "value": "550px"
+          },
+          {
+            "label": "650px",
+            "value": "650px"
+          },
+          {
+            "label": "750px",
+            "value": "750px"
+          },
+          {
+            "label": "Full screen",
+            "value": "100vh"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "mobile_height",
+        "label": "Mobile height",
+        "default": "auto",
+        "info": "Not used if desktop height is set to natural",
+        "options": [
+          {
+            "label": "Auto",
+            "value": "auto"
+          },
+          {
+            "label": "250px",
+            "value": "250px"
+          },
+          {
+            "label": "300px",
+            "value": "300px"
+          },
+          {
+            "label": "400px",
+            "value": "400px"
+          },
+          {
+            "label": "500px",
+            "value": "500px"
+          },
+          {
+            "label": "Full screen",
+            "value": "100vh"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,11 @@
+<div id="pluginBundle"></div>
+<script src="https://storage.googleapis.com/shopify-plugins/prod/bundle.plugin.js?tz=1"></script>
+<script type="text/javascript">
+   BundleGraphPath.init({
+     product: {{product.id | default: 0}} , 
+     customer: {{customer.id | default: 0}}, 
+     clientId: 'vidilogix', 
+     clientSecret: 'Q6s6V2d1L9c6k6P1', 
+     provider: 'shopify' 
+   });
+</script>
