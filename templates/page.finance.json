@@ -1,1 +1,222 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"164004502781c7bb2f":{"type":"slideshow","blocks":{"164004502788530973-0":{"type":"image","settings":{"top_subheading":"","title":"Buy now, pay later","title_size":42,"subheading":"Pay in 4 from PayPal: Easy as 1-2-3. Simple, short-term installments. Just choose Pay in 4 at checkout and split your payments in 4 - one every two weeks. It's interest-free and is backed by PayPal.","chat_widget":false,"link":"shopify:\/\/collections\/sale","link_text":"Shop Now","link_2":"","link_text_2":"","color_accent":"#f6c12f","text_color":"#000000","text_align":"vertical-center horizontal-left","image":"shopify:\/\/shop_images\/finance_hero_900x_65d2be34-c71c-402c-8d1c-300a85aa2b8d.jpg","overlay_opacity":0,"focal_point":"20% 50%"}}},"block_order":["164004502788530973-0"],"settings":{"section_height":"650px","mobile_height":"auto","parallax":false,"style":"bars","autoplay":false,"autoplay_speed":5}},"1640045049ef117e94":{"type":"text-columns","blocks":{"164004504949d5fbb7-0":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/exwar-Icon-3_small_10763450-ba69-4a7d-87c1-3d914fa7799f.png","image_width":80,"title":"Choose Paypal","text":"<p>Choose PayPal at checkout and select 'Pay Later' – you’ll see 'Pay in 4' as a way to pay.<\/p>","button_label":"","button_link":""}},"164004504949d5fbb7-1":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/shopping-cart.png","image_width":80,"title":"Complete Purchase","text":"<p>Complete your purchase and make the down payment today. It’s interest free.<\/p>","button_label":"","button_link":""}},"164004504949d5fbb7-2":{"type":"text_block","settings":{"enable_image":true,"image":"shopify:\/\/shop_images\/make-payments.png","image_width":80,"title":"Make Payments","text":"<p>Pay 3 interest-free payments - one every two weeks. It’s backed by PayPal.<\/p>","button_label":"","button_link":""}}},"block_order":["164004504949d5fbb7-0","164004504949d5fbb7-1","164004504949d5fbb7-2"],"settings":{"title":"Pay in 4","align_text":"center","divider":false,"box_shadow":true}},"164004510682ac0e2f":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/needhelp.jpg","image_width":500,"full_width":true,"subtitle":"PAY OVER TIME","title":"","center_title":false,"text_below":false,"text":"<p>Now's the time to Pay Later.<\/p>","button_label":"Shop Now","button_link":"shopify:\/\/collections\/best-sellers","button_style":"primary","align_text":"left","button_chat":false,"disclaimer":"<p>Pay in 4 is available to consumers upon approval for purchases of $30 - $1500. Pay in 4 is not currently available to residents of New Mexico, North Dakota, Missouri, South Dakota, Wisconsin, Nevada, Rhode Island, or any U.S. Territories. Loans to California residents are made or arranged pursuant to a California Finance Lenders Law License. PayPal, Inc. is a Georgia Installment Lender Licensee, NMLS #910457. For purchases made with Pay in 4 on or before September 30, 2021, late fees may apply for missed payments depending on your state of residency. When applying, a soft credit check may be needed, but will not affect your credit score. You must be of legal age in your U.S. state of residence to use Pay in 4. Offer availability depends on the merchant and also may not be available for certain recurring, subscription services. Offers are not pre-approved offers or firm offers of credit.<\/p>","background_color":"#46454d","text_color":"#ffffff","layout":"left","divider":false}},"164004510986b74b22":{"type":"faq","blocks":{"164004510925ecbd80-0":{"type":"question","settings":{"title":"What is Pay in 4?","text":"<p>Pay in 4 is a feature that lets you split your purchase into 4 payments, with the down payment due at the time of transaction and 3 subsequent payments made every 2 weeks thereafter.<\/p>","button_link2":"","button_text2":"Button text","button_chat2":false,"text2":""}},"164004510925ecbd80-1":{"type":"question","settings":{"title":"Will I be able to use Pay in 4?","text":"<p>We are offering Pay in 4 to a growing number of our US customers. Availability depends on your state of residence and you must be at least 18 years of age (or the age of majority in your state) to apply. You must also have a PayPal account in good standing or open a PayPal account in order to apply. Pay in 4 is not available for certain merchants and goods. If you choose Pay in 4 as your payment method when you check out with PayPal, you will be taken through the application process. You will get a decision instantly but not everyone will be approved based on our internal checks.<\/p>","button_link2":"","button_text2":"Button text","button_chat2":false,"text2":""}},"f01bd8c0-677b-4a86-bc02-7301be4b26db":{"type":"question","settings":{"title":"How can I pay with Pay in 4?","text":"<p>Just choose to pay with PayPal when you shop online and if it is an eligible transaction, you will see Pay in 4 as one of the available payment methods. Simply apply for a Pay in 4 plan in just a few steps, get an instant decision, and finish checking out.<\/p>","button_link2":"","button_text2":"Button text","button_chat2":false,"text2":""}},"3813e24a-ff27-410b-8060-21bf2c790a56":{"type":"question","settings":{"title":"What amounts qualify for Pay in 4?","text":"<p>You can use Pay in 4 for eligible shopping cart values between $30 to $1500.<\/p>","button_link2":"","button_text2":"Button text","button_chat2":false,"text2":""}},"f58715c7-53c9-4fbf-a605-eeb8bcc58dd9":{"type":"question","settings":{"title":"What are the terms and conditions?","text":"<p>You must read the loan agreement of your Pay in 4 plan before you submit your application. You will see the link to the loan agreement when you choose to apply for Pay in 4 at checkout. You will also have the option to download the loan agreement. Once your plan starts, we will send you an email containing important information about your Pay in 4 plan, including how to locate your loan agreement.<\/p>","button_link2":"","button_text2":"Button text","button_chat2":false,"text2":""}},"a84e1a1f-679c-47f6-81f5-e1b140e391fe":{"type":"question","settings":{"title":"Are there any fees with Pay in 4?","text":"<p>There are no fees for choosing to pay with Pay in 4, however if you are late with a payment you may be charged a late fee.<\/p>","button_link2":"","button_text2":"Button text","button_chat2":false,"text2":""}},"03db0e99-4dc4-43d0-a267-e61f4e31715f":{"type":"question","settings":{"title":"Where can I pay with Pay in 4?","text":"<p>Pay in 4 is available to use at selected merchants where PayPal is accepted. Transactions can be made in all currencies that PayPal supports, not just USD. For transactions not in USD, PayPal will automatically convert the transaction amount to USD at checkout before providing you with your Pay in 4 plan. Currency conversion charges will apply as set out in your PayPal User Agreement.<\/p>","button_link2":"","button_text2":"Button text","button_chat2":false,"text2":""}}},"block_order":["164004510925ecbd80-0","164004510925ecbd80-1","f01bd8c0-677b-4a86-bc02-7301be4b26db","3813e24a-ff27-410b-8060-21bf2c790a56","f58715c7-53c9-4fbf-a605-eeb8bcc58dd9","a84e1a1f-679c-47f6-81f5-e1b140e391fe","03db0e99-4dc4-43d0-a267-e61f4e31715f"],"settings":{"title":"FAQs"}},"164175857628b36d96":{"type":"background-image-text","settings":{"subtitle":"Impressive","title":"Large image with text box","text":"<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>","button_label":"rehrtu","button_link":"shopify:\/\/blogs\/news","focal_point":"center","layout":"left","height":550,"framed":false,"parallax":false}}},"order":["main","164004502781c7bb2f","1640045049ef117e94","164004510682ac0e2f","164004510986b74b22","164175857628b36d96"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "164004502781c7bb2f": {
+      "type": "slideshow",
+      "blocks": {
+        "164004502788530973-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Buy now, pay later",
+            "title_size": 42,
+            "subheading": "Pay in 4 from PayPal: Easy as 1-2-3. Simple, short-term installments. Just choose Pay in 4 at checkout and split your payments in 4 - one every two weeks. It's interest-free and is backed by PayPal.",
+            "chat_widget": false,
+            "link": "shopify:\/\/collections\/sale",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#f6c12f",
+            "text_color": "#000000",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify:\/\/shop_images\/finance_hero_900x_65d2be34-c71c-402c-8d1c-300a85aa2b8d.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "20% 50%"
+          }
+        }
+      },
+      "block_order": [
+        "164004502788530973-0"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "1640045049ef117e94": {
+      "type": "text-columns",
+      "blocks": {
+        "164004504949d5fbb7-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/exwar-Icon-3_small_10763450-ba69-4a7d-87c1-3d914fa7799f.png",
+            "image_width": 80,
+            "title": "Choose Paypal",
+            "text": "<p>Choose PayPal at checkout and select 'Pay Later' – you’ll see 'Pay in 4' as a way to pay.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "164004504949d5fbb7-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/shopping-cart.png",
+            "image_width": 80,
+            "title": "Complete Purchase",
+            "text": "<p>Complete your purchase and make the down payment today. It’s interest free.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "164004504949d5fbb7-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/make-payments.png",
+            "image_width": 80,
+            "title": "Make Payments",
+            "text": "<p>Pay 3 interest-free payments - one every two weeks. It’s backed by PayPal.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "164004504949d5fbb7-0",
+        "164004504949d5fbb7-1",
+        "164004504949d5fbb7-2"
+      ],
+      "settings": {
+        "title": "Pay in 4",
+        "align_text": "center",
+        "divider": false,
+        "box_shadow": true
+      }
+    },
+    "164004510682ac0e2f": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/needhelp.jpg",
+        "image_width": 500,
+        "full_width": true,
+        "subtitle": "PAY OVER TIME",
+        "title": "",
+        "center_title": false,
+        "text_below": false,
+        "text": "<p>Now's the time to Pay Later.<\/p>",
+        "button_label": "Shop Now",
+        "button_link": "shopify:\/\/collections\/best-sellers",
+        "button_style": "primary",
+        "align_text": "left",
+        "button_chat": false,
+        "disclaimer": "<p>Pay in 4 is available to consumers upon approval for purchases of $30 - $1500. Pay in 4 is not currently available to residents of New Mexico, North Dakota, Missouri, South Dakota, Wisconsin, Nevada, Rhode Island, or any U.S. Territories. Loans to California residents are made or arranged pursuant to a California Finance Lenders Law License. PayPal, Inc. is a Georgia Installment Lender Licensee, NMLS #910457. For purchases made with Pay in 4 on or before September 30, 2021, late fees may apply for missed payments depending on your state of residency. When applying, a soft credit check may be needed, but will not affect your credit score. You must be of legal age in your U.S. state of residence to use Pay in 4. Offer availability depends on the merchant and also may not be available for certain recurring, subscription services. Offers are not pre-approved offers or firm offers of credit.<\/p>",
+        "background_color": "#46454d",
+        "text_color": "#ffffff",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "164004510986b74b22": {
+      "type": "faq",
+      "blocks": {
+        "164004510925ecbd80-0": {
+          "type": "question",
+          "settings": {
+            "title": "What is Pay in 4?",
+            "text": "<p>Pay in 4 is a feature that lets you split your purchase into 4 payments, with the down payment due at the time of transaction and 3 subsequent payments made every 2 weeks thereafter.<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": ""
+          }
+        },
+        "164004510925ecbd80-1": {
+          "type": "question",
+          "settings": {
+            "title": "Will I be able to use Pay in 4?",
+            "text": "<p>We are offering Pay in 4 to a growing number of our US customers. Availability depends on your state of residence and you must be at least 18 years of age (or the age of majority in your state) to apply. You must also have a PayPal account in good standing or open a PayPal account in order to apply. Pay in 4 is not available for certain merchants and goods. If you choose Pay in 4 as your payment method when you check out with PayPal, you will be taken through the application process. You will get a decision instantly but not everyone will be approved based on our internal checks.<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": ""
+          }
+        },
+        "f01bd8c0-677b-4a86-bc02-7301be4b26db": {
+          "type": "question",
+          "settings": {
+            "title": "How can I pay with Pay in 4?",
+            "text": "<p>Just choose to pay with PayPal when you shop online and if it is an eligible transaction, you will see Pay in 4 as one of the available payment methods. Simply apply for a Pay in 4 plan in just a few steps, get an instant decision, and finish checking out.<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": ""
+          }
+        },
+        "3813e24a-ff27-410b-8060-21bf2c790a56": {
+          "type": "question",
+          "settings": {
+            "title": "What amounts qualify for Pay in 4?",
+            "text": "<p>You can use Pay in 4 for eligible shopping cart values between $30 to $1500.<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": ""
+          }
+        },
+        "f58715c7-53c9-4fbf-a605-eeb8bcc58dd9": {
+          "type": "question",
+          "settings": {
+            "title": "What are the terms and conditions?",
+            "text": "<p>You must read the loan agreement of your Pay in 4 plan before you submit your application. You will see the link to the loan agreement when you choose to apply for Pay in 4 at checkout. You will also have the option to download the loan agreement. Once your plan starts, we will send you an email containing important information about your Pay in 4 plan, including how to locate your loan agreement.<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": ""
+          }
+        },
+        "a84e1a1f-679c-47f6-81f5-e1b140e391fe": {
+          "type": "question",
+          "settings": {
+            "title": "Are there any fees with Pay in 4?",
+            "text": "<p>There are no fees for choosing to pay with Pay in 4, however if you are late with a payment you may be charged a late fee.<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": ""
+          }
+        },
+        "03db0e99-4dc4-43d0-a267-e61f4e31715f": {
+          "type": "question",
+          "settings": {
+            "title": "Where can I pay with Pay in 4?",
+            "text": "<p>Pay in 4 is available to use at selected merchants where PayPal is accepted. Transactions can be made in all currencies that PayPal supports, not just USD. For transactions not in USD, PayPal will automatically convert the transaction amount to USD at checkout before providing you with your Pay in 4 plan. Currency conversion charges will apply as set out in your PayPal User Agreement.<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": ""
+          }
+        }
+      },
+      "block_order": [
+        "164004510925ecbd80-0",
+        "164004510925ecbd80-1",
+        "f01bd8c0-677b-4a86-bc02-7301be4b26db",
+        "3813e24a-ff27-410b-8060-21bf2c790a56",
+        "f58715c7-53c9-4fbf-a605-eeb8bcc58dd9",
+        "a84e1a1f-679c-47f6-81f5-e1b140e391fe",
+        "03db0e99-4dc4-43d0-a267-e61f4e31715f"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164004502781c7bb2f",
+    "1640045049ef117e94",
+    "164004510682ac0e2f",
+    "164004510986b74b22"
+  ]
+}
