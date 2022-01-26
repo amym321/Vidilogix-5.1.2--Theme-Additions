@@ -27,6 +27,9 @@
             {%- endif -%}
           {%- when 'form' -%}
             {%- render 'superphone-form', section_id: section.id, snippet_context: 'section' -%}
+            {%- if section.settings.superphone_url != blank -%}
+              <div class="superphone-link rte"><a href="{{ section.settings.superphone_url }}" target="_blank">{{ section.settings.superphone_text }}</a></div>
+            {%- endif -%}
         {%- endcase -%}
       </div>
     {%- endfor -%}
@@ -75,7 +78,7 @@
     "settings": [
       {
         "type": "paragraph",
-        "content": "Customers who subscribe will have their phone number added to the 'accepts marketing' list."
+        "content": "Customers who subscribe will have their phone number added to the SuperPhone app"
       },
       {
         "type": "color",
@@ -91,14 +94,14 @@
       },
       {
         "type": "text",
-        "id": "unsubscribe_text",
-        "label": "Unsubscribe text",
-        "default": "Unsubscribe"
+        "id": "superphone_text",
+        "label": "SuperPhone text",
+        "default": "Click for information"
       },
       {
         "type": "url",
-        "id": "unsubscribe_url",
-        "label": "Unsubscribe URL"
+        "id": "superphone_url",
+        "label": "SuperPhone URL"
       },
       {
         "type": "checkbox",
