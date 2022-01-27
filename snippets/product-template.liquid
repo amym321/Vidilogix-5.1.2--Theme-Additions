@@ -235,19 +235,7 @@
                         <span data-unit-price>{{ current_variant.unit_price | money }}</span>/{{ unit_price_base_unit }}
                       </div>
 
-                      {% comment %} begin code change per 4.1.1 customization {% endcomment %}
-                      <!-- PayPal Pay Later Code -->
-                      {% unless isModal %}
-                      <div
-                          class="payPal"
-                          data-pp-message
-                          data-pp-style-layout="text"
-                          data-pp-style-logo-type="inline"
-                          data-pp-style-text-color="black"
-                          data-pp-amount="{{ current_variant.price | money_without_currency }}">
-                      </div>
-                    {% endunless %}
-
+                    {% comment %} begin code change per 4.1.1 customization {% endcomment %}
                     {%- if settings.vendor_enable or sku_enable or settings.enable_product_reviews -%}
 
                     {%- if settings.vendor_enable or sku_enable -%}
