@@ -94,8 +94,8 @@
               {%- else -%}
                 {% comment %} display values above title on desktop. 4.1.1 mod {% endcomment %}
                 <div class="product-single__values mobile-hidden">
-                  <span>{{ section.settings.value_one }}</span>
-                  <span>{{ section.settings.value_two }}</span>
+                  {% if section.settings.value_one != '' %}<span>{{ section.settings.value_one }}</span>{% endif %}
+                  {% if section.settings.value_two != '' %}<span>{{ section.settings.value_two }}</span>{% endif %}
                 </div>
                  {% comment %} end code change per 4.1.1 customization {% endcomment %}
                 <h1 class="h2 product-single__title">
