@@ -1,4 +1,65 @@
-{% comment %} code change per 4.1.1 customization. added SVG {% endcomment %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.7/parsley.js"></script>
+<script src="https://superphone.io/f/assets/javascripts/intlTelInput.js"></script>
+<link rel="stylesheet" href="https://superphone.io/f/assets/stylesheets/intlTelInput.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Set up phone widget
+        $("#phone").intlTelInput({
+            utilsScript: 'https://superphone.io/f/assets/javascripts/utils.js',
+            numberType: "MOBILE",
+            nationalMode: false,
+            autoFormat: true,
+            autoPlaceholder: true
+        });
+
+        // Click on button send
+        $('#addContact').submit(function (event) {
+            event.preventDefault();
+            var formData = $("#addContact").serializeArray();
+            $('#submitButton').prop('disabled', true);
+            $('.form-error').hide();
+
+            // Convert the form data to backend format
+            var requestData = {};
+            formData.map(function (element) {
+                requestData[element.name] = element.value;
+            });
+
+            // Send post to API
+            $.ajax({
+                url: 'https://superphone.io/w/WqqeJW', // Url where to submit the request
+                type: "POST",
+                beforeSend: function (request) {
+                    request.setRequestHeader("Access-Control-Allow-Origin", "*");
+                },
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(requestData),
+                success: function (result) {
+                    // You can see the result from the console
+                    // tab of the developer tools
+                    console.log(result);
+                    $('.custom-form').hide();
+                    $('.form-success').show();
+                },
+                error: function (xhr, resp, text) {
+                    $('.form-error').show();
+                    $('#submitButton').prop('disabled', false);
+                }
+            });
+        });
+    });
+</script>
+
 {%- assign superphone_form_id = 'newsletter-' | append: section_id -%}
 {% form 'customer', id: superphone_form_id %}
   <!-- {%- if form.posted_successfully? -%}
@@ -14,18 +75,92 @@
     <label for="Email-{{ section_id }}" class="hidden-label">{{ 'general.superphone_form.superphone_email' | t }}</label>
     <input type="hidden" name="contact[tags]" value="prospect,newsletter">
     <input type="hidden" name="contact[context]" value="{{ snippet_context }}">
-    <div class="input-group newsletter__input-group">
-      <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.superphone_form.superphone_email' | t }}" name="contact[email]" id="Email-{{ section_id }}" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
-      <div class="input-group-btn">
-        <button type="submit" class="btn" name="commit">
-          <span class="form__submit--large">
-            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-right" viewBox="0 0 50 15"><path d="M0 9.63V5.38h35V0l15 7.5L35 15V9.63z"/></svg>
-          </span>
-          <span class="form__submit--small">
-            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-right" viewBox="0 0 50 15"><path d="M0 9.63V5.38h35V0l15 7.5L35 15V9.63z"/></svg>
-          </span>
-        </button>
+
+    <form id="addContact"  method="POST" action="#" autocomplete="false" data-parsley-validate>
+
+      <div class="input-group newsletter__input-group google-form">
+        <input autocomplete="off" tabindex="4" type="tel" id="phone" name="mobile"
+          data-parsley-trigger="focusout" data-parsley-minlength="9" data-parsley-required
+          class="input-group-field newsletter__input" placeholder="{{ 'general.superphone_form.superphone_email' | t }}">
+        <div class="input-group-btn">
+          <div class="google-button">
+            <button type="submit" id="submitButton" class="btn">
+              <span class="form__submit--large">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-right" viewBox="0 0 50 15"><path d="M0 9.63V5.38h35V0l15 7.5L35 15V9.63z"/></svg>
+              </span>
+              <span class="form__submit--small">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-right" viewBox="0 0 50 15"><path d="M0 9.63V5.38h35V0l15 7.5L35 15V9.63z"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </form>
   {%- endunless -%}
 {% endform %}
+
+<style>
+  input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      height: 38px;
+  }
+
+  .google-apis .form-error {
+      padding-left: 12px;
+      display: none;
+      color: #D85959;
+  }
+
+  .google-form-success {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 5px;
+      display: none;
+  }
+
+  .google-apis .parsley-required {
+      padding-top: 5px;
+      color: #D85959;
+  }
+
+  .google-apis .parsley-minlength {
+      padding-top: 5px;
+      color: #D85959;
+  }
+
+  .iti-flag {
+      background-image: url("https://superphone.io/f/assets/images/flags.png");
+  }
+
+  .google-apis #submitButton {
+    background: #f6c12f;
+    border: none;
+    border-radius: 50px;
+    color: #fff;          
+  }
+
+  .google-apis .container {
+    margin: 0 auto !important;
+  }
+
+  @media only screen and (max-width: 768px){
+    .google-apis .google-button, .google-apis .google-form {
+      margin: 0 auto;
+      float:none;
+    }
+    .google-apis .google-form, .google-apis .form-group {
+      width: 100%;
+      }
+    .google-apis .google-form {
+      position: absolute;
+    }
+    .google-apis .google-button {
+      margin-top: 50px !important;
+    }
+  }
