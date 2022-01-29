@@ -12,14 +12,11 @@
   var btn = $('#button-top');
 
   window.addEventListener("scroll", function () {
-    console.log("before if");
     // detects new state and compares it with the new one
     if (document.body.getBoundingClientRect().top > scrollPos  &&  $(window).scrollTop() > 800) {
-      console.log("scrolling down");
       btn.addClass('show');
     } else  {
       btn.removeClass('show');
-      console.log("scrolling up");
     }
     // saves the new position for iteration.
     scrollPos = document.body.getBoundingClientRect().top;

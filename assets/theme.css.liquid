@@ -6773,10 +6773,16 @@ input[type=image]{
   margin-bottom:40px;
 }
 
-.newsletter-section, .superphone-section {
+.newsletter-section {
   padding:40px 0;
 }
 
+{% comment %} code added - am. {% endcomment %}
+.superphone-section {
+  padding:40px 0 60px 0;
+}
+
+{% comment %} code added - am. add class {% endcomment %}
 .newsletter-section--with-divider, .superphone-section--with-divider {
   border-top:1px solid;
   border-top-color:{{ settings.color_borders | default: "#1c1d1d" }};
@@ -9987,8 +9993,8 @@ html[dir=rtl] .background-media-text__text{
   text-decoration:underline;
 }
 
-/*  code change per 4.1.1 customization */
-.newsletter__input-group{
+/*  code change per 4.1.1 customization. code change - am, class added */
+.newsletter__input-group, .superphone__input-group {
   position: relative;
 
   margin:0 auto 20px;
@@ -9996,8 +10002,9 @@ html[dir=rtl] .background-media-text__text{
   max-width:500px
 }
 
-/*  code change per 4.1.1 customization */
-.newsletter__input-group .input-group-btn {
+/*  code change per 4.1.1 customization. code change - am, class added  */
+.newsletter__input-group .input-group-btn,
+.superphone__input-group .input-group-btn  {
   position: absolute;
   right: 10px;
   top: 50%;
@@ -10005,14 +10012,15 @@ html[dir=rtl] .background-media-text__text{
 }
 
 /*  code change per 4.1.1 customization */
-.input-group.newsletter__input-group .input-group-btn button.btn {
+.input-group.newsletter__input-group .input-group-btn button.btn,
+.input-group.superphone__input-group .input-group-btn button.btn {
   padding: 10px;
   border-radius: 100%;
   min-width: 40px;
   height: 40px;
 }
 
-.newsletter__input-group:last-child{
+.newsletter__input-group:last-child {
     margin-bottom:0;
   }
 
@@ -12551,6 +12559,7 @@ html[dir=rtl] .product-single__meta .rte{
   }
 }
 
+{% comment %} code added - am. add class {% endcomment %}
 .unsubscribe-link, .superphone-link {
   font-size: 12px;
   margin-top: 20px;
@@ -12830,11 +12839,54 @@ font-weight:700;
   100% { opacity:1; }
 }
 
-/* googleapis style */
-.google-super-phone {
-  padding: 100px 0 75px 0;
-  background-color: #f4f4f4;
+/* additional Superphone style */
+.intl-tel-input{
+  width: 100%;
+  display: flex;
 }
+
+.superphone-section ul {
+  margin: 0;
+  /* transform: translate(-250px,140px); */
+  transform: translate(-400px,110px);
+  width:0 !important;
+}
+
+.superphone-section li {
+  width: 300px;
+  list-style-type: none;
+  background-color: #fff6f6;
+}
+
+.iti-flag {
+  background-image: url("https://superphone.io/f/assets/images/flags.png");
+}
+
+.superphone-section .parsley-required {
+    padding-top: 5px;
+    color: #D85959;
+}
+
+.superphone-section .parsley-minlength {
+    padding-top: 5px;
+    color: #D85959;
+}
+
+.superphone-section .form-error {
+  padding-left: 12px;
+  display: none;
+  color: #D85959;
+  max-width: 300px;
+  margin: auto;
+}
+
+.superphone-section .form-success {
+  border-radius: 5px;
+  padding: 5px;
+  display: none;
+}
+/* end Superphone */
+
 
 /* make gray color box white on hover of add-to-cart buttons */
 /* [data-button_style=square] .btn:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style=square] .product-reviews .spr-button:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style=square] .product-reviews .spr-summary-actions a:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style=square] .rte .btn:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style=square] .shopify-payment-button .shopify-payment-button__button--unbranded:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style^=round] .btn:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style^=round] .product-reviews .spr-button:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style^=round] .product-reviews .spr-summary-actions a:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style^=round] .rte .btn:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after,[data-button_style^=round] .shopify-payment-button .shopify-payment-button__button--unbranded:not(.btn--secondary):not(.btn--tertiary):not(.btn--inverse):not(.btn--body):not(.btn--static):after{
