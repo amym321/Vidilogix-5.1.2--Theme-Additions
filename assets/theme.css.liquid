@@ -9996,9 +9996,7 @@ html[dir=rtl] .background-media-text__text{
 /*  code change per 4.1.1 customization. code change - am, class added */
 .newsletter__input-group, .superphone__input-group {
   position: relative;
-
   margin:0 auto 20px;
-  /* max-width:400px */
   max-width:500px
 }
 
@@ -12856,6 +12854,28 @@ font-weight:700;
   width: 300px;
   list-style-type: none;
   background-color: #fff6f6;
+}
+
+@media (max-width:560px) {
+  .superphone__input-group {
+    max-width:300px
+  }
+  .superphone-section ul {
+    transform: translate(-300px,110px);
+  }
+  .superphone-section li {
+    max-width: 300px;
+}
+@media (max-width:300px) {
+  .superphone__input-group {
+    max-width:250px
+  }
+  .superphone-section ul {
+    transform: translate(-250px,110px);
+  }
+  .superphone-section li {
+    max-width: 250px;
+  }
 }
 
 .iti-flag {
