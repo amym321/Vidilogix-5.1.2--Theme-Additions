@@ -63,7 +63,7 @@
       searchArticles: {{ 'general.search.articles' | t | json }}
     };
     theme.settings = {
-      dynamicVariantsEnable: true,
+      dynamicVariantsEnable: false,
       cartType: {{ settings.cart_type | json }},
       isCustomerTemplate: {% if request.page_type contains 'customers/' %}true{% else %}false{% endif %},
       moneyFormat: {{ shop.money_format | json }},
