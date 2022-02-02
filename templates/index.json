@@ -250,31 +250,31 @@
         "show_divider": false
       }
     },
-    "1643420130b45d8c00": {
+    "1643681849e31c7c00": {
       "type": "super-phone",
       "blocks": {
-        "1643420130af52fb90-0": {
+        "16436818490e76c67c-0": {
           "type": "title",
           "settings": {
             "title": "Never miss an offer"
           }
         },
-        "1643420130af52fb90-1": {
+        "16436818490e76c67c-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Join the list to receive exclusive offers and updates.<\/p>"
+            "text": "<p>Join the list to receive exclusive offers and updates. <br\/>Plus, enter to win a coveted Sonos Arc Soundbar.<\/p>"
           }
         },
-        "1643420130af52fb90-2": {
+        "16436818490e76c67c-2": {
           "type": "form",
           "settings": {
           }
         }
       },
       "block_order": [
-        "1643420130af52fb90-0",
-        "1643420130af52fb90-1",
-        "1643420130af52fb90-2"
+        "16436818490e76c67c-0",
+        "16436818490e76c67c-1",
+        "16436818490e76c67c-2"
       ],
       "settings": {
         "color_background": "#ffffff",
@@ -293,6 +293,6 @@
     "16374606876c4b0894",
     "163746679950095452",
     "16374675471ddb7cfa",
-    "1643420130b45d8c00"
+    "1643681849e31c7c00"
   ]
 }

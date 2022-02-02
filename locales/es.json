@@ -48,6 +48,11 @@
       "newsletter_confirmation": "Gracias por suscribirse",
       "submit": "Suscribir"
     },
+    "superphone_form": {
+      "superphone_email": "Mobile # (w\/ country code)",
+      "superphone_confirmation": "Gracias por suscribirse",
+      "submit": "Suscribir"
+    },
     "search": {
       "view_more": "Ver más",
       "collections": "Colecciones:",

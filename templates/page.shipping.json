@@ -71,7 +71,7 @@
           "type": "question",
           "settings": {
             "title": "Signature request",
-            "text": "<p>Vidlogix chooses which carrier will deliver your shipment, and some of our shipments require a signature. Your shipping confirmation email will tell you whether a signature is required. The carrier may also require a signature at their discretion. The carrier may make subsequent delivery attempts before returning the shipment to Vidlogix. We are unable to change the shipping address once your order has been placed.<\/p>",
+            "text": "<p>All orders over $500 require an adult signature. The carrier may also require a signature at their discretion. The carrier may make subsequent delivery attempts before returning the shipment to Vidlogix. We are unable to change the shipping address once your order has been placed.<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
             "button_chat2": false,

@@ -1,5 +1,12 @@
 {
   "sections": {
+    "16430719887e99fa25": {
+      "type": "smart-header-section",
+      "settings": {
+        "page_title": "",
+        "page_description": ""
+      }
+    },
     "164021208894912036": {
       "type": "company-tabs",
       "disabled": true,
@@ -92,6 +99,7 @@
     }
   },
   "order": [
+    "16430719887e99fa25",
     "164021208894912036",
     "main",
     "16402121138cda5d47",
