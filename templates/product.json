@@ -73,13 +73,6 @@
             "show_dynamic_checkout": false,
             "surface_pickup_enable": false
           }
-        },
-        "c3a5a2c0-bc73-4cb0-8b40-b64720f55767": {
-          "type": "contact",
-          "settings": {
-            "title": "Ask a question",
-            "phone": true
-          }
         }
       },
       "block_order": [
@@ -89,8 +82,7 @@
         "variant_picker",
         "inventory_status",
         "a1448bda-730b-4507-8fd1-2b0660b10919",
-        "buy_buttons",
-        "c3a5a2c0-bc73-4cb0-8b40-b64720f55767"
+        "buy_buttons"
       ],
       "settings": {
         "sku_enable": true,
