@@ -180,6 +180,8 @@
               "email_text": "hello@vidlogix.com",
               "show_phone": true,
               "phone_text": "(212) 431-5086",
+              "show_phone_text": true,
+              "phone_text_text": "(626) 539-4937",
               "container_width": 40
             }
           },
@@ -223,6 +225,8 @@
               "email_text": "hello@vidlogix.com",
               "show_phone": true,
               "phone_text": "(212) 431-5086",
+              "show_phone_text": false,
+              "phone_text_text": "626-539-4937",
               "container_width": 25
             }
           }
