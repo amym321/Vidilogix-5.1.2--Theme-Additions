@@ -94,7 +94,6 @@
     "checkout_accent_color": "#1a1a1a",
     "checkout_button_color": "#1a1a1a",
     "checkout_error_color": "#ff6d6d",
-    "sku_enable": false,
     "variant_labels_enable": false,
     "variant_type": "dropdown",
     "product_zoom_enable": true,
