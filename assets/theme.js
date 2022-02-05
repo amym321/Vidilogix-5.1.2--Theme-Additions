@@ -6437,6 +6437,16 @@ lazySizesConfig.expFactor = 4;
       },
   
       renderCollectionPage: function(searchParams, updateURLHash = true) {
+        // If on vendor page, make sure to pass the q param.  Added by Archetype to correct filtering
+        if (window.location.href.indexOf('collections/vendors') > -1) {
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          const vendor = urlParams.get('q')
+          if (vendor) {
+            searchParams.append('q', vendor);
+          }
+        }
+        
         this.ajaxRenderer
           .renderPage(window.location.pathname, searchParams, updateURLHash)
           .then(() => {
