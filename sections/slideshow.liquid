@@ -248,7 +248,7 @@
                           {%- if block.settings.link_text != blank or block.settings.link_text_2 != blank or block.settings.chat_widget == true -%}
                           <div class="hero__link">
                             {%- if block.settings.chat_widget == true -%}
-                              <a id="rp-home" class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}" aria-describedby="a11y-external-message">
+                              <a href="/pages\/contact"  class="btn{% if block.settings.color_accent contains 'rgba(0,0,0,0)' %} btn--inverse{% endif %}" aria-describedby="a11y-external-message">
                                 {{ block.settings.link_text }}
                               </a>
                             {%- elsif block.settings.link_text != blank -%}
@@ -435,7 +435,7 @@
           {
             "type": "checkbox",
             "id": "chat_widget",
-            "label": "First button opens the chat widget",
+            "label": "First button opens the chat widget. Defaults to Contact page for now.",
             "default": false,
             "info": "Leave link url below blank if you'd like to open the chat widget."
           },

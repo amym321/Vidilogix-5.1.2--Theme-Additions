@@ -82,9 +82,9 @@
           <div class="rte featured-row__subtext appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.text }}</div>
         {%- endif -%}
 
-
+        
         {% if section.settings.button_chat == true and section.settings.button_label != blank %}
-          <a id="rp-home" class="btn">
+          <a href="/pages\/contact"  class="btn">
             {{ section.settings.button_label }}
           </a>
         {%- elsif section.settings.button_label != blank -%}
@@ -307,7 +307,7 @@
           {
             "type": "checkbox",
             "id": "button_chat",
-            "label": "Button opens chat widget",
+            "label": "Button opens chat widget. Defaults to Contact page for now",
             "default": false
           },
           {

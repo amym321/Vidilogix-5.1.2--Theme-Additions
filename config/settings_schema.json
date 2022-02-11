@@ -248,7 +248,7 @@
       {
         "type": "checkbox",
         "id": "button_chat",
-        "label": "Open chat widget",
+        "label": "Open chat widget. Defaults to Contact page for now",
         "default": true
       },
       {

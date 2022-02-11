@@ -34,12 +34,12 @@
                         {{ block.settings.text }}
                       {%- if block.settings.enlarge_text %}</div>{% endif -%}
                     </div>
-                  
+
                     {% if block.settings.button_chat %}
-                      <a id="rp-home" class="btn">
-                        {{ block.settings.button_text }}
-                      </a>
-                    {% elsif block.settings.button_link != blank %}
+                    <a href="/pages\/contact"  class="btn">
+                      {{ block.settings.button_text }}
+                    </a>
+                  {% elsif block.settings.button_link != blank %}
                       <a class="btn" href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_text }}</a>
                     {% endif %}
 
@@ -57,10 +57,10 @@
                 <div id="FAQ-content-{{ block.id }}" class="collapsible-content collapsible-content--all" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                   <div class="collapsible-content__inner collapsible-content__inner--faq rte" itemprop="text">
                     {{ block.settings.text }}
-                    
-                    {% comment %} code added - am. added more text & button to question block{% endcomment %}
-                    {% if block.settings.button_chat2  %}
-                      <a id="rp-home" class="btn">
+
+                      {% comment %} code added - am. added more text & button to question block{% endcomment %}
+                      {% if block.settings.button_chat2  %}
+                      <a href="/pages\/contact" class="btn">
                         {{ block.settings.button_text2 }}
                       </a>
                     {% elsif block.settings.button_link2 != blank %}
@@ -133,10 +133,9 @@
           {
             "type": "checkbox",
             "id": "button_chat",
-            "label": "Button launches chat widget",
+            "label": "Button launches chat widget. Defaults to Contact page for now",
             "default": false
           },
-
           {
             "type": "select",
             "id": "align_text",
@@ -189,7 +188,7 @@
           {
             "type": "checkbox",
             "id": "button_chat2",
-            "label": "Button launches chat widget",
+            "label": "Button launches chat widget. Defaults to Contact page for now",
             "default": false
           },
           {
