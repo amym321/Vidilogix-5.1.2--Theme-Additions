@@ -78,18 +78,6 @@
     };
   </script>
 
-  <!-- begin code change per 4.1.1 customization -->
-
-  <!-- starapps_scripts_start -->
-  <!-- This code is automatically managed by StarApps Studio -->
-  <!-- Please contact support@starapps.studio for any help -->
-  {% render "starapps-product-json", product: product, starapps_app: "VIA", starapps_attribute: "sa-product-json" %}
-  <script type="text/javascript" src="https://bcdn.starapps.studio/apps/via/vidilogix/script-1608031801.js?shop={{shop.permanent_domain}}" async></script><script type="text/javascript" src="https://bcdn.starapps.studio/apps/vdk/vidilogix/script-1632955730.js?shop={{shop.permanent_domain}}" async></script>
-
-  <script type="text/javascript" src="https://bcdn.starapps.studio/apps/vtk/vidilogix/script-1632955757.js?shop={{shop.permanent_domain}}" async></script>
-  <!-- starapps_scripts_end -->
-  <!-- end code change per 4.1.1 customization -->
-
   {{ content_for_header }}
 
   <script src="{{ 'vendor-scripts-v10.js' | asset_url | split: '?' | first }}" defer="defer"></script>
@@ -100,7 +88,9 @@
   {%- endif -%}
 
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
- 
+
+
+
   <!-- begin code change per 4.1.1 customization -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="{{ 'accordion-products.js' | asset_url }}" defer="defer"></script>
