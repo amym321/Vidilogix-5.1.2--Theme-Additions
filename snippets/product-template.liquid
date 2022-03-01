@@ -8,6 +8,9 @@
   assign product_zoom_size = '1800x1800'
   assign product_image_size = '620x'
 
+  assign variants_total = product.variants | size
+
+
   case image_container_width
     when 'small'
       assign product_image_width = 'medium-up--two-fifths'
@@ -100,7 +103,10 @@
                  {% comment %} end code change per 4.1.1 customization {% endcomment %}
                 <h1 class="h2 product-single__title">
                   {%- unless product.empty? -%}
-                    {{ product.title }}
+                    {{ product.title }} 
+                    {% if variants_total > 1 %}
+                      <span data-variant-title>, {{ current_variant.title }}</span>
+                    {% endif %}
                   {%- else -%}
                     {{ 'home_page.onboarding.product_title' | t }}
                   {%- endunless -%}

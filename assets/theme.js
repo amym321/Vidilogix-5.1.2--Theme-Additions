@@ -895,6 +895,8 @@ lazySizesConfig.expFactor = 4;
         this._updatePrice(variant);
         this._updateUnitPrice(variant);
         this._updateSKU(variant);
+        // update variant title - am
+        this._updateVariantTitle(variant);
         // begin code change per 4.1.1 customization
         this._updatePayPalPrice(variant);
         this._updateBackstockMessage(variant);
@@ -953,6 +955,19 @@ lazySizesConfig.expFactor = 4;
         }
   
         this.container.dispatchEvent(new CustomEvent('variantSKUChange', {
+          detail: {
+            variant: variant
+          }
+        }));
+      },
+
+      // update variant title - am
+      _updateVariantTitle: function(variant) {
+        if (variant.title === this.currentVariant.title) {
+          return;
+        }
+  
+        this.container.dispatchEvent(new CustomEvent('variantTitleChange', {
           detail: {
             variant: variant
           }
@@ -6733,6 +6748,7 @@ lazySizesConfig.expFactor = 4;
         unitPrice: '[data-unit-price]',
         unitPriceBaseUnit: '[data-unit-base]',
         sku: '[data-sku]',
+        variantTitle: '[data-variant-title]',
         inventory: '[data-product-inventory]',
         incomingInventory: '[data-incoming-inventory]',
         colorLabel: '[data-variant-color-label]',
@@ -6912,6 +6928,10 @@ lazySizesConfig.expFactor = 4;
   
         if (this.container.querySelector(this.selectors.sku)) {
           this.container.on('variantSKUChange' + this.settings.namespace, this.updateSku.bind(this));
+        }
+
+        if (this.container.querySelector(this.selectors.variantTitle)) {
+          this.container.on('variantTitleChange' + this.settings.namespace, this.updateVariantTitle.bind(this));
         }
   
         var inventoryEl = this.container.querySelector(this.selectors.inventory);
@@ -7131,6 +7151,19 @@ lazySizesConfig.expFactor = 4;
           }
   
           this.container.querySelector(this.selectors.sku).textContent = newSku;
+        }
+      },
+
+      updateVariantTitle: function(evt) {
+        var variant = evt.detail.variant;
+        var newVariantTitle = '';
+  
+        if (variant) {
+          if (variant.title) {
+            newVariantTitle = variant.title;
+          }
+  
+          this.container.querySelector(this.selectors.variantTitle).textContent = newVariantTitle;
         }
       },
   
