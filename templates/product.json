@@ -92,6 +92,7 @@
         "related_count": 3,
         "value_one": "Free shipping on orders over $49",
         "value_two": "Free (1) Year Extended Warranty",
+        "condition_new": "Condition: New",
         "image_position": "left",
         "image_size": "medium",
         "product_zoom_enable": true,
@@ -99,7 +100,7 @@
         "thumbnail_arrows": true,
         "mobile_layout": "partial",
         "enable_video_looping": true,
-        "product_video_style": "muted"
+        "product_video_style": "unmuted"
       }
     },
     "sub": {
