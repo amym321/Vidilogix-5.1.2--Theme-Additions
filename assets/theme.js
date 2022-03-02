@@ -3731,11 +3731,11 @@ lazySizesConfig.expFactor = 4;
     // end code change per 4.1.1 customization
 
     var videoHolderId = 'VideoHolder';
+
+    // code change per 4.1.1 customization. added vimeo in var
     var selectors = {
       youtube: 'a[href*="youtube.com/watch"], a[href*="youtu.be/"]',
-      // begin code change per 4.1.1 customization
       vimeo: 'a[href*="player.vimeo.com/video"]',
-      // end code change per 4.1.1 customization
       mp4Trigger: '.product-video-trigger--mp4',
       mp4Player: '.product-video-mp4-sound'
     };
