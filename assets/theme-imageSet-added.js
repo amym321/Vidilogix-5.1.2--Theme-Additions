@@ -79,8 +79,8 @@ imageSetArguments: function(variant) {
         var imageSetName2 = imageSetNameTemp[1];    // size
       }
 
-      
-      if (imageSetNameCheck != true) {
+
+      // if (imageSetNameCheck != true) {
         if (this.settings.imageSetName ) {
           var variantWrapper = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName+'"]');  //comes up null if using both options, color*size
           if (variantWrapper) {
@@ -90,14 +90,15 @@ imageSetArguments: function(variant) {
             this.settings.imageSetName = null;
           }
         } 
-      } else if (imageSetName1 || imageSetName2) {
-        var variantWrapper1 = this.container.querySelector('.variant-input-wrap[data-handle="'+imageSetName1+'"]');
+      // } else 
+      if (this.settings.imageSetName1 || this.settings.imageSetName2) {
+        var variantWrapper1 = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName1+'"]');
         if (variantWrapper1) {
           this.settings.imageSetIndex1 = variantWrapper1.dataset.index;  // definately option1
           // this.settings.imageSetIndex1 = 'option1'
           this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))  // use combined imageSet option1*option2
         } 
-        var variantWrapper2 = this.container.querySelector('.variant-input-wrap[data-handle="'+imageSetName2+'"]');
+        var variantWrapper2 = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName2+'"]');
         if (variantWrapper2) {
           this.settings.imageSetIndex2 = variantWrapper2.dataset.index;  // definately option2
           // this.settings.imageSetIndex2 = 'option2'

@@ -972,9 +972,6 @@ lazySizesConfig.expFactor = 4;
             variant: variant
           }
         }));
-
-console.log('24) variant at _updateVariantTitle = ');
-console.log(variant);
       },
   
       // begin code change per 4.1.1 customization
@@ -7043,8 +7040,8 @@ console.log(variant2);
           // var imageSetNameCheck = this.settings.imageSetName.includes("*");  // true or false
           
 console.log('x2.1) this.settings.imageSetName = '+ this.settings.imageSetName);   // null
-console.log('x2.2) this.settings.imageSetName1 = '+ this.settings.imageSetName);  // null
-console.log('x2.3) this.settings.imageSetName2 = '+ this.settings.imageSetName);  // null
+console.log('x2.2) this.settings.imageSetName1 = '+ this.settings.imageSetName1);  // color
+console.log('x2.3) this.settings.imageSetName2 = '+ this.settings.imageSetName2);  // size
 
 
           // if (this.settings.imageSetName !== null) {
@@ -7062,7 +7059,7 @@ console.log('x2.3) this.settings.imageSetName2 = '+ this.settings.imageSetName);
           // }
 
         
-        if (imageSetNameCheck != true) {
+        // if (imageSetNameCheck != true) {
           if (this.settings.imageSetName ) {
             var variantWrapper = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName+'"]');  //comes up null if using both options, color*size
         
@@ -7079,8 +7076,9 @@ console.log(variantWrapper);  // array with dataset > handle = color,   dataset 
             }
           } 
 // OR MAYBE DO THIS AS WELL RATHER THAN AN ELSE IF
-        } else if (imageSetName1 || imageSetName2) {
-          var variantWrapper1 = this.container.querySelector('.variant-input-wrap[data-handle="'+imageSetName1+'"]');
+        // } else 
+        if (this.settings.imageSetName1 || this.settings.imageSetName2) {
+          var variantWrapper1 = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName1+'"]');
 
 var variantWrapperY = variantWrapper1;
 JSON.stringify(variantWrapperY, null, "  ");
@@ -7091,7 +7089,7 @@ console.log(variantWrapperY);  //  array with dataset > handle = color,   datase
             // this.settings.imageSetIndex1 = 'option1'
             this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))  // use combined imageSet option1*option2
           } 
-          var variantWrapper2 = this.container.querySelector('.variant-input-wrap[data-handle="'+imageSetName2+'"]');
+          var variantWrapper2 = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName2+'"]');
           if (variantWrapper2) {
             this.settings.imageSetIndex2 = variantWrapper2.dataset.index;  // definately option2
             // this.settings.imageSetIndex2 = 'option2'
@@ -7320,6 +7318,12 @@ console.log(cellSelectorTemp2);                       // '[data-group="size_1-pa
 console.log('9d2)this.settings.currentSlideIndex = ' + this.settings.currentSlideIndex);    //
 console.log('9d3) set2 = ' + set2);   // size_1-pack
 
+var array = { cellSelector: '[data-group="'+set1+'*'+set2+'"]', imageSet: set1+'*'+set2, initialIndex: this.settings.currentSlideIndex }
+JSON.stringify(array, null, "  ");
+console.log('9d4) array = ');
+console.log(array); //cellSelector: "[data-group=\"color_black*size_1-pack\"]"   imageSet: "color_black*size_1-pack"  initialIndex: 0
+
+
         // Return object that adds cellSelector to mainSliderArgs
         if (set) {
           return {
@@ -7328,18 +7332,18 @@ console.log('9d3) set2 = ' + set2);   // size_1-pack
             initialIndex: this.settings.currentSlideIndex   // 0
           }
         }
-        if (set1) {
+        if (set1 && set2) {
           return {
-            cellSelector: '[data-group="'+set1+'"]',         // '[data-group="color_black"]' 
-            imageSet: set1,                                  //
-            initialIndex: this.settings.currentSlideIndex   // 0
+            cellSelector: '[data-group="'+set1+'*'+set2+'"]',         // '[data-group="color_black"]' 
+            imageSet: set1+'*'+set2,                                  // color_black   want  color_black*size_1-pack
+            initialIndex: this.settings.currentSlideIndex    // 0
           } 
-        } else if (set2) {
-          return {
-            cellSelector: '[data-group="'+set2+'"]',         // '[data-group="size_1-pack"]'
-            imageSet: set2,                                  //
-            initialIndex: this.settings.currentSlideIndex   // 0
-          }
+        // } else if (set2) {
+        //   return {
+        //     cellSelector: '[data-group="'+set2+'"]',         // '[data-group="size_1-pack"]'
+        //     imageSet: set2,                                  // size_1-pack
+        //     initialIndex: this.settings.currentSlideIndex    // 0
+        //   }
         }
       },
 
@@ -7397,8 +7401,15 @@ console.log('2k3) passed updateImageSet');
         this.cache.thumbSlider.querySelectorAll('.product__thumb-item').forEach(thumb => {
           thumb.classList.toggle(classes.hidden, thumb.dataset.group !== set);    // thumb.dataset.group = color_black
 
-console.log('2k3) thumb.dataset.group = '); // goes though all the images 
-console.log(thumb.dataset.group);
+console.log('2k3) thumb.dataset.group = '); // goes through all the images 
+console.log(thumb.dataset.group);   //color_black*size_1-pack
+console.log('2k4) set = '+set); //  color_black*size_2-pack
+var thumb2 = thumb;
+JSON.stringify(thumb2, null, "  ");
+console.log('2k5) thumb = '); //div.product__thumb-item.hide  group: "color_black*size_1-pack"  index: "1" etc  setName: "color*size"
+console.log(thumb2); 
+
+
 
         });
 
@@ -7798,14 +7809,20 @@ var mainSliderArgs2 = mainSliderArgs;
 JSON.stringify(mainSliderArgs2, null, "  ");
 console.log('e) mainSliderArgs');
 console.info(mainSliderArgs);  // callbacks > onInit > name: "bound onSliderInit",  callbacks > onChange > name: "bound onSlideChange"
+// initialIndex: "0"   and then   initialIndex: "0"  when refreshing on black/1-pack. same 0 and 0 when changing option1
+// initialIndex: "0"   and then   initialIndex: "0"  when refreshing on black/1-pack. same 0 and 0 when changing option2
+
+console.log('e.1) this.settings.imageSetName = ' + this.settings.imageSetName); // null
+console.log('e.2) this.settings.imageSetName1 = ' + this.settings.imageSetName1); // color
+console.log('e.3) this.settings.imageSetName2 = ' + this.settings.imageSetName2); // size
 
   
         // Override default settings if image set feature enabled
-        if (this.settings.imageSetName) {
+        if (this.settings.imageSetName || this.settings.imageSetName1 || this.settings.imageSetName2) {
           var imageSetArgs = this.imageSetArguments(variant);
           mainSliderArgs = Object.assign({}, mainSliderArgs, imageSetArgs);
           this.updateImageSetThumbs(mainSliderArgs.imageSet);    // imageSet = set = 
-
+                console.log('e.4) passed this.updateImageSetThumbs(mainSliderArgs.imageSet)');
         }
   
         this.flickity = new theme.Slideshow(this.cache.mainSlider, mainSliderArgs);
@@ -7819,10 +7836,15 @@ var slide3 = slide;
 JSON.stringify(slide3, null, "  ");
 console.log('13xx) slide = ');  // **NULL**  when 1 & 2. starting slide. whole <div> otherwise. div.product-main-slide.starting-slide.is-selected
 console.log(slide3); 
-console.log('14xx) this.settings.imageSetName = ' + this.settings.imageSetName);  // color*size
+console.log('14.1xx) this.settings.imageSetName = ' + this.settings.imageSetName);  // null
+console.log('14.2xx) this.settings.imageSetName1 = ' + this.settings.imageSetName1);  // color
+console.log('14.3xx) this.settings.imageSetName2 = ' + this.settings.imageSetName2);  // size
 
         if (this.settings.imageSetName) {
 console.log('15xx this.prepMediaOnSlide(slide)');
+          this.prepMediaOnSlide(slide);
+        } else if (this.settings.imageSetName1 && this.settings.imageSetName1) {
+console.log('15yy this.prepMediaOnSlide(slide)');
           this.prepMediaOnSlide(slide);
         }
       },
@@ -7883,21 +7905,22 @@ console.log('2 this.prepMediaOnSlide(slide)');
   
       prepMediaOnSlide(slide) {
 console.log('16) this.prepMediaOnSlide(slide)');
-console.log('17) slide = ');     // **COMES UP NULL** when 1 & 2 combined.  should be array. 
-console.log(slide);               // dataset > group = color_white, dataset > index = 4, dataset > setName = color
+console.log('17) slide = ');     // 
+console.log(slide);               // <div> div.product-main-slide.starting-slide.is-selected
 console.log('18) selectorsArray = '); // array. currentSlide: ".is-selected", productVideo: ".product__video", slide: ".product-main-slide", startingSlide: ".starting-slide"
 console.log(selectorsArray);
-console.log('19) selectors.productVideo = ');
-console.log(selectors.productVideo); //.product__video, even for image_set_full_3 & image_set_group_3
+console.log('19) selectors.productVideo = '+selectors.productVideo);   //.product__video
 
         var video = slide.querySelector(selectors.productVideo);
+        // var video = slide.querySelector( .product__video );    // class .product__video from media.liquid
 
 var video2 = video;
 JSON.stringify(video2, null, "  ");
-console.log('20) slide.querySelector(selectors.productVideo)'); // null, even for image_set_full_1 & image_set_group_1
-console.log(slide.querySelector(selectors.productVideo));     
 console.log('21) video2 = ');
 console.log(video2);       // null, even for image_set_full_1 & image_set_group_1
+console.log('20) slide.querySelector(selectors.productVideo) = '); // null, even for image_set_full_1 & image_set_group_1
+console.log(slide.querySelector(selectors.productVideo));     
+
   
         if (video) {
           var videoType = this._getVideoType(video);
