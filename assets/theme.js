@@ -6693,11 +6693,6 @@ lazySizesConfig.expFactor = 4;
       blocks: '[data-product-blocks]',
       blocksHolder: '[data-blocks-holder]'
     };
-
-var selectorsArray = selectors;
-JSON.stringify(selectorsArray, null, "  ");
-console.log('selectorsArray');
-console.log(selectorsArray);
   
     function Product(container) {
       this.container = container;
@@ -6780,37 +6775,19 @@ console.log(selectorsArray);
         this.settings.hasImages = false;
       }
   
-      var dataSetEl = this.cache.mainSlider.querySelector('[data-set-name]'); // pulls <div> element from media.liquid line 69, whicih is whole file
+      var dataSetEl = this.cache.mainSlider.querySelector('[data-set-name]');
       if (dataSetEl) {
-        console.log('1.1) this.settings.imageSetName = '+ this.settings.imageSetName);   // null
-        var imageSetNameCheck = dataSetEl.dataset.setName;  // true or false
-            console.log('1.11) dataSetEl.dataset.setName.includes("*") = '+dataSetEl.dataset.setName.includes("*")); // true or false 
-        
+        var imageSetNameCheck = dataSetEl.dataset.setName;
         if (imageSetNameCheck) {
-          // var imageSetNameTemp = this.settings.imageSetName.split("*");
           var imageSetNameSplit = dataSetEl.dataset.setName.split("*");
-          this.settings.imageSetName1 = imageSetNameSplit[0];    // color
-          this.settings.imageSetName2 = imageSetNameSplit[1];    // size
-          // this.settings.imageSetName = null;   // 
-                // console.log('1.5) this.settings.imageSetName = '+ this.settings.imageSetName);
-                console.log('1.2) this.settings.imageSetName1 = '+ this.settings.imageSetName1);  // color   
-                console.log('1.3) this.settings.imageSetName2 = '+ this.settings.imageSetName2);  // size
+          this.settings.imageSetName1 = imageSetNameSplit[0];
+          this.settings.imageSetName2 = imageSetNameSplit[1];
         } else {
-          this.settings.imageSetName = dataSetEl.dataset.setName;   // 
-                console.log('1.4) this.settings.imageSetName = '+ this.settings.imageSetName);  // should NOT hit if running 1 & 2
+          this.settings.imageSetName = dataSetEl.dataset.setName;
         }
-
-var dataSetEl2 = dataSetEl;
-// JSON.stringify(dataSetEl2, null, "  ");
-console.log('0.5) dataSetEl1 - this.cache.mainSlider.querySelectorv  data-set-name = ');  //
-console.log(dataSetEl2);  // color*size     pulls <div> element from media.liquid line 69, whicih is whole file
-// console.log('2) dataSetEl.dataset.setName = '+ dataSetEl.dataset.setName);        // color*size
-
       }
   
       this.init();
-console.log('2b2) passed this.init');  
-
     }
   
     Product.prototype = Object.assign({}, Product.prototype, {
@@ -6833,8 +6810,6 @@ console.log('2b2) passed this.init');
   
       cacheElements: function() {
 
-console.log('2c) start cacheElements: function');  
-
         this.cache = {
           form: this.container.querySelector(this.selectors.form),
           mainSlider: this.container.querySelector(this.selectors.mainSlider),
@@ -6850,13 +6825,6 @@ console.log('2c) start cacheElements: function');
           savePrice: this.container.querySelector(this.selectors.savePrice),
           priceA11y: this.container.querySelector(this.selectors.priceA11y)
         };
-console.log('2d) end cacheElements: function');  
-
-var cache_1 = this.cache;
-JSON.stringify(cache_1, null, "  ");
-console.log('2e) cache');  
-console.log(cache_1);     // array.  dataset > thumbSlider > position = 'beside'
-
       },
   
       formSetup: function() {
@@ -6899,8 +6867,6 @@ console.log(cache_1);     // array.  dataset > thumbSlider > position = 'beside'
         if (currentImage) {
           this.settings.imageSize = theme.Images.imageSize(currentImage);
         }
-
-console.log('2f) passed setImageSizes');
       },
   
       addIdToRecentlyViewed: function() {
@@ -6927,16 +6893,8 @@ console.log('2f) passed setImageSizes');
       },
   
       initVariants: function() {
-console.log('2g) start setImageSizes');
-
         var variantJson = this.container.querySelector(this.selectors.variantsJson);
 
-var currentVariantJson = this.container.querySelector(this.selectors.currentVariantJson);  
-var currentVariantJson2 = currentVariantJson;
-JSON.stringify(currentVariantJson2, null, "  ");
-console.log('2g2) currentVariantJson nevermind = ')
-console.log(currentVariantJson2);
-  
         if (!variantJson) {
           return;
         }
@@ -7013,95 +6971,28 @@ console.log(currentVariantJson2);
             }
           }
         }
-  
-
-
-        // image set names variant change listeners
-
-
-// ....(variant)[imageSetName]
-// ....(variant[this.settings.imageSetIndex])
-
-//passes through this once. not ajax
-
-  var dataSetEl2 = this.cache.mainSlider.querySelector('[data-set-name]');  
-  console.log('2nd dataSetEl2 = ');  
-console.log(dataSetEl2);  //not defined
-
-var variant = variant ? variant : (this.variants ? this.variants.currentVariant : null);
-var variant2 = variant;
-JSON.stringify(variant2, null, "  ");
-console.log('x1) variant = '); 
-console.log(variant2); 
-
-  // var newImageSetIndex = [data-set-name]  '[data-set-name="'+set+'"]'
-
-        // if (this.settings.imageSetName.includes("*")) {
-          // var imageSetNameCheck = this.settings.imageSetName.includes("*");  // true or false
-          
-console.log('x2.1) this.settings.imageSetName = '+ this.settings.imageSetName);   // null
-console.log('x2.2) this.settings.imageSetName1 = '+ this.settings.imageSetName1);  // color
-console.log('x2.3) this.settings.imageSetName2 = '+ this.settings.imageSetName2);  // size
-
-
-          // if (this.settings.imageSetName !== null) {
-          //   var imageSetName1 = imageSetName;    // 
-          // } else {
-          //   var imageSetNameCheck = this.settings.imageSetName.includes("*");
-          //   if (imageSetNameCheck) {
-          //     var imageSetNameSplit = this.settings.imageSetName.split("*");
-          //     var imageSetName1 = imageSetNameSplit[0];    // color
-          //     var imageSetName2 = imageSetNameSplit[1];    // size
-          //           console.log('x2) imageSetNameCheck = '+imageSetNameCheck);  // true
-          //           console.log('x3) imageSetName1 = '+imageSetName1);          // color
-          //           console.log('x4) imageSetName2 = '+imageSetName2);          // size
-          //   }
-          // }
-
         
-        // if (imageSetNameCheck != true) {
-          if (this.settings.imageSetName ) {
-            var variantWrapper = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName+'"]');  //comes up null if using both options, color*size
-        
-var variantWrapperX = variantWrapper;
-JSON.stringify(variantWrapperX, null, "  ");
-console.log('x5) variantWrapper = ');  //
-console.log(variantWrapper);  // array with dataset > handle = color,   dataset > index = option1
-
-            if (variantWrapper) {
-              this.settings.imageSetIndex = variantWrapper.dataset.index;  // option1
-              this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))
-            } else {
-              this.settings.imageSetName = null;
-            }
-          } 
-// OR MAYBE DO THIS AS WELL RATHER THAN AN ELSE IF
-        // } else 
+        if (this.settings.imageSetName ) {
+          var variantWrapper = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName+'"]');  //comes up null if using both options, color*size
+      
+          if (variantWrapper) {
+            this.settings.imageSetIndex = variantWrapper.dataset.index;  // option1
+            this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))
+          } else {
+            this.settings.imageSetName = null;
+          }
+        } 
         if (this.settings.imageSetName1 || this.settings.imageSetName2) {
           var variantWrapper1 = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName1+'"]');
 
-var variantWrapperY = variantWrapper1;
-JSON.stringify(variantWrapperY, null, "  ");
-console.log('6) variantWrapper1 = ');  //
-console.log(variantWrapperY);  //  array with dataset > handle = color,   dataset > index = option1
           if (variantWrapper1) {
             this.settings.imageSetIndex1 = variantWrapper1.dataset.index;  // definately option1
-            // this.settings.imageSetIndex1 = 'option1'
             this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))  // use combined imageSet option1*option2
           } 
           var variantWrapper2 = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName2+'"]');
           if (variantWrapper2) {
             this.settings.imageSetIndex2 = variantWrapper2.dataset.index;  // definately option2
-            // this.settings.imageSetIndex2 = 'option2'
             this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))  // use combined imageSet option1*option2
-          
-var variantWrapperZ = variantWrapper2;
-JSON.stringify(variantWrapperZ, null, "  ");
-console.log('6b) variantWrapper2 = ');  //
-console.log(variantWrapper2);  //  array with dataset > handle = size,   dataset > index = option2
-
-console.log('6c) this.settings.imageSetIndex2 = '+this.settings.imageSetIndex2);
-          
           } else {
             this.settings.imageSetName = null;
           }
@@ -7232,199 +7123,76 @@ console.log('6c) this.settings.imageSetIndex2 = '+this.settings.imageSetIndex2);
       // end code change per 4.1.1 customization
   
       imageSetArguments: function(variant) {
-
-
-console.log('3aa) this.productId = ' + this.productId);
-console.log('3a) imageSetArguments'); // start through  this logic or not
-
         var variant = variant ? variant : (this.variants ? this.variants.currentVariant : null);
         if (!variant) return;  
 
-console.log('3ac) this.settings.imageSetIndex'+ this.settings.imageSetIndex);   // null
-console.log('3ad) this.settings.imageSetIndex1'+ this.settings.imageSetIndex1); // option1
-console.log('3ae) this.settings.imageSetIndex2'+ this.settings.imageSetIndex2); // option2
-
-        // var setValue = this.settings.currentImageSet = this.getImageSetName(variant[this.settings.imageSetIndex]); // setValue = black
         if (this.settings.imageSetIndex !== null) {
-              console.log('3af) should NOT hit');
           var setValue = this.settings.currentImageSet = this.getImageSetName(variant[this.settings.imageSetIndex]);
           var set = this.settings.imageSetName + '_' + setValue; 
-              console.log('3ag) should NOT hit');
-              console.log('3ag1) setValue = ' + setValue);   // black
-              console.log('3ag2) this.settings.imageSetName = ' + this.settings.imageSetName);   // color
-              console.log('3ag3) set = ' + set);   // color_black
         } else if (this.settings.imageSetIndex1 != null || this.settings.imageSetIndex2 != null ) {
           if (this.settings.imageSetIndex1 != null) {
-                console.log('3ah) should hit'); // hits
             var setValue1 = this.settings.currentImageSet1 = this.getImageSetName(variant[this.settings.imageSetIndex1]);   // black
             var set1 = this.settings.imageSetName1 + '_' + setValue1;  // null_black
-                console.log('3ai) should hit'); // hits
-                console.log('3ai1) setValue1 = ' + setValue1);   // black
-                console.log('3ai2) this.settings.imageSetName1 = ' + this.settings.imageSetName1);   // color
-                console.log('3ai3) set1 = ' + set1);   // color_black
           } 
           if (this.settings.imageSetIndex2 != null) {
-                console.log('3aj) should hit'); // hits
             var setValue2 = this.settings.currentImageSet2 = this.getImageSetName(variant[this.settings.imageSetIndex2]);
             var set2 = this.settings.imageSetName2 + '_' + setValue2; 
-                console.log('3ak) should hit'); //   hits
-                console.log('3aj1) setValue2 = ' + setValue2);   // size
-                console.log('3aj2) this.settings.imageSetName2 = ' + this.settings.imageSetName2);   // size
-                console.log('3aj3) set2 = ' + set2);   // size_1-pack
           }
         }
-        
-        // var set = this.settings.imageSetName + '_' + setValue; // set = color*size_black
-        // var set2 = this.settings.imageSetName2 + '_' + setValue2; // set = color*size_black
-
-
-        // want to have set = 'color_black*size_1-pack';
-  
-console.log('3b) imageSetArguments'); // passed through  this logic or not
-console.log('4) this.settings.currentImageSet'+ this.settings.currentImageSet);
-// console.log('5) this.getImageSetName(variant[this.settings.imageSetIndex])'+ this.getImageSetName(variant[this.settings.imageSetIndex])); 
-console.log('6.0) setvalue = ' + setValue);  // setValue 
-console.log('6.1) setvalue1 = ' + setValue1);  // setValue1
-console.log('6.2) setvalue2 = ' + setValue2);  // setValue2
-// console.log('7) 1 set = ' + set);            // set = color_white
-var variant2 = variant;
-JSON.stringify(variant2, null, "  ");
-console.log('8) variant = '); 
-console.log(variant2); 
-console.log('9) this.settings.imageSetName = ' + this.settings.imageSetName); // color
 
         // Always start on index 0
         this.settings.currentSlideIndex = 0;
 
-
-var cellSelectorTemp0 = {cellSelectorTemp00:'[data-group="'+set+'"]'};
-JSON.stringify(cellSelectorTemp0, null, "  ");
-console.log('9b1)cellSelectorTemp0 = ');   // data-group = undefined (when running 1 & 2)
-console.log(cellSelectorTemp0);                       // '[data-group="undefined"]'
-console.log('9b2)this.settings.currentSlideIndex = ' + this.settings.currentSlideIndex);    // 0
-console.log('9b3) set = ' + set);   //undefined
-  
-var cellSelectorTemp1 = {cellSelectorTemp11:'[data-group="'+set1+'"]'};
-JSON.stringify(cellSelectorTemp1, null, "  ");
-console.log('9c1)cellSelectorTemp1 = ');   // data-group =   (when running 1 & 2)
-console.log(cellSelectorTemp1);                       // '[data-group="color_black"]'     8
-console.log('9c2)this.settings.currentSlideIndex = ' + this.settings.currentSlideIndex);    // 0
-console.log('9c3) set1 = ' + set1);   // color_black
-
-var cellSelectorTemp2 = {cellSelectorTemp22:'[data-group="'+set2+'"]'};
-JSON.stringify(cellSelectorTemp2, null, "  ");
-console.log('9d1)cellSelectorTemp2 = ');   // data-group = undefined (when running 1 & 2)
-console.log(cellSelectorTemp2);                       // '[data-group="size_1-pack"]'    
-console.log('9d2)this.settings.currentSlideIndex = ' + this.settings.currentSlideIndex);    //
-console.log('9d3) set2 = ' + set2);   // size_1-pack
-
-var array = { cellSelector: '[data-group="'+set1+'*'+set2+'"]', imageSet: set1+'*'+set2, initialIndex: this.settings.currentSlideIndex }
-JSON.stringify(array, null, "  ");
-console.log('9d4) array = ');
-console.log(array); //cellSelector: "[data-group=\"color_black*size_1-pack\"]"   imageSet: "color_black*size_1-pack"  initialIndex: 0
-
-
         // Return object that adds cellSelector to mainSliderArgs
         if (set) {
           return {
-            cellSelector: '[data-group="'+set+'"]',         // '[data-group="undefined"]'  when running 1 & 2
-            imageSet: set,                                  //
-            initialIndex: this.settings.currentSlideIndex   // 0
+            cellSelector: '[data-group="'+set+'"]',
+            imageSet: set,
+            initialIndex: this.settings.currentSlideIndex
           }
         }
         if (set1 && set2) {
           return {
-            cellSelector: '[data-group="'+set1+'*'+set2+'"]',         // '[data-group="color_black"]' 
-            imageSet: set1+'*'+set2,                                  // color_black   want  color_black*size_1-pack
-            initialIndex: this.settings.currentSlideIndex    // 0
+            cellSelector: '[data-group="'+set1+'*'+set2+'"]',
+            imageSet: set1+'*'+set2,
+            initialIndex: this.settings.currentSlideIndex
           } 
-        // } else if (set2) {
-        //   return {
-        //     cellSelector: '[data-group="'+set2+'"]',         // '[data-group="size_1-pack"]'
-        //     imageSet: set2,                                  // size_1-pack
-        //     initialIndex: this.settings.currentSlideIndex    // 0
-        //   }
         }
       },
 
   
       updateImageSet: function(evt) {
-console.log('2j) start updateImageSet');
-
         // If called directly, use current variant
         var variant = evt ? evt.detail.variant : (this.variants ? this.variants.currentVariant : null);
         if (!variant) {
           return;
         }
 
-console.log('2j2) this.settings.imageSetIndex ='+ this.settings.imageSetIndex);   // null
-console.log('2j3) this.settings.imageSetIndex1 ='+ this.settings.imageSetIndex1); // option1
-console.log('2j4) this.settings.imageSetIndex2 ='+ this.settings.imageSetIndex2); // option2
-
-
         if (this.settings.imageSetIndex !== null) {
-          var setValue = this.getImageSetName(variant[this.settings.imageSetIndex]); // setValue1 = , imageSetIndex = 
-console.log('2j5) this.settings.imageSetIndex = '+ this.settings.imageSetIndex);
+          var setValue = this.getImageSetName(variant[this.settings.imageSetIndex]);
         } 
         if (this.settings.imageSetIndex1 !== null) {
-console.log('2j6.1) this.settings.imageSetIndex1 = '+ this.settings.imageSetIndex1);  //option1
-console.log('2j6.2) variant[this.settings.imageSetIndex1] = '+ variant[this.settings.imageSetIndex1]); // Black
-console.log('2j6.3) this.getImageSetName(variant[this.settings.imageSetIndex1]) = '+ this.getImageSetName(variant[this.settings.imageSetIndex1])); // black
-          var setValue1 = this.getImageSetName(variant[this.settings.imageSetIndex1]); // setValue1 = black
-console.log('2j6.4) setValue1 = '+ setValue1);  //black
-
+          var setValue1 = this.getImageSetName(variant[this.settings.imageSetIndex1]);
         } 
         if (this.settings.imageSetIndex2 !== null) {
-console.log('2j7.1) this.settings.imageSetIndex2 = '+ this.settings.imageSetIndex2);  // option2
-console.log('2j7.2) this.getImageSetName(variant[this.settings.imageSetIndex2]) = '+ this.getImageSetName(variant[this.settings.imageSetIndex2]));  // 1-pack
-          var setValue2 = this.getImageSetName(variant[this.settings.imageSetIndex2]); // setValue2 = 1-pack
+          var setValue2 = this.getImageSetName(variant[this.settings.imageSetIndex2]);
         }
-
-// console.log('2k1) updateImageSet > this.getImageSetName(variant[this.settings.imageSetIndex]) = ' + setValue); // white
-console.log('2k1.2) updateImageSet > this.getImageSetName(variant[this.settings.imageSetIndex1]) = ' + setValue1); // 
-// console.log('2k1.3) this.settings.imageSetIndex = ' + this.settings.imageSetIndex);  // option1
-console.log('2k1.4) this.settings.imageSetIndex1 = ' + this.settings.imageSetIndex1);  // 
 
         // Already on the current image group
         if (this.settings.currentImageSet === setValue) {
           return;
         }
-console.log('2k2) passed updateImageSet');
-  
         this.initProductSlider(variant);
-
-console.log('2k3) passed updateImageSet');
       },
   
       // Show/hide thumbnails based on current image set
-      updateImageSetThumbs: function(set) {                         // set = color_black
+      updateImageSetThumbs: function(set) {
         this.cache.thumbSlider.querySelectorAll('.product__thumb-item').forEach(thumb => {
-          thumb.classList.toggle(classes.hidden, thumb.dataset.group !== set);    // thumb.dataset.group = color_black
-
-console.log('2k3) thumb.dataset.group = '); // goes through all the images 
-console.log(thumb.dataset.group);   //color_black*size_1-pack
-console.log('2k4) set = '+set); //  color_black*size_2-pack
-var thumb2 = thumb;
-JSON.stringify(thumb2, null, "  ");
-console.log('2k5) thumb = '); //div.product__thumb-item.hide  group: "color_black*size_1-pack"  index: "1" etc  setName: "color*size"
-console.log(thumb2); 
-
-
-
+          thumb.classList.toggle(classes.hidden, thumb.dataset.group !== set);
         });
-
-console.log('10) updateImageSetThumbs');
-console.log('11) 2 set = ' + set); // color_white
-
       },
   
       getImageSetName: function(string) {
-
-console.log('11b) string = ' + string);   // Black  (uppercase) or 1-pack
-console.log('12a) getImageSetName()');
-console.log('12) getImageSetName string before'+ string); // Black  (uppercase) or 1-pack
-// console.log('13) getImageSetName string after'+ string.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '').replace(/^-/, '')); // black  lowercase
-
         return string.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '').replace(/^-/, '');
       },
   
@@ -7726,7 +7494,6 @@ console.log('12) getImageSetName string before'+ string); // Black  (uppercase) 
       },
   
       getThumbIndex: function(target) {
-        console.log('23) target.dataset.index = ' + target.dataset.index)
         return target.dataset.index;
       },
   
@@ -7750,31 +7517,18 @@ console.log('12) getImageSetName string before'+ string); // Black  (uppercase) 
   
       initProductSlider: function(variant) {
 
-console.log('a) initProductSlider()');
-
-
-var slide2 = this.cache.mainSlider.querySelector(selectors.slide);
-JSON.stringify(slide2, null, "  ");
-console.log('a2) slide2 = ');
-console.log(slide2);
-
-
         // Stop if only a single image, but add active class to first slide
         if (this.cache.mainSlider.querySelectorAll(selectors.slide).length <= 1) {
-          var slide = this.cache.mainSlider.querySelector(selectors.slide);   // slide is <div> element from media.liquid
+          var slide = this.cache.mainSlider.querySelector(selectors.slide);
           if (slide) {
             slide.classList.add('is-selected');
           }
-console.log('b) initProductSlider()'); //shouldn't hit since multiple images
-
           return;
         }
   
         // Destroy slider in preparation of new initialization
         if (this.flickity && typeof this.flickity.destroy === 'function') {
           this.flickity.destroy();
-console.log('c) initProductSlider()');
-
         }
   
         // If variant argument exists, slideshow is reinitializing because of the
@@ -7783,46 +7537,28 @@ console.log('c) initProductSlider()');
         if (!variant) {
           var activeSlide = this.cache.mainSlider.querySelector(selectors.startingSlide);
           this.settings.currentSlideIndex = this._slideIndex(activeSlide);
-console.log('d) initProductSlider()');
-
         }
   
         var mainSliderArgs = {
           adaptiveHeight: true,
           avoidReflow: true,
-          initialIndex: this.settings.currentSlideIndex,    // 0
+          initialIndex: this.settings.currentSlideIndex,
           childNav: this.cache.thumbSlider,
           childNavScroller: this.cache.thumbScroller,
           childVertical: this.cache.thumbSlider.dataset.position === 'beside',
           pageDots: true, // mobile only with CSS
           wrapAround: true,
           callbacks: {
-            onInit: this.onSliderInit.bind(this),    //  name: "bound onSliderInit", length: 1
-            onChange: this.onSlideChange.bind(this)  // name: "bound onSlideChange", length: 1
-          }                 // 'this' = the product with all variants. doesn't fail when 1 & 2 color*size
+            onInit: this.onSliderInit.bind(this),
+            onChange: this.onSlideChange.bind(this)
+          }
         };
-
-
-console.log('e1) this'); // whole product with variants
-console.log(this);
-var mainSliderArgs2 = mainSliderArgs;
-JSON.stringify(mainSliderArgs2, null, "  ");
-console.log('e) mainSliderArgs');
-console.info(mainSliderArgs);  // callbacks > onInit > name: "bound onSliderInit",  callbacks > onChange > name: "bound onSlideChange"
-// initialIndex: "0"   and then   initialIndex: "0"  when refreshing on black/1-pack. same 0 and 0 when changing option1
-// initialIndex: "0"   and then   initialIndex: "0"  when refreshing on black/1-pack. same 0 and 0 when changing option2
-
-console.log('e.1) this.settings.imageSetName = ' + this.settings.imageSetName); // null
-console.log('e.2) this.settings.imageSetName1 = ' + this.settings.imageSetName1); // color
-console.log('e.3) this.settings.imageSetName2 = ' + this.settings.imageSetName2); // size
-
   
         // Override default settings if image set feature enabled
         if (this.settings.imageSetName || this.settings.imageSetName1 || this.settings.imageSetName2) {
           var imageSetArgs = this.imageSetArguments(variant);
           mainSliderArgs = Object.assign({}, mainSliderArgs, imageSetArgs);
-          this.updateImageSetThumbs(mainSliderArgs.imageSet);    // imageSet = set = 
-                console.log('e.4) passed this.updateImageSetThumbs(mainSliderArgs.imageSet)');
+          this.updateImageSetThumbs(mainSliderArgs.imageSet);
         }
   
         this.flickity = new theme.Slideshow(this.cache.mainSlider, mainSliderArgs);
@@ -7832,19 +7568,9 @@ console.log('e.3) this.settings.imageSetName2 = ' + this.settings.imageSetName2)
         // If slider is initialized with image set feature active,
         // initialize any videos/media when they are first slide
 
-var slide3 = slide;
-JSON.stringify(slide3, null, "  ");
-console.log('13xx) slide = ');  // **NULL**  when 1 & 2. starting slide. whole <div> otherwise. div.product-main-slide.starting-slide.is-selected
-console.log(slide3); 
-console.log('14.1xx) this.settings.imageSetName = ' + this.settings.imageSetName);  // null
-console.log('14.2xx) this.settings.imageSetName1 = ' + this.settings.imageSetName1);  // color
-console.log('14.3xx) this.settings.imageSetName2 = ' + this.settings.imageSetName2);  // size
-
         if (this.settings.imageSetName) {
-console.log('15xx this.prepMediaOnSlide(slide)');
           this.prepMediaOnSlide(slide);
         } else if (this.settings.imageSetName1 && this.settings.imageSetName1) {
-console.log('15yy this.prepMediaOnSlide(slide)');
           this.prepMediaOnSlide(slide);
         }
       },
@@ -7866,7 +7592,6 @@ console.log('15yy this.prepMediaOnSlide(slide)');
         this.stopMediaOnSlide(prevSlide);
   
         // Prep next slide video/media
-console.log('2 this.prepMediaOnSlide(slide)');
         this.prepMediaOnSlide(nextSlide);
 
   
@@ -7904,24 +7629,8 @@ console.log('2 this.prepMediaOnSlide(slide)');
       },
   
       prepMediaOnSlide(slide) {
-console.log('16) this.prepMediaOnSlide(slide)');
-console.log('17) slide = ');     // 
-console.log(slide);               // <div> div.product-main-slide.starting-slide.is-selected
-console.log('18) selectorsArray = '); // array. currentSlide: ".is-selected", productVideo: ".product__video", slide: ".product-main-slide", startingSlide: ".starting-slide"
-console.log(selectorsArray);
-console.log('19) selectors.productVideo = '+selectors.productVideo);   //.product__video
-
         var video = slide.querySelector(selectors.productVideo);
-        // var video = slide.querySelector( .product__video );    // class .product__video from media.liquid
 
-var video2 = video;
-JSON.stringify(video2, null, "  ");
-console.log('21) video2 = ');
-console.log(video2);       // null, even for image_set_full_1 & image_set_group_1
-console.log('20) slide.querySelector(selectors.productVideo) = '); // null, even for image_set_full_1 & image_set_group_1
-console.log(slide.querySelector(selectors.productVideo));     
-
-  
         if (video) {
           var videoType = this._getVideoType(video);
           var videoId = this._getVideoDivId(video);

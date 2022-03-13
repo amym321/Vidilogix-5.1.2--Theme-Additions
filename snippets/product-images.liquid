@@ -62,22 +62,46 @@
           {%- if product.media.size > 1 -%}
             {%- for media in product.media -%}
               {%- liquid
-                assign image_set = false
-                assign image_set_group = ''
+                assign image_set_1 = false
+                assign image_set_2 = false
+                assign image_set_group_1 = ''
+                assign image_set_group_2 = ''
                 if media.alt contains '#'
-                  assign image_set_full = media.alt | split: '#' | last
-                  if image_set_full contains '_'
-                    assign image_set = true
-                    assign image_set_group = image_set_full | split: '_' | first
+                  assign image_set_full_1 = media.alt | split: '#' | last
+                  if image_set_full_1 contains '_'
+                    assign image_set_1 = true
+                    assign image_set_group_1 = image_set_full_1 | split: '_' | first
+                  endif
+                endif
+                if media.alt contains '%'
+                  assign image_set_media = media.alt | split: '%' | first
+                  if image_set_media contains '#'
+                    assign image_set_full_2 = image_set_media | split: '#' | last
+                    if image_set_full_2 contains '_'
+                      assign image_set_2 = true
+                      assign image_set_group_2 = image_set_full_2 | split: '_' | first
+                    endif
                   endif
                 endif
               -%}
+
               <div class="product__thumb-item"
                 data-index="{{ forloop.index0 }}"
-                {% if image_set %}
-                  data-set-name="{{image_set_group}}"
-                  data-group="{{image_set_full}}"
+                {% if image_set_1 %}
+                  {% if image_set_2 == false %}
+                    data-set-name="{{image_set_group_1}}"   
+                    data-group="{{image_set_full_1}}"
+                  {% endif %}
+                {% endif %}
+                {% if image_set_1 %}
+                  {% if image_set_2 %}
+                    {% capture image_set_group_3 %}{{ image_set_group_1 }}*{{ image_set_group_2 }}{% endcapture %}
+                    {% capture image_set_full_3 %}{{ image_set_full_1 }}*{{ image_set_full_2 }}{% endcapture %}
+                    data-set-name="{{image_set_group_3}}"   
+                    data-group="{{image_set_full_3}}"
+                  {% endif %}
                 {% endif %}>
+
                 <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: media.preview_image.aspect_ratio }}%;">
                   <a
                     href="{{ media.preview_image | img_url: product_zoom_size }}"
