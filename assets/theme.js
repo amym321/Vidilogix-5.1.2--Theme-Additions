@@ -895,7 +895,7 @@ lazySizesConfig.expFactor = 4;
         this._updatePrice(variant);
         this._updateUnitPrice(variant);
         this._updateSKU(variant);
-        // update variant title added - am
+        // update variant title - am
         this._updateVariantTitle(variant);
         // begin code change per 4.1.1 customization
         this._updatePayPalPrice(variant);
@@ -6775,6 +6775,7 @@ lazySizesConfig.expFactor = 4;
         this.settings.hasImages = false;
       }
   
+      // added logic for variant image set based on 2 alt text tags - am
       var dataSetEl = this.cache.mainSlider.querySelector('[data-set-name]');
       if (dataSetEl) {
         var imageSetNameCheck = dataSetEl.dataset.setName;
@@ -6809,7 +6810,6 @@ lazySizesConfig.expFactor = 4;
       },
   
       cacheElements: function() {
-
         this.cache = {
           form: this.container.querySelector(this.selectors.form),
           mainSlider: this.container.querySelector(this.selectors.mainSlider),
@@ -6834,6 +6834,7 @@ lazySizesConfig.expFactor = 4;
         this.initVariants();
   
         // We know the current variant now so setup image sets
+        // added logic for variant image set based on 2 alt text tags - am
         if (this.settings.imageSetName ||this.settings.imageSetName1 || this.settings.imageSetName2) {
           this.updateImageSet();
         }
@@ -6972,11 +6973,13 @@ lazySizesConfig.expFactor = 4;
           }
         }
         
-        if (this.settings.imageSetName ) {
-          var variantWrapper = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName+'"]');  //comes up null if using both options, color*size
+        // image set names variant change listeners
+        // added logic for variant image set based on 2 alt text tags - am
+        if (this.settings.imageSetName) {
+          var variantWrapper = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName+'"]');
       
           if (variantWrapper) {
-            this.settings.imageSetIndex = variantWrapper.dataset.index;  // option1
+            this.settings.imageSetIndex = variantWrapper.dataset.index;  
             this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))
           } else {
             this.settings.imageSetName = null;
@@ -6986,13 +6989,13 @@ lazySizesConfig.expFactor = 4;
           var variantWrapper1 = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName1+'"]');
 
           if (variantWrapper1) {
-            this.settings.imageSetIndex1 = variantWrapper1.dataset.index;  // definately option1
-            this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))  // use combined imageSet option1*option2
+            this.settings.imageSetIndex1 = variantWrapper1.dataset.index;
+            this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))
           } 
           var variantWrapper2 = this.container.querySelector('.variant-input-wrap[data-handle="'+this.settings.imageSetName2+'"]');
           if (variantWrapper2) {
-            this.settings.imageSetIndex2 = variantWrapper2.dataset.index;  // definately option2
-            this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))  // use combined imageSet option1*option2
+            this.settings.imageSetIndex2 = variantWrapper2.dataset.index;
+            this.container.on('variantChange' + this.settings.namespace, this.updateImageSet.bind(this))
           } else {
             this.settings.imageSetName = null;
           }
@@ -7122,6 +7125,7 @@ lazySizesConfig.expFactor = 4;
       },
       // end code change per 4.1.1 customization
   
+      // added logic for variant image set based on 2 alt text tags - am
       imageSetArguments: function(variant) {
         var variant = variant ? variant : (this.variants ? this.variants.currentVariant : null);
         if (!variant) return;  
@@ -7131,8 +7135,8 @@ lazySizesConfig.expFactor = 4;
           var set = this.settings.imageSetName + '_' + setValue; 
         } else if (this.settings.imageSetIndex1 != null || this.settings.imageSetIndex2 != null ) {
           if (this.settings.imageSetIndex1 != null) {
-            var setValue1 = this.settings.currentImageSet1 = this.getImageSetName(variant[this.settings.imageSetIndex1]);   // black
-            var set1 = this.settings.imageSetName1 + '_' + setValue1;  // null_black
+            var setValue1 = this.settings.currentImageSet1 = this.getImageSetName(variant[this.settings.imageSetIndex1]); 
+            var set1 = this.settings.imageSetName1 + '_' + setValue1;  
           } 
           if (this.settings.imageSetIndex2 != null) {
             var setValue2 = this.settings.currentImageSet2 = this.getImageSetName(variant[this.settings.imageSetIndex2]);
@@ -7151,6 +7155,7 @@ lazySizesConfig.expFactor = 4;
             initialIndex: this.settings.currentSlideIndex
           }
         }
+        // added logic for variant image set based on 2 alt text tags - am
         if (set1 && set2) {
           return {
             cellSelector: '[data-group="'+set1+'*'+set2+'"]',
@@ -7159,7 +7164,6 @@ lazySizesConfig.expFactor = 4;
           } 
         }
       },
-
   
       updateImageSet: function(evt) {
         // If called directly, use current variant
@@ -7182,6 +7186,7 @@ lazySizesConfig.expFactor = 4;
         if (this.settings.currentImageSet === setValue) {
           return;
         }
+
         this.initProductSlider(variant);
       },
   
@@ -7516,7 +7521,6 @@ lazySizesConfig.expFactor = 4;
       },
   
       initProductSlider: function(variant) {
-
         // Stop if only a single image, but add active class to first slide
         if (this.cache.mainSlider.querySelectorAll(selectors.slide).length <= 1) {
           var slide = this.cache.mainSlider.querySelector(selectors.slide);
@@ -7567,7 +7571,6 @@ lazySizesConfig.expFactor = 4;
       onSliderInit: function(slide) {
         // If slider is initialized with image set feature active,
         // initialize any videos/media when they are first slide
-
         if (this.settings.imageSetName) {
           this.prepMediaOnSlide(slide);
         } else if (this.settings.imageSetName1 && this.settings.imageSetName1) {
@@ -7593,7 +7596,6 @@ lazySizesConfig.expFactor = 4;
   
         // Prep next slide video/media
         this.prepMediaOnSlide(nextSlide);
-
   
         // Update current slider index
         this.settings.currentSlideIndex = index;
@@ -7630,7 +7632,6 @@ lazySizesConfig.expFactor = 4;
   
       prepMediaOnSlide(slide) {
         var video = slide.querySelector(selectors.productVideo);
-
         if (video) {
           var videoType = this._getVideoType(video);
           var videoId = this._getVideoDivId(video);

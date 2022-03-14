@@ -58,6 +58,7 @@
           </button>
         {%- endif -%}
 
+        {% comment %} added logic for variant image set based on 2 alt text tags - am {% endcomment %}
         <div class="product__thumbs--scroller">
           {%- if product.media.size > 1 -%}
             {%- for media in product.media -%}
@@ -165,14 +166,3 @@
     </div>
   </div>
 {%- endunless -%}
-
-<!-- <div>
-  {% assign loop = forloop.index %}
-  <h3>{{ image_set }} </h3>
-  <h3>{{ image_set_full }} </h3>
-  <h3>{{ image_set_group }} </h3>
-        <h3>1{{data-index}}</h3>
-        <h3>2{{ forloop.index0 }}</h3>
-        <h3>3 {{ loop }}</h3>
-        <h3>4 loop</h3>
-</div> -->
