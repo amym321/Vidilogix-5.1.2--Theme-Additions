@@ -1,5 +1,12 @@
 {
   "sections": {
+    "16473050831485a50c": {
+      "type": "smart-header-section",
+      "settings": {
+        "page_title": "",
+        "page_description": ""
+      }
+    },
     "1638402140320849a6": {
       "type": "promo-grid",
       "disabled": true,
@@ -228,6 +235,7 @@
     }
   },
   "order": [
+    "16473050831485a50c",
     "1638402140320849a6",
     "main",
     "sub",
