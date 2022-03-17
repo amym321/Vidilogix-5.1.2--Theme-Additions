@@ -190,7 +190,7 @@
         "button_label": "Get Help",
         "button_link": "shopify:\/\/pages\/tech-support",
         "button_style": "primary",
-        "align_text": "center",
+        "align_text": "left",
         "button_chat": false,
         "disclaimer": "",
         "background_color": "#57545d",
