@@ -190,7 +190,7 @@
         "button_label": "Get Help",
         "button_link": "",
         "button_style": "primary",
-        "align_text": "left",
+        "align_text": "center",
         "button_chat": false,
         "disclaimer": "",
         "background_color": "#57545d",
