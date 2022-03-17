@@ -188,7 +188,7 @@
         "text_below": false,
         "text": "<p>You have questions, we have answers. Whether you’re looking for a gift or searching for a smart home solution, our team of trusted specialists are here to provide exactly the guidance you need.<\/p>",
         "button_label": "Get Help",
-        "button_link": "",
+        "button_link": "shopify:\/\/pages\/tech-support",
         "button_style": "primary",
         "align_text": "center",
         "button_chat": false,
