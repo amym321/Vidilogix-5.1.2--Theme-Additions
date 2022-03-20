@@ -19,7 +19,8 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image_width": 650,
+            "image": "shopify:\/\/shop_images\/account.png",
+            "image_width": 60,
             "title": "Example title",
             "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
             "button_label": "Optional button",
@@ -30,7 +31,8 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image_width": 650,
+            "image": "shopify:\/\/shop_images\/account.png",
+            "image_width": 60,
             "title": "Example title",
             "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
             "button_label": "Optional button",
