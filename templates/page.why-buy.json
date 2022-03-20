@@ -83,26 +83,20 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "mode": "disabled",
-        "box_shadow": false,
-        "popup_title": "Sign up and save",
-        "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
-        "align_text": "center",
-        "load_page": true
       }
     },
     "1647739588abb8602d": {
       "type": "text-columns",
-      "disabled": true,
       "blocks": {
         "1647739588fd1e8495-1": {
           "type": "text_block",
           "settings": {
-            "enable_image": false,
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p><p><\/p><p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
-            "button_label": "",
+            "title": "Military Discount",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p><p><\/p><p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p><p><\/p>",
+            "button_label": "get code",
             "button_link": ""
           }
         },
