@@ -81,6 +81,7 @@
     },
     "main": {
       "type": "why-buy-popup",
+      "disabled": true,
       "settings": {
         "mode": "disabled",
         "box_shadow": false,
@@ -88,6 +89,45 @@
         "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
         "align_text": "center",
         "load_page": true
+      }
+    },
+    "1647739588abb8602d": {
+      "type": "text-columns",
+      "disabled": true,
+      "blocks": {
+        "1647739588fd1e8495-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_width": 60,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p><p><\/p><p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "1647739588fd1e8495-2": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1647739588fd1e8495-1",
+        "1647739588fd1e8495-2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "left",
+        "divider": false,
+        "box_shadow": true
       }
     },
     "1647738197e182b9eb": {
@@ -141,51 +181,13 @@
         "divider": false,
         "box_shadow": true
       }
-    },
-    "1647739588abb8602d": {
-      "type": "text-columns",
-      "blocks": {
-        "1647739588fd1e8495-1": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "image_width": 60,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p><p><\/p><p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "1647739588fd1e8495-2": {
-          "type": "text_block",
-          "disabled": true,
-          "settings": {
-            "enable_image": true,
-            "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1647739588fd1e8495-1",
-        "1647739588fd1e8495-2"
-      ],
-      "settings": {
-        "title": "",
-        "align_text": "left",
-        "divider": false,
-        "box_shadow": true
-      }
     }
   },
   "order": [
     "1647738483295e09e3",
     "1647738182cdf37965",
     "main",
-    "1647738197e182b9eb",
-    "1647739588abb8602d"
+    "1647739588abb8602d",
+    "1647738197e182b9eb"
   ]
 }
