@@ -78,7 +78,9 @@
     };
   </script>
 
+{% if template != 'page' %}
   {{ content_for_header }}
+{% endif %}
 
   <script src="{{ 'vendor-scripts-v10.js' | asset_url | split: '?' | first }}" defer="defer"></script>
 
@@ -110,19 +112,25 @@
   <div id="PageContainer" class="page-container">
     <div class="transition-body">
 
+{% if template != 'page.why-buy' %}
     {%- section 'header' -%}
+{% endif %}
+
 
       <main class="main-content" id="MainContent">
         {{ content_for_layout }}
       </main>
 
+{% if template != 'page.why-buy' %}
       {%- section 'footer-promotions' -%}
       {%- section 'footer' -%}
+{% endif %}
 
     </div>
   </div>
 
   {%- section 'newsletter-popup' -%}
+  {%- section 'why-buy-popup' -%}
 
   <!-- code change per 4.1.1 customization - Add  'junip-store-key' -->
   {%- liquid
@@ -131,7 +139,9 @@
     render 'junip-store-key'
   -%}
 
+{% if template != 'page.why-buy' %}
   {%- render 'back-to-top-button' -%}
+{% endif %}
 
 
 <!-- Drastically increase Slide Cart's start up time -->

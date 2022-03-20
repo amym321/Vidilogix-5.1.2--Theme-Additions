@@ -1,5 +1,5 @@
-{% comment %} code change per 4.1.1 customization. added/modified {% endcomment %}
-{% unless template == 'page.charity' %}
+{% comment %} no smart header on Why Buy popup page {% endcomment %}
+{% unless template == 'page.why-buy' or template == 'page.charity'   %}
   {% render 'page-block-smart-header' %}
 {% endunless %}
 
