@@ -80,7 +80,7 @@
       }
     },
     "main": {
-      "type": "why-buy-popup",
+      "type": "main-page",
       "disabled": true,
       "settings": {
         "mode": "disabled",
