@@ -1,0 +1,12 @@
+{
+    "sections": {
+      "main": {
+        "type": "why-buy-popup",
+        "settings": {
+        }
+      }
+    },
+    "order": [
+      "main"
+    ]
+  }
