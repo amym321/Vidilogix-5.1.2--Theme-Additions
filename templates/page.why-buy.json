@@ -1,5 +1,32 @@
 {
   "sections": {
+    "1647738483295e09e3": {
+      "type": "rich-text",
+      "blocks": {
+        "164773848396ce9a33-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Why it's best to buy from Vidlogix"
+          }
+        },
+        "164773848396ce9a33-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>A great product is more than what’s in the box. It’s a promise of premium performance, world-class support, and everything you expect from a trusted brand. It’s just one of many reasons why you’ll shop with confidence on Vidlogix.com.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164773848396ce9a33-0",
+        "164773848396ce9a33-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "1647738182cdf37965": {
       "type": "text-columns",
       "blocks": {
@@ -117,6 +144,7 @@
     }
   },
   "order": [
+    "1647738483295e09e3",
     "1647738182cdf37965",
     "main",
     "1647738197e182b9eb"
