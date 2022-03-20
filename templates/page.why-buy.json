@@ -133,10 +133,10 @@
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
-            "button_label": "Optional button",
-            "button_link": ""
+            "title": "Trusted since 1974",
+            "text": "<p>For 48 years, we've helped connect people with the gear they need – and provided legendary service and tech support after the sale. <\/p>",
+            "button_label": "meet vidlogix",
+            "button_link": "https:\/\/www.vidlogix.com\/pages\/about"
           }
         },
         "16477381977f0120a4-1": {
