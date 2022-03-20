@@ -36,7 +36,7 @@
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
-            "title": "Free tech support",
+            "title": "Free Tech Support",
             "text": "<p>Need help? Our NY-based techs are available 24\/7 for all products — new and old — via email, SMS, chat, phone, and carrier pigeon. <\/p>",
             "button_label": "learn more",
             "button_link": "https:\/\/www.vidlogix.com\/pages\/tech-support"
@@ -48,7 +48,7 @@
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
-            "title": "Free shipping",
+            "title": "Free Shipping",
             "text": "<p>We offer free shipping and easy returns on all orders over $49. <\/p>",
             "button_label": "learn more",
             "button_link": "https:\/\/www.vidlogix.com\/pages\/shipping"
@@ -60,17 +60,30 @@
             "enable_image": true,
             "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
-            "title": "60-day free returns",
+            "title": "60-Day Free Returns",
             "text": "<p>Take some time, make sure it's the right product for you. If you don't love it, send it back<\/p>",
             "button_label": "learn more",
             "button_link": "https:\/\/www.vidlogix.com\/pages\/returns"
+          }
+        },
+        "c08dc1cc-1175-417c-9cca-9b1b4a1490b8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/account.png",
+            "image_width": 60,
+            "title": "60-day price match",
+            "text": "<p>We'll match the price shown on any US-based retailer's website for the <strong>identical in-stock product<\/strong> within 60-days of purchase. <\/p>",
+            "button_label": "see full details",
+            "button_link": "https:\/\/www.vidlogix.com\/pages\/price-match"
           }
         }
       },
       "block_order": [
         "1647738182370ae00a-0",
         "1647738182370ae00a-2",
-        "1647738182370ae00a-1"
+        "1647738182370ae00a-1",
+        "c08dc1cc-1175-417c-9cca-9b1b4a1490b8"
       ],
       "settings": {
         "title": "",
@@ -162,12 +175,24 @@
             "button_label": "Optional button",
             "button_link": ""
           }
+        },
+        "da39476b-2367-4f84-b475-76798852410d": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "16477381977f0120a4-0",
         "16477381977f0120a4-1",
-        "16477381977f0120a4-2"
+        "16477381977f0120a4-2",
+        "da39476b-2367-4f84-b475-76798852410d"
       ],
       "settings": {
         "title": "",
