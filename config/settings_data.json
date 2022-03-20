@@ -295,7 +295,7 @@
       "why-buy-popup": {
         "type": "why-buy-popup",
         "settings": {
-          "mode": "testing",
+          "mode": "enabled",
           "page_link": "https:\/\/vidlogix.com\/pages\/why-buy-vidlogix"
         }
       }
