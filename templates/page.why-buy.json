@@ -1,12 +1,119 @@
 {
-    "sections": {
-      "main": {
-        "type": "why-buy-popup",
-        "settings": {
+  "sections": {
+    "1647738182cdf37965": {
+      "type": "text-columns",
+      "blocks": {
+        "1647738182370ae00a-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/account.png",
+            "image_width": 60,
+            "title": "Free tech support",
+            "text": "<p>Need help? Our NY-based techs are available 24\/7 for all products — new and old — via email, SMS, chat, phone, and carrier pigeon. <\/p>",
+            "button_label": "learn more",
+            "button_link": ""
+          }
+        },
+        "1647738182370ae00a-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "1647738182370ae00a-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
         }
+      },
+      "block_order": [
+        "1647738182370ae00a-0",
+        "1647738182370ae00a-1",
+        "1647738182370ae00a-2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false,
+        "box_shadow": true
       }
     },
-    "order": [
-      "main"
-    ]
-  }
+    "main": {
+      "type": "why-buy-popup",
+      "settings": {
+        "mode": "disabled",
+        "box_shadow": false,
+        "popup_title": "Sign up and save",
+        "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
+        "align_text": "center",
+        "load_page": true
+      }
+    },
+    "1647738197e182b9eb": {
+      "type": "text-columns",
+      "blocks": {
+        "16477381977f0120a4-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "16477381977f0120a4-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "16477381977f0120a4-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16477381977f0120a4-0",
+        "16477381977f0120a4-1",
+        "16477381977f0120a4-2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false,
+        "box_shadow": false
+      }
+    }
+  },
+  "order": [
+    "1647738182cdf37965",
+    "main",
+    "1647738197e182b9eb"
+  ]
+}
