@@ -12852,14 +12852,18 @@ font-weight:700;
 
 .why-buy-popup .modal__inner, 
 .why-buy-popup .modal__outer {
-  min-width: 90%;
-  min-height: 90%;
+  min-width: 95%;
+  min-height: 95%;
 }
 
 .why-buy-popup .why-buy-page {
   width: 100%;
   min-width:100%;
   border:none; 
+}
+
+.why-buy-popup .modal--square .modal__centered-content {
+  max-width: none !important;
 }
 
 .why-buy-popup .modal--square .modal__centered-content {
@@ -12887,4 +12891,18 @@ font-weight:700;
 
 .grid__item .why-shadow {
   padding: 30px 15px;
+}
+
+.why-buy .medium-up--one-quarter {
+  width: 100%;
+}
+@media only screen and (min-width: 769px) {
+  .why-buy .medium-up--one-quarter {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1150px) {
+  .why-buy .medium-up--one-quarter {
+    width: 25%;
+  }
 }
