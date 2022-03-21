@@ -14,7 +14,7 @@
 
 {%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
 
-<div class="page-width">
+<div class="page-width {% if template != 'page.why-buy' %} index-section {% endif %}">
   {%- if section.settings.title != blank -%}
     <div class="section-header text-{{ section.settings.align_text }}">
       <h2 class="section-header__title">{{ section.settings.title }}</h2>
@@ -45,7 +45,7 @@
         {%- assign column_width = grid_item_width -%}
       {%- endif -%}
       <div class="grid__item {{ column_width }} text-{{ section.settings.align_text }}" {{ block.shopify_attributes }} data-aos="row-of-3">
-        <div class="shadow">
+        <div class="shadow {% if template == 'page.why-buy' %} why-shadow {% endif %}">
         
         {%- if block.settings.enable_image -%}
           <div style="{% if section.settings.align_text == 'center' %}margin: 0 auto;{% endif %} max-width: {{ block.settings.image_width }}px;">
@@ -76,10 +76,10 @@
           <h3>{{ block.settings.title }}</h3>
         {%- endif -%}
         {%- if block.settings.text != blank -%}
-          <div class="rte-setting text-spacing">{{ block.settings.text }}</div>
+          <div class="rte-setting text-spacing {% if template == 'page.why-buy' %} why-text {% endif %}">{{ block.settings.text }}</div>
         {%- endif -%}
         {%- if block.settings.button_label != blank -%}
-          <a href="{{ block.settings.button_link }}" class="btn">
+          <a href="{{ block.settings.button_link }}" class="btn {% if template == 'page.why-buy' %} why-btn {% endif %}">
             {{ block.settings.button_label }}
           </a>
         {%- endif -%}
@@ -94,7 +94,6 @@
 {% schema %}
   {
     "name": "Text columns with images",
-    "class": "index-section",
     "settings": [
       {
         "type": "text",
