@@ -103,10 +103,11 @@
                  {% comment %} end code change per 4.1.1 customization {% endcomment %}
                 <h1 class="h2 product-single__title">
                   {%- unless product.empty? -%}
-                    {{ product.title }},
-                    {% if variants_total > 1 %}
+                    {{-product.title-}}
+                    {%- if variants_total > 1 -%}
+                      <span>,</span>
                       <span data-variant-title> {{ current_variant.title }}</span>
-                    {% endif %}
+                    {%- endif -%}
                   {%- else -%}
                     {{ 'home_page.onboarding.product_title' | t }}
                   {%- endunless -%}
