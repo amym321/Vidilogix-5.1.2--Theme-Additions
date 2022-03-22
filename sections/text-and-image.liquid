@@ -86,6 +86,13 @@
           <a href="/pages\/contact"  class="btn">
             {{ section.settings.button_label }}
           </a>
+
+{% comment%} 'Why Buy Vidlogix' popup added - am {% endcomment%}
+{% elsif section.settings.button_popup == true and section.settings.button_label != blank %}
+  <a href="/pages\/why-buy"  class="btn">
+    {{ section.settings.button_label }}
+  </a>
+
         {%- elsif section.settings.button_label != blank -%}
           <div class="appear-delay{% cycle '','-1','-2','-3','-4' %} text-{{ section.settings.align_button }}">
             <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
@@ -322,6 +329,12 @@
             "label": "Right"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "id": "button_popup",
+        "label": "Button opens large popup",
+        "default": false
       },
           {
             "type": "checkbox",

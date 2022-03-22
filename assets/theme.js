@@ -6778,7 +6778,7 @@ lazySizesConfig.expFactor = 4;
       // added logic for variant image set based on 2 alt text tags - am
       var dataSetEl = this.cache.mainSlider.querySelector('[data-set-name]');
       if (dataSetEl) {
-        var imageSetNameCheck = dataSetEl.dataset.setName;
+        var imageSetNameCheck = dataSetEl.dataset.setName.includes("*");
         if (imageSetNameCheck) {
           var imageSetNameSplit = dataSetEl.dataset.setName.split("*");
           this.settings.imageSetName1 = imageSetNameSplit[0];
