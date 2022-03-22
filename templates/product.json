@@ -2,6 +2,7 @@
   "sections": {
     "16473050831485a50c": {
       "type": "smart-header-section",
+      "disabled": true,
       "settings": {
         "page_title": "",
         "page_description": ""
@@ -188,9 +189,11 @@
         "text_below": false,
         "text": "<p>You have questions, we have answers. Whether you’re looking for a gift or searching for a smart home solution, our team of trusted specialists are here to provide exactly the guidance you need.<\/p>",
         "button_label": "Get Help",
-        "button_link": "shopify:\/\/pages\/tech-support",
+        "button_link": "",
         "button_style": "primary",
         "align_text": "left",
+        "align_button": "left",
+        "button_popup": false,
         "button_chat": false,
         "disclaimer": "",
         "background_color": "#57545d",
