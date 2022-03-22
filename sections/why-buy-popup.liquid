@@ -1,19 +1,10 @@
 {% comment %} Why Buy Vidlogix popup modal - am {% endcomment %}
 
-{% comment %} hide chat button for page inside popup {% endcomment %}
-{% if template == 'page.why-buy' %}
-  {% style %}
-  #dummy-chat-button-iframe,
-  #shopify-chat-dummy,
-  #dummy-chat-button, 
-  .chat-toggle { 
-    display:none ;
-    background-color:#ffffff00 ;
-    color:#ffffff00 ;
-    fill:#ffffff00 ;
+{% style %}
+  h2.section-header__title {
+    font-size: 18px;
   }
-  {% endstyle %}
-{% endif %}
+{% endstyle %}
 
 {%- if section.settings.mode != 'disabled' -%}
 
@@ -28,88 +19,65 @@
       <div class="modal__centered medium-up--text-center">
         <div class="modal__centered-content">
           <div class="newsletter">
-
-<!-- Block Content -->
-<!-- Rich Text -->
-<div class="text-center page-width">
-  <div class="theme-block" {{ block.shopify_attributes }}>
-    {%- if block.settings.title_rich -%}
-      <h2 class="section-header__title">{{ block.settings.title_rich }}</h2>
-    {%- endif -%}
-
-      {%- when 'page' -%}
-        <div class="rte">
-          {%- if block.settings.page_text != blank -%}
-            {{ pages[block.settings.page_text].content }}
-          {%- else -%}
-            {{ 'home_page.onboarding.no_content' | t }}
-          {%- endif -%}
-        </div>
-      {%- when 'text' -%}
-        <div class="rte">
-          {%- if block.settings.text != blank -%}
-            {%- if block.settings.enlarge_text %}<div class="enlarge-text">{% endif -%}
-            {{ block.settings.text }}
-            {%- if block.settings.enlarge_text %}</div>{% endif -%}
-          {%- else -%}
-            {{ 'home_page.onboarding.no_content' | t }}
-          {%- endif -%}
-        </div>
-      {%- when 'button' -%}
-        <div class="rte">
-          <a href="{{ block.settings.link }}" class="btn">
-            {{ block.settings.link_text }}
-          </a>
-        </div>
-    {%- endcase -%}
-  </div>
-</div>
-<!-- 1ST 4 BLOCKS -->
-<div class="grid flex-grid grid--uniform grid--flush-bottom">
-  {%- assign column_width = 'medium-up--one-quarter' -%}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_A, enable_image: section.settings.enable_image_1, 
-      why_image: section.settings.image_1, title: section.settings.title_1, text: section.settings.text_1, 
-      button_label: section.settings.button_label_1, button_link: section.settings.button_link_1 %}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_A, enable_image: section.settings.enable_image_2, 
-      why_image: section.settings.image_2, title: section.settings.title_2, text: section.settings.text_2, 
-      button_label: section.settings.button_label_2, button_link: section.settings.button_link_2 %}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_A, enable_image: section.settings.enable_image_3, 
-      why_image: section.settings.image_3, title: section.settings.title_3, text: section.settings.text_3, 
-      button_label: section.settings.button_label_3, button_link: section.settings.button_link_3 %}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_A, enable_image: section.settings.enable_image_4, 
-      why_image: section.settings.image_4, title: section.settings.title_4, text: section.settings.text_4, 
-      button_label: section.settings.button_label_4, button_link: section.settings.button_link_4 %}
- </div>
-
-<!-- MIDDLE BLOCK -->
-<div class="grid flex-grid grid--uniform grid--flush-bottom">
-  {%- assign column_width = '' -%}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_B, enable_image: section.settings.enable_image_B, 
-      why_image: section.settings.image_B, title: section.settings.title_B, text: section.settings.text_B, 
-      button_label: section.settings.button_label_B, button_link: section.settings.button_link_B %}
-</div>
-
-<!-- LAST 4 BLOCKS -->
-<div class="grid flex-grid grid--uniform grid--flush-bottom">
-  {%- assign column_width = 'medium-up--one-quarter' -%}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_C, enable_image: section.settings.enable_image_5, 
-      why_image: section.settings.image_5, title: section.settings.title_5, text: section.settings.text_5, 
-      button_label: section.settings.button_label_5, button_link: section.settings.button_link_5 %}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_C, enable_image: section.settings.enable_image_6, 
-      why_image: section.settings.image_6, title: section.settings.title_6, text: section.settings.text_6, 
-      button_label: section.settings.button_label_6, button_link: section.settings.button_link_6 %}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_C, enable_image: section.settings.enable_image_7, 
-      why_image: section.settings.image_7, title: section.settings.title_7, text: section.settings.text_7, 
-      button_label: section.settings.button_label_7, button_link: section.settings.button_link_7 %}
-  {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_C, enable_image: section.settings.enable_image_8, 
-      why_image: section.settings.image_8, title: section.settings.title_8, text: section.settings.text_8, 
-      button_label: section.settings.button_label_8, button_link: section.settings.button_link_8 %}
- </div>
-<!-- END TEXT-COLUMNS -->
-
+            <!-- Block Content -->
+            <!-- Rich Text -->
+            <div class="text-{{ section.settings.align_text }} page-width page-width--narrow">
+              <div class="theme-block">
+                {%- if section.settings.title_rich -%}
+                  <br>
+                  <h2 class="section-header__title">{{ section.settings.title_rich }}</h2>
+                  <br><br>
+                {%- endif -%}
+                <div class="rte">
+                  {%- if section.settings.text_rich  -%}
+                    {{ section.settings.text_rich }}
+                  {%- endif -%}
+                  <br>
+                </div >
+              </div>
+            </div>
+            <!-- 1ST 4 BLOCKS -->
+            <div class="grid flex-grid grid--uniform grid--flush-bottom">
+              {%- assign column_width = 'medium-up--one-quarter' -%}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_A, enable_image: section.settings.enable_image_1, 
+                  why_image: section.settings.image_1, title: section.settings.title_1, text: section.settings.text_1, 
+                  button_label: section.settings.button_label_1, button_link: section.settings.button_link_1 %}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_A, enable_image: section.settings.enable_image_2, 
+                  why_image: section.settings.image_2, title: section.settings.title_2, text: section.settings.text_2, 
+                  button_label: section.settings.button_label_2, button_link: section.settings.button_link_2 %}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_A, enable_image: section.settings.enable_image_3, 
+                  why_image: section.settings.image_3, title: section.settings.title_3, text: section.settings.text_3, 
+                  button_label: section.settings.button_label_3, button_link: section.settings.button_link_3 %}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_A, enable_image: section.settings.enable_image_4, 
+                  why_image: section.settings.image_4, title: section.settings.title_4, text: section.settings.text_4, 
+                  button_label: section.settings.button_label_4, button_link: section.settings.button_link_4 %}
+            </div>
+            <!-- MIDDLE BLOCK -->
+            <div class="grid flex-grid grid--uniform grid--flush-bottom">
+              {%- assign column_width = '' -%}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_B, enable_image: section.settings.enable_image_B, 
+                  why_image: section.settings.image_B, title: section.settings.title_B, text: section.settings.text_B, 
+                  button_label: section.settings.button_label_B, button_link: section.settings.button_link_B %}
+            </div>
+            <!-- LAST 4 BLOCKS -->
+            <div class="grid flex-grid grid--uniform grid--flush-bottom">
+              {%- assign column_width = 'medium-up--one-quarter' -%}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_C, enable_image: section.settings.enable_image_5, 
+                  why_image: section.settings.image_5, title: section.settings.title_5, text: section.settings.text_5, 
+                  button_label: section.settings.button_label_5, button_link: section.settings.button_link_5 %}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_C, enable_image: section.settings.enable_image_6, 
+                  why_image: section.settings.image_6, title: section.settings.title_6, text: section.settings.text_6, 
+                  button_label: section.settings.button_label_6, button_link: section.settings.button_link_6 %}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_C, enable_image: section.settings.enable_image_7, 
+                  why_image: section.settings.image_7, title: section.settings.title_7, text: section.settings.text_7, 
+                  button_label: section.settings.button_label_7, button_link: section.settings.button_link_7 %}
+              {% render 'why-buy-blocks', column_width: column_width, align_text: section.settings.align_text_C, enable_image: section.settings.enable_image_8, 
+                  why_image: section.settings.image_8, title: section.settings.title_8, text: section.settings.text_8, 
+                  button_label: section.settings.button_label_8, button_link: section.settings.button_link_8 %}
+            </div>
+            <!-- END TEXT-COLUMNS -->
           </div>
         </div>
-
         <button type="button" class="modal__close js-modal-close text-link">
           <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
           <span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t | json }}</span>
@@ -178,7 +146,7 @@
         "default": "Rich text heading"
       },
       {
-        "id": "text",
+        "id": "text_rich",
         "type": "richtext",
         "label": "Rich Text Detailed",
         "default": "<p>Detailed Rich text</p>"
