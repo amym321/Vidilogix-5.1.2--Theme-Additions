@@ -193,7 +193,7 @@
         "button_style": "primary",
         "align_text": "left",
         "align_button": "left",
-        "button_popup": false,
+        "button_popup": true,
         "button_chat": false,
         "disclaimer": "",
         "background_color": "#57545d",
