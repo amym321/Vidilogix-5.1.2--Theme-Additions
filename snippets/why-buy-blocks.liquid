@@ -3,7 +3,7 @@
   {%- if enable_image -%}
     <div style="{% if align_text == 'center' %}margin: 0 auto;{% endif %} max-width: 60px;">
       {%- if button_link != blank -%}
-        <a href="{{ button_link }}">
+        <a href="{{ button_link }}" target="_blank">
       {%- endif -%}
       {%- if why_image != blank -%}
         <div>
@@ -23,11 +23,20 @@
   {%- if text != blank -%}
     <div class="rte-setting text-spacing why-text">{{ text }}</div>
   {%- endif -%}
-  {%- if button_label != blank -%}
-    <a href="{{ button_link }}" class="btn why-btn ">
+
+  {% if button_label != blank %}
+    <a href="{{ button_link }}" class="why-btn why-link"  target="_blank">
       {{ button_label }}
+      <span style="font-size:24px;">  &rsaquo;</span>
+    </a>
+  {% endif %}
+
+  {%- if button_label_B != blank -%}
+    <a href="{{ button_link }}" class="btn why-btn "  target="_blank">
+      {{ button_label_B }}
     </a>
   {%- endif -%}
+
   {%- if disclaimer_text != blank -%}
     <div class="rte-setting text-spacing why-text">{{ disclaimer_text }}</div>
   {%- endif -%}
