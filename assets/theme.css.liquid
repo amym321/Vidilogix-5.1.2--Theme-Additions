@@ -12879,30 +12879,101 @@ font-weight:700;
   position: relative;
 }
 
-.text-center .why-btn {
-  position: absolute !important;
-  bottom: 30px;
-  transform: translate(-50%);
-}
-
-.text-center .why-text { 
-  margin-bottom: 100px;
+@media only screen and (min-width: 600px) {
+  .text-center .why-btn {
+    position: absolute !important;
+    bottom: 30px;
+    transform: translate(-50%);
+  }
+  .text-center .why-text { 
+    margin-bottom: 100px;
+  }
 }
 
 .grid__item .why-shadow {
   padding: 30px 15px;
 }
 
-.why-buy .medium-up--one-quarter {
-  width: 100%;
+.why-buy-popup .medium-up--one-quarter-popup {
+  width: 100% ;
+}
+@media only screen and (min-width: 600px) {
+  .why-buy-popup .medium-up--one-quarter-popup {
+    width: 50% ;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .why-buy-popup .medium-up--one-quarter-popup {
+    width: 25% ;
+  }
+}
+
+.why-buy-popup .grid.flex-grid {
+  padding: 30px;
+  margin-top: -30px;
+}
+.why-buy-popup .shadow {
+  padding: 50px 30px;
+  box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+  height: 100%;
+}
+
+.why-buy-popup h2.section-header__title {
+  font-size: 18px;
+}
+
+.why-rich-text {
+  padding: 30px 30px 50px 30px;
+}
+
+@media only screen and (max-width: 769px) {
+  .why-buy-popup .grid.flex-grid {
+    padding: 15px;
+    margin-top: -15px;
+  }
+}
+
+.hide-why-popup { 
+  display:none; 
+}
+
+.why-buy-popup .modal {
+  display:flex;
+}
+
+/* Why Buy Modal (background) */
+.why-modal {
+  display: none; 
+}
+
+.why-modal h3  {
+  font-size: calc(var(--typeHeaderSize)*0.5);
 }
 @media only screen and (min-width: 769px) {
-  .why-buy .medium-up--one-quarter {
-    width: 50%;
+  .why-modal h3 {
+    font-size: calc(var(--typeHeaderSize)*0.6);
   }
+  /* .why-modal .height_A,{
+    min-height: 60px;
+  }
+  .why-modal .height_C {
+    min-height: 100px;
+  } */
 }
-@media only screen and (min-width: 1150px) {
-  .why-buy .medium-up--one-quarter {
-    width: 25%;
-  }
+
+/* The Close Button */
+.close-why-popup {
+  color: #000;
+  z-index:40 !important;
+  background-color: #ffffff00;
+  height: 30px;
+  text-align: right !important;
+  padding-right: 20px;
+  font-size: 40px;
+  display:block !important;
+}
+
+.close-why-popup:hover,
+.close-why-popup:focus {
+  color: #000;
 }

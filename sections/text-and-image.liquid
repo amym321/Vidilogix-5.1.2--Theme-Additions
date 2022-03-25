@@ -87,13 +87,27 @@
             {{ section.settings.button_label }}
           </a>
 
-{% comment%} 'Why Buy Vidlogix' popup added - am {% endcomment%}
-{% elsif section.settings.button_popup == true and section.settings.button_label != blank %}
-  <a href="/pages\/why-buy"  class="btn">
-    {{ section.settings.button_label }}
-  </a>
+        {% comment%} 'Why Buy Vidlogix' popup - am {% endcomment%}
+        {% elsif section.settings.button_popup == true and section.settings.button_label != blank %}
+          <div id="why-buy-btn"  class=" btn">
+            {{ section.settings.button_label }}
+          </div>
+          <div id="why-buy-popup" class="why-modal">
+            <div class="modal-content">
+              <div  class="why-buy-popup " style="color:black;">
+                <div class="modal modal--square modal--mobile-friendly ">
+                  <div class="modal__inner">
+                    <div class="modal__centered medium-up--text-center">
+                      <span class="close-why-popup">&times;</span>
+                      {% render 'why-buy-popup-snippet' %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        {%- elsif section.settings.button_label != blank -%}
+        {%- elsif section.settings.button_label != blank and section.settings.button_popup != true -%}
           <div class="appear-delay{% cycle '','-1','-2','-3','-4' %} text-{{ section.settings.align_button }}">
             <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
               {{ section.settings.button_label }}
@@ -333,30 +347,30 @@
       {
         "type": "checkbox",
         "id": "button_popup",
-        "label": "Button opens large popup",
+        "label": "Button opens Why Buy Vidlogix popup",
         "default": false
       },
-          {
-            "type": "checkbox",
-            "id": "button_chat",
-            "label": "Button opens chat widget. Defaults to Contact page for now",
-            "default": false
-          },
-          {
-            "type": "richtext",
-            "id": "disclaimer",
-            "label": "Disclaimer text if needed"
-          },
-          {
-            "type": "color",
-            "id": "background_color",
-            "label": "Background color"
-          },
-          {
-            "type": "color",
-            "id": "text_color",
-            "label": "Text color"
-          },
+      {
+        "type": "checkbox",
+        "id": "button_chat",
+        "label": "Button opens chat widget. Defaults to Contact page for now",
+        "default": false
+      },
+      {
+        "type": "richtext",
+        "id": "disclaimer",
+        "label": "Disclaimer text if needed"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color"
+      },
       {
         "type": "select",
         "id": "layout",
