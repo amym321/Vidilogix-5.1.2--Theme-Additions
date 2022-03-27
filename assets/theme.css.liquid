@@ -12884,6 +12884,12 @@ font-weight:700;
 
 .why-buy-popup .modal--square .modal__centered-content {
   padding: 0;
+  max-height: 85vh;
+}
+@media only screen and (min-width: 769px) {
+  .why-buy-popup .modal--square .modal__centered-content {
+    max-height: 75vh;
+  }
 }
 
 .why-buy-popup .modal--square .modal__close {
@@ -12948,7 +12954,7 @@ font-weight:700;
 }
 
 .why-rich-text {
-  padding: 30px 30px 50px 30px;
+  padding: 0 30px 50px 30px;
 }
 
 @media only screen and (max-width: 769px) {
@@ -12991,7 +12997,7 @@ font-weight:700;
   color: #000;
   z-index:3500000000 !important;
   background-color: #ffffff00;
-  height: 30px;
+  /* height: 30px; */  /* reduced height of close element, but didn't line up with svg, thus close didn't work */
   text-align: right !important;
   padding-right: 20px;
   font-size: 40px;
