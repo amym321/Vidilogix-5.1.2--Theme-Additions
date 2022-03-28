@@ -9,6 +9,23 @@
 {%- endfor -%}
 
 {% if show_announcement %}
+
+{% comment %} 'Why Buy Vidlogix' popup - am {% endcomment %}
+  <div id="why-buy-popup" class="why-modal">
+    <div class="modal-content">
+      <div  class="why-buy-popup " style="color:black;">
+        <div id="why-outer-modal" class="modal modal--square modal--mobile-friendly ">
+          <div id="why-modal-inner" class="modal__inner">
+            <div class="modal__centered medium-up--text-center">
+              <span class="close-why-popup">&times;</span>
+              {% render 'why-buy-popup-snippet' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="announcement-bar">
     <div class="page-width">
       <div class="slideshow-wrapper">
@@ -38,8 +55,10 @@
                 class="announcement-slider__slide"
                 data-index="{{ slide_index }}"
                 {{ block.shopify_attributes }}>
-                {%- if block.settings.link != blank -%}
+                {%- if block.settings.link != blank and block.settings.bar_popup == false -%}
                   <a class="announcement-link" href="{{ block.settings.link }}">
+                {%- elsif block.settings.link == blank and block.settings.bar_popup == true -%}
+                  <div id="why-buy-btn"  class="announcement-link" style="cursor: pointer;">
                 {%- endif -%}
                   {%- if block.settings.text != blank -%}
                     <span class="announcement-text">{{ block.settings.text }}</span>
@@ -47,9 +66,11 @@
                   {%- if block.settings.link_text != blank -%}
                     <span class="announcement-link-text">{{ block.settings.link_text }}</span>
                   {%- endif -%}
-                {%- if block.settings.link != blank -%}
+                  {%- if block.settings.link != blank and block.settings.bar_popup == false -%}
                   </a>
-                {%- endif -%}
+                  {%- elsif block.settings.link == blank and block.settings.bar_popup == true -%}
+                    </div>
+                  {%- endif -%}
               </div>
               {%- assign slide_index = slide_index | plus: 1 -%}
             {%- endif -%}
