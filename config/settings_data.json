@@ -114,26 +114,31 @@
           },
           "1524770292306": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Free lifetime technical support",
               "link_text": "",
-              "link": "shopify:\/\/pages\/tech-support"
+              "link": "shopify:\/\/pages\/tech-support",
+              "bar_popup": false
             }
           },
           "1524770296206": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Fast, free, no-contact delivery",
               "link_text": "",
-              "link": "shopify:\/\/pages\/shipping"
+              "link": "shopify:\/\/pages\/shipping",
+              "bar_popup": false
             }
           },
           "f1e24d76-2f27-4282-a406-a30a0e3d8935": {
             "type": "announcement",
             "settings": {
-              "text": "Hassle-free 30-day return policy",
+              "text": "9 Reasons to Shop Vidlogix",
               "link_text": "",
-              "link": "shopify:\/\/pages\/returns"
+              "link": "",
+              "bar_popup": true
             }
           }
         },
