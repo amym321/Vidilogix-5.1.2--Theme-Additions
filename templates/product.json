@@ -129,11 +129,11 @@
           "type": "question",
           "settings": {
             "title": "Protection Plans",
-            "text": "<p>Use the text to answer questions<\/p>",
+            "text": "<p><strong>Our advisors have the answers<\/strong><\/p><p>We're deeply into the gear we sell. And we're the first to admit: it can sometimes seem complicated. That's why we have more than 150 friendly, knowledgeable advisors in New York ready to help by phone, text, or chat. If you ever feel stuck or need a second opinion, give 'em a call.<\/p><p><strong>The right advice – for you<\/strong><\/p><p>Our advisors are led by one defining principle: help our customers find the products that are right for their needs. Upselling and trying to push customers toward specific products that aren't a fit for them just isn't our thing.<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
             "button_chat2": false,
-            "text2": "<p>Use the text to answer questions<\/p>"
+            "text2": ""
           }
         }
       },
