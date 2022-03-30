@@ -111,6 +111,40 @@
         "product_video_style": "unmuted"
       }
     },
+    "164867535455be9619": {
+      "type": "faq",
+      "blocks": {
+        "16486753547f9001bb-0": {
+          "type": "question",
+          "settings": {
+            "title": "Lifetime Support",
+            "text": "<p>Use the text to answer questions<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": "<p>Use the text to answer questions<\/p>"
+          }
+        },
+        "16486753547f9001bb-1": {
+          "type": "question",
+          "settings": {
+            "title": "Protection Plans",
+            "text": "<p>Use the text to answer questions<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": "<p>Use the text to answer questions<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16486753547f9001bb-0",
+        "16486753547f9001bb-1"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
     "sub": {
       "type": "product-full-width",
       "disabled": true,
@@ -241,6 +275,7 @@
     "16473050831485a50c",
     "1638402140320849a6",
     "main",
+    "164867535455be9619",
     "sub",
     "product-recommendations",
     "recently-viewed",
