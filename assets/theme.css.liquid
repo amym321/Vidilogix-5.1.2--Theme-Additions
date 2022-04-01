@@ -12849,6 +12849,13 @@ font-weight:700;
   z-index: 3000000000 !important;
 }
 
+
+@media only screen and (max-width: 768px) {
+  .why-buy-popup .modal {
+    height:90%;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   .why-buy-popup .modal {
     background-color: rgba(0, 0, 0, 0.507);
@@ -12860,15 +12867,26 @@ font-weight:700;
   min-height:100%;
 }
 
+/* @media only screen and (max-width: 768px) {
+  .why-buy-popup .modal__centered {
+    transform: translateY(40px);
+    border-top: solid 2px black;
+  }
+} */
+
 .why-buy-popup .modal__inner, 
 .why-buy-popup .modal__outer {
   min-width: 80%;
   min-height: 80%;
 }
-
 @media only screen and (min-width: 769px) {
   .why-buy-popup .modal__inner {
     margin: 50px 80px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .why-buy-popup .modal__inner {
+    transform: translateY(80px);
   }
 }
 
@@ -12891,6 +12909,8 @@ font-weight:700;
     max-height: 75vh;
   }
 }
+
+    transform: translateY(40px);
 
 .why-buy-popup .modal--square .modal__close {
    position: fixed;
@@ -13000,6 +13020,7 @@ font-weight:700;
   /* height: 30px; */  /* reduced height of close element, but didn't line up with svg, thus close didn't work */
   text-align: right !important;
   padding-right: 20px;
+  /* margin-top: 60px; */
   font-size: 40px;
   display:block !important;
   cursor: pointer;
