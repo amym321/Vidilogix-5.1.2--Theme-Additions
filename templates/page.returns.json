@@ -107,13 +107,25 @@
             "button_chat2": false,
             "text2": ""
           }
+        },
+        "854139dd-e50f-431c-b8d3-be37367bc5b2": {
+          "type": "question",
+          "settings": {
+            "title": "BULLET POINTS - UNORDERED LIST",
+            "text": "<p><strong>• <\/strong>Bullet point 1<\/p><p><strong>• <\/strong>Bullet point 2<\/p><p><strong>• <\/strong>Bullet point 3<\/p><p><strong>• <\/strong>Bullet point 4<\/p><p><strong>• <\/strong>Bullet point 5<\/p><p><strong>• <\/strong>Bullet point 6<\/p>",
+            "button_link2": "",
+            "button_text2": "Button text",
+            "button_chat2": false,
+            "text2": ""
+          }
         }
       },
       "block_order": [
         "16400379824b518b3b-0",
         "73e85beb-3191-4263-96c4-21a31fe22953",
         "7bd60e6a-a7a7-4add-afd9-0c54eff2c6ca",
-        "16400379824b518b3b-1"
+        "16400379824b518b3b-1",
+        "854139dd-e50f-431c-b8d3-be37367bc5b2"
       ],
       "settings": {
         "title": "FAQs"
