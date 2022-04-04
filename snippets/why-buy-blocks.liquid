@@ -7,7 +7,7 @@
       {%- endif -%}
       {%- if why_image != blank -%}
         <div class="{% if image_class != blank%} {{ image_class }} {% endif %}">
-          <img style="margin-bottom: 50%;" src="{{ why_image.cloudinary_src | append: 'w_60,h_60,c_fill' }}" alt="why buy from Vidlogix image"/>
+          <img style="margin-bottom: 50%;" src="{{ why_image.cloudinary_src | append: 'w_60,h_60,c_fill' }}" alt="Reason to Buy - {{ title}}" title="{{ title }}"/>
         </div>
       {%- else -%}
         <div class="image-wrap text-spacing">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
