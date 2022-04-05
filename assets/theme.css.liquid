@@ -5707,7 +5707,8 @@ h2.section-header__title, .h5.section-header__title {
     box-shadow:0 15px 45px rgba(0, 0, 0, 0.1)
 }
 
-.modal__inner img{
+.modal__inner img,
+.why-buy__inner img{
     display:block;
     max-height:90vh;
   }
@@ -12841,7 +12842,8 @@ font-weight:700;
 }
 
 /* why-buy-popup */
-.why-buy-popup .newsletter{
+.why-buy-popup .newsletter,
+.why-buy-section .newsletter{
   max-width:none;
 }
 
@@ -12880,7 +12882,8 @@ font-weight:700;
   min-height: 80%;
 }
 @media only screen and (min-width: 769px) {
-  .why-buy-popup .modal__inner {
+  .why-buy-popup .modal__inner,
+  .why-buy-section .modal__inner {
     margin: 50px 80px;
   }
 }
@@ -12945,31 +12948,37 @@ font-weight:700;
   padding: 30px 15px;
 }
 
-.why-buy-popup .medium-up--one-quarter-popup {
+.why-buy-popup .medium-up--one-quarter-popup,
+.why-buy-section .medium-up--one-quarter-popup {
   width: 100% ;
 }
 @media only screen and (min-width: 600px) {
-  .why-buy-popup .medium-up--one-quarter-popup {
+  .why-buy-popup .medium-up--one-quarter-popup,
+  .why-buy-section .medium-up--one-quarter-popup {
     width: 50% ;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .why-buy-popup .medium-up--one-quarter-popup {
+  .why-buy-popup .medium-up--one-quarter-popup,
+  .why-buy-section .medium-up--one-quarter-popup {
     width: 25% ;
   }
 }
 
-.why-buy-popup .grid.flex-grid {
+.why-buy-popup .grid.flex-grid,
+.why-buy-section .grid.flex-grid {
   padding: 30px;
   margin-top: -30px;
 }
-.why-buy-popup .shadow {
+.why-buy-popup .shadow,
+.why-buy-section .shadow {
   padding: 50px 20px;
   box-shadow: 10px 10px 10px rgb(0 0 0 / 12%);
   height: 100%;
 }
 
-.why-buy-popup h2.section-header__title {
+.why-buy-popup h2.section-header__title,
+.why-buy-section h2.section-header__title {
   font-size: 18px;
 }
 
@@ -12978,7 +12987,8 @@ font-weight:700;
 }
 
 @media only screen and (max-width: 769px) {
-  .why-buy-popup .grid.flex-grid {
+  .why-buy-popup .grid.flex-grid,
+  .why-buy-section .grid.flex-grid {
     padding: 15px;
     margin-top: -15px;
   }
@@ -13063,7 +13073,8 @@ button#dummy-chat-button.chat-toggle {
   }
 }
 
-#why-buy-popup .grid__item {
+#why-buy-popup .grid__item,
+#why-buy-section .grid__item {
   margin-top: 50px;
 }
 
@@ -13076,6 +13087,18 @@ button#dummy-chat-button.chat-toggle {
   }
 }
 /* end why-buy-popup */
+
+/* why-buy-section */
+.why-buy-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 769px) {
+  .why-buy-section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
 
 /* Smart Header */
 @media only screen and (max-width: 768px) {
