@@ -2,6 +2,7 @@
   "sections": {
     "1647738483295e09e3": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "164773848396ce9a33-0": {
           "type": "heading",
@@ -29,12 +30,12 @@
     },
     "1647738182cdf37965": {
       "type": "text-columns",
+      "disabled": true,
       "blocks": {
         "1647738182370ae00a-0": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "FREE TECH SUPPORT",
             "text": "<p>Need help? Our NY-based techs are available 24\/7 for all products — new and old — via email, SMS, chat, phone, and carrier pigeon. <\/p>",
@@ -46,7 +47,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "FREE SHIPPING",
             "text": "<p>We offer free shipping and easy returns on all orders over $49. <\/p>",
@@ -58,7 +58,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "60-DAY RETURNS",
             "text": "<p>Take some time, make sure it's the right product for you. If you don't love it, send it back<\/p>",
@@ -70,7 +69,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "60-DAY PRICE MATCH",
             "text": "<p>We'll match the price shown on any US-based retailer's website for the <strong>identical in-stock product<\/strong> within 60-days of purchase. <\/p>",
@@ -100,12 +98,12 @@
     },
     "1647739588abb8602d": {
       "type": "text-columns",
+      "disabled": true,
       "blocks": {
         "1647739588fd1e8495-1": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "MILITARY DISCOUNT",
             "text": "<p>We're extending 25% off* to all military community members — active duty, reservists, national guard, veterans, and military family members.<\/p><p><\/p><p>Thank you for your service and for protecting our freedom. We couldn't do what we do without you.<\/p><p><\/p><p>To redeem your offer, please verify your eligibility below.<\/p><p><\/p><p>VERIFY NOW<\/p><p>*Special discount applies to orders of $199 or more.<\/p>",
@@ -139,12 +137,12 @@
     },
     "1647738197e182b9eb": {
       "type": "text-columns",
+      "disabled": true,
       "blocks": {
         "16477381977f0120a4-0": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "TRUSTED SINCE 1974",
             "text": "<p>For 48 years, we've helped connect people with the gear they need – and provided legendary service and tech support after the sale. <\/p>",
@@ -156,7 +154,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "PROTECTION PLUS",
             "text": "<p>Extend your free 1-year extended warranty up to years with a Vidlogix protection plan – available when you buy or after. <\/p>",
@@ -168,7 +165,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "FREE 1-YEAR WARRANTY",
             "text": "<p>If we can't replace or repair your item, we'll repurchase it at market value. No-fuss. No muss. <\/p>",
@@ -180,7 +176,6 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify:\/\/shop_images\/account.png",
             "image_width": 60,
             "title": "PRODUCT RESEARCH",
             "text": "<p>We double-check measurements, features, and connections to give you the most accurate info.<\/p>",
@@ -201,6 +196,11 @@
         "divider": false,
         "box_shadow": true
       }
+    },
+    "1649183713a4cc8874": {
+      "type": "why-buy-section",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -208,6 +208,7 @@
     "1647738182cdf37965",
     "main",
     "1647739588abb8602d",
-    "1647738197e182b9eb"
+    "1647738197e182b9eb",
+    "1649183713a4cc8874"
   ]
 }
