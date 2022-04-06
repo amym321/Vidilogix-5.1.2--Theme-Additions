@@ -2,11 +2,17 @@ window.onload = function(){
 
   var outerModal = document.getElementById("why-buy-popup");
   var btn = document.getElementById("why-buy-btn");
+  var mapModal = document.getElementById("map-popup");
+  var mapBtn = document.getElementById("map-btn");
 
   btn.onclick = function() {
     outerModal.style.display = "flex";
   }
 
+  mapBtn.onclick = function() {
+    mapModal.style.display = "flex";
+  }
+  
   document.addEventListener(
     "click",
     function(event) {
@@ -21,9 +27,10 @@ window.onload = function(){
     },
     false
   )
-  
+   
   function closeModal() {
     outerModal.style.display = "none";
+    mapModal.style.display = "none";
   }
 
 }
