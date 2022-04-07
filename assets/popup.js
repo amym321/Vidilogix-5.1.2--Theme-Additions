@@ -5,12 +5,16 @@ window.onload = function(){
   var mapModal = document.getElementById("map-popup");
   var mapBtn = document.getElementById("map-btn");
 
-  btn.onclick = function() {
-    outerModal.style.display = "flex";
+  if (outerModal){
+    btn.onclick = function() {
+      outerModal.style.display = "flex";
+    }
   }
 
-  mapBtn.onclick = function() {
-    mapModal.style.display = "flex";
+  if (mapBtn){
+    mapBtn.onclick = function() {
+      mapModal.style.display = "flex";
+    }
   }
   
   document.addEventListener(
@@ -29,8 +33,12 @@ window.onload = function(){
   )
    
   function closeModal() {
-    outerModal.style.display = "none";
-    mapModal.style.display = "none";
+    if (outerModal){
+      outerModal.style.display = "none";
+    }
+    if (mapModal){
+      mapModal.style.display = "none";
+    }
   }
 
 }
