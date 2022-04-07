@@ -2,45 +2,26 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
       }
     },
     "1641757491effe7074": {
       "type": "smart-header-section",
+      "disabled": true,
       "settings": {
         "page_title": "",
         "page_description": ""
       }
     },
-    "1640041344e995db21": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "16400413440adaf63b-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Shipping"
-          }
-        }
-      },
-      "block_order": [
-        "16400413440adaf63b-0"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
     "164004230690a0c083": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "16400423069a560b32-1": {
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>We offer free shipping on all orders over $49. For all orders under $49, there will be an $8 shipping fee. <\/p><p>The carrier will be selected based on the shipping address. We do not ship internationally or to freight forwarders.<\/p><p>All orders are processed Monday through Friday, from 9:00 A.M. to 5:00 P.M. ET. Due to volume, inclement weather and COVID-19 impacts, some of our carrier partners are experiencing ground service delays in various parts of the U.S. There may be extended delivery time frames. <\/p><p>In-stock shipments are usually shipped the same day of order. See Delivery Times for details. Totals are calculated after all discounts and freight charges have been applied. Shipping fees are nonrefundable.<\/p>"
+            "text": "<p>We offer free shipping on all orders over $49. For all orders under $49, there will be an $10 shipping fee. <\/p><p>The carrier will be selected based on the shipping address. We do not ship to freight forwarders or post offices. All orders are processed Monday through Friday, from 9:00 A.M. to 5:00 P.M. ET. In-stock shipments are usually shipped the same day of order. See <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0056\/9632\/3651\/files\/Shipping_Map_1_2x_835305d1-a77f-4eaa-b4eb-6eb9066ff75c.jpg?v=1647141684\" target=\"_blank\" title=\"UPS Time in Transit Map\">Delivery Times<\/a> for details. Totals are calculated after all discounts and freight charges have been applied. Shipping fees are nonrefundable.<\/p>"
           }
         }
       },
@@ -60,6 +41,8 @@
           "type": "question",
           "settings": {
             "title": "Delivery times",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0056\/9632\/3651\/files\/Shipping_Map_1_2x_835305d1-a77f-4eaa-b4eb-6eb9066ff75c.jpg?v=1647141684\" target=\"_blank\" title=\"UPS Time in Transit Map\">UPS Time in Transit Map<\/a><\/p><p>Some items on our website are not regularly stocked. Availability on these items may show as Special Order.<\/p><p>In some cases, the manufacturer will ship select items to you directly. You may generally expect these items to arrive at U.S. destinations in 7-10 days, unless specified otherwise. <\/p><p>If items in your order qualify as a stock exception, we will ask you whether you'd like us to ship your full order when all items are in stock, or if you'd like to split a shipment (at no extra cost). The estimated delivery shown reflects the shipping time once your item reaches our warehouse.<\/p><p>The Restock Date posted on the product detail page is when we reasonably expect to have the product in stock based on anticipated demand, communications from the manufacturer, and other factors. The estimated time of arrival (ETA) date advised is the time required for the order to be delivered to our distribution center. These dates are good faith estimates and subject to delays or changes. You may cancel an order at any time before shipment. <\/p><p>If we email you a tracking number during the day, the information may not post to the carrier's website until that evening. <\/p><p>Business days are defined as Monday to Friday, excluding holidays.<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -71,6 +54,8 @@
           "type": "question",
           "settings": {
             "title": "Signature request",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p>All orders over $500 require an adult signature. The carrier may also require a signature at their discretion. The carrier may make subsequent delivery attempts before returning the shipment to Vidlogix. We are unable to change the shipping address once your order has been placed.<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -82,6 +67,8 @@
           "type": "question",
           "settings": {
             "title": "Shipping offer terms",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p>We do not ship to freight forwarders. Some items that ship from the manufacturer can only be delivered to addresses within the 48 contiguous U.S. <a href=\"https:\/\/vidlogix.com\/pages\/contact\" target=\"_blank\" title=\"Contact vidlogix customer service\">Contact us<\/a> for delivery information on specific models. Merchandise amount thresholds for shipping prices apply to the cost of items after any special discounts have been applied and exclusive of any tax. These offers may end at any time. <\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -93,6 +80,8 @@
           "type": "question",
           "settings": {
             "title": "Incorrect item",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p><strong>RECEIVE INCORRECT MERCHANDISE? WE'LL MAKE IT RIGHT!<\/strong><\/p><p>Contact our Customer Support team at <a href=\"mailto:hello@vidlogix.com\" target=\"_blank\" title=\"mailto:hello@vidlogix.com\">hello@vidlogix.com<\/a> and we will coordinate a reorder to ship the correct merchandise at no additional cost to you. We may also provide you with a prepaid return shipping label and request an immediate return of the incorrectly received merchandise. To avoid additional charges the incorrectly received merchandise must be shipped within 7 days of receiving the prepaid return shipping label. All regular return policies still apply. All merchandise must be returned unused and in original packaging in order to avoid being charged.<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -104,6 +93,8 @@
           "type": "question",
           "settings": {
             "title": "Damaged\/Missing",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p><strong>DAMAGED & MISSING MERCHANDISE MUST BE REPORTED WITHIN 7 DAYS OF RECEIVING YOUR ORDER <\/strong><\/p><p>Prior to signing receipt of your shipment, carefully inspect the box or boxes for any damage. If you see damage you must mark the delivery receipt accordingly. It is recommended to take pictures of the outside of the box and the inside of the box. Then unpack the contents to ensure there is no concealed damage or missing items.<\/p><p>Gather the following documentation:<br\/>E-mail <a href=\"mailto:hello@vidlogix.com\" target=\"_blank\" title=\"hello@vidlogix.com\">hello@vidlogix.com<\/a> with the above documentation and we will be happy to work with the freight company to process a damage claim. <\/p><p>• vidlogix Order Number<br\/>• Freight Tracking Number<br\/>• Photographs and description of damage<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -115,6 +106,8 @@
           "type": "question",
           "settings": {
             "title": "Insurance Notice",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p><strong>By selecting UPS Shipping,<\/strong> you release vidlogix from responsibility for delayed shipments and loss in excess of $100.00. Insurance in excess of $100 should be requested at the time of purchase. The receiver is responsible for additional insurance costs. The receiver is responsible to file an insurance claim with UPS. All shipments are DAP, unless otherwise noted. Weather, natural disasters and other uncontrollable events can interrupt UPS transportation flow. Shipments delayed due to an uncontrollable event are not eligible for a refund or credit under the UPS money-back guarantee policy.<\/p><p><strong>By selecting USPS Shipping,<\/strong> you release vidlogix from responsibility for delayed shipments and loss in excess of $50.00. Insurance claims to damaged or lost items in excess of $50.00 will not be recovered. vidlogix is not responsible for lost or damaged items. Insurance in excess of $50.00 should be requested at the time of purchase. All shipments are DAP, unless otherwise noted.<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -126,6 +119,8 @@
           "type": "question",
           "settings": {
             "title": "Sustainable shopping",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p><strong>100% post-consumer recyclable packaging<\/strong><\/p><p>All our packaging, boxes, and inserts are made from recycled paper and are recyclable. We take care to partner with vendors and suppliers that share these same values.<\/p><p><strong>Carbon-neutral shipping<\/strong><\/p><p>Our business is 100% carbon neutral through carbonfund.org, with a certification that covers national shipping, packaging materials, warehouse utilities, and the commutes of our employees.<\/p><p><strong>Smarter packing<\/strong><\/p><p>Our packers are very efficient and have reduced the amount of packing materials we use by almost half. All the paper and plastic material in your box can go into your recycling streams—even the tape, which is also made of paper!<\/p><p><strong>Zero-waste warehouses<\/strong><\/p><p>We raise the bar for being an environmentally responsible company by diverting more than 90% of waste to a recycling stream or reusing it in some way. Both of our fulfillment centers are also powered by renewable energy.<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -151,7 +146,6 @@
   "order": [
     "main",
     "1641757491effe7074",
-    "1640041344e995db21",
     "164004230690a0c083",
     "1640041293a13b372e"
   ]
