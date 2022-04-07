@@ -17,7 +17,7 @@
       {%- for block in section.blocks -%}
 
       {% comment %} UPS Map popup - am {% endcomment %}
-      {% if block.settings.map_text %}{% render 'map-popup' %}{% endif %}
+      {% if block.settings.map_text and block.settings.map_popup %}{% render 'map-popup' %}{% endif %}
 
         <div {{ block.shopify_attributes }}>
           {% case block.type %}
@@ -61,7 +61,7 @@
                 <div id="FAQ-content-{{ block.id }}" class="collapsible-content collapsible-content--all" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                   <div class="collapsible-content__inner collapsible-content__inner--faq rte" itemprop="text">
                    {% comment %} UPS Map popup - am {% endcomment %}
-                    {% if block.settings.map_text  %}
+                    {% if block.settings.map_text and block.settings.map_popup %}
                       <a id="map-btn" class="" style="cursor: pointer;">
                         {{ block.settings.map_text }}
                       </a>
@@ -180,7 +180,14 @@
             "type": "richtext",
             "id": "map_text",
             "label": "Map Popup Text",
-            "default": "<p>UPS Time in Transit Map</p>"
+            "default": "<p>UPS Time In Transit Map</p>"
+          },
+          {
+            "type": "checkbox",
+            "id": "map_popup",
+            "label": "Button opens Why Buy Vidlogix popup.",
+            "default": false, 
+            "info": "Map Popup Text must not be blank for popup to work."
           },
           {
             "type": "richtext",
