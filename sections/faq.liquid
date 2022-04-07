@@ -17,7 +17,7 @@
       {%- for block in section.blocks -%}
 
       {% comment %} UPS Map popup - am {% endcomment %}
-      {% if block.settings.map_text and block.settings.map_popup %}{% render 'map-popup' %}{% endif %}
+      {% render 'map-popup' %}
 
         <div {{ block.shopify_attributes }}>
           {% case block.type %}
