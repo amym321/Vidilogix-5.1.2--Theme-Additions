@@ -254,7 +254,7 @@
       "newsletter-popup": {
         "type": "newsletter-popup",
         "settings": {
-          "mode": "testing",
+          "mode": "disabled",
           "popup_seconds": 5,
           "popup_days": 30,
           "popup_title": "Sonos Arc Giveaway",
