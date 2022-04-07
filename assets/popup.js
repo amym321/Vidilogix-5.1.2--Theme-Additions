@@ -4,6 +4,7 @@ window.onload = function(){
   var btn = document.getElementById("why-buy-btn");
   var mapModal = document.getElementById("map-popup");
   var mapBtn = document.getElementById("map-btn");
+  var mapBtn2 = document.getElementById("map-btn2");
 
   if (outerModal){
     btn.onclick = function() {
@@ -13,6 +14,12 @@ window.onload = function(){
 
   if (mapBtn){
     mapBtn.onclick = function() {
+      mapModal.style.display = "flex";
+    }
+  }
+
+  if (mapBtn2){
+    mapBtn2.onclick = function() {
       mapModal.style.display = "flex";
     }
   }
