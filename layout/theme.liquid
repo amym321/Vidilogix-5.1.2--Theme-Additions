@@ -100,6 +100,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="{{ 'accordion-products.js' | asset_url }}" defer="defer"></script>
   <!-- end code change per 4.1.1 customization -->
+  
+  <!-- disable Slide Cart -->
+  <script>window.SLIDECART_DISABLE = true</script>
 
   {%- if request.page_type contains 'customers/' -%}
     <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
