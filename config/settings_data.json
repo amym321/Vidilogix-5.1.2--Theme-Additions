@@ -322,7 +322,7 @@
       },
       "16275430657926763838": {
         "type": "shopify:\/\/apps\/incentivize-cart-upsell\/blocks\/upsell-cart\/ae66766b-0b4d-4801-a38e-5692b1140cb1",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "upsell_auto_rotate_upsells": true,
           "upsell_auto_rotate_speed": "4000",
