@@ -303,6 +303,15 @@
                       </div>
                     {%- endif -%}
 
+<div style="border-top: 1px solid #f2f2f2; margin-top: 20px;" >
+  {%- form 'product', product, id: form_id, class: 'product-single__form display-flex' -%}
+    {% comment %} added back Shop Pay language & popup {% endcomment %}
+    <div class="shopify-payment-terms product__policies" >
+      {{ form | payment_terms }}
+    </div>
+  {%- endform -%}
+</div>  
+
                   </div>
 
                   {%- when 'quantity_selector' -%}
@@ -344,7 +353,11 @@
                         </div>
                       {% endif %}
                       
-                    </div>
+  {%- form 'product', product, id: form_id, class: 'product-single__form display-flex' -%}
+    {% comment %} added back Shop Pay language & popup {% endcomment %}
+    <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
+  {%- endform -%}
+                      </div>
 
                   {%- when 'variant_picker' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>

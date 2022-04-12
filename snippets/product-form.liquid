@@ -89,6 +89,10 @@
       {{ current_variant | json }}
     </textarea>
   {%- endif -%}
+  
+  {% comment %} added back Shop Pay language & popup {% endcomment %}
+  <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
+
 {%- endform -%}
 
 <script>
