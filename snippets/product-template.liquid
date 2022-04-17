@@ -178,6 +178,15 @@
                     </div>
                     {% comment %} end code change per 4.1.1 customization {% endcomment %}
 
+{%- form 'product', product, id: form_id, class: 'product-single__form display-flex' -%}
+  {% comment %} added back Shop Pay language & popup {% endcomment %}
+  <div class="shopify-payment-terms product__policies" >
+    {{ form | payment_terms }}
+  </div>
+  <br><br><br>
+{%- endform -%}
+
+
                   {%- when 'price' -%}
                     <div class="product-block product-block--price block-no-margin" {{ block.shopify_attributes }}>
                       {%- assign hide_sale_price = true -%}
@@ -303,14 +312,16 @@
                       </div>
                     {%- endif -%}
 
+
 <div style="border-top: 1px solid #f2f2f2; margin-top: 20px;" >
   {%- form 'product', product, id: form_id, class: 'product-single__form display-flex' -%}
-    {% comment %} added back Shop Pay language & popup {% endcomment %}
     <div class="shopify-payment-terms product__policies" >
       {{ form | payment_terms }}
     </div>
   {%- endform -%}
 </div>  
+
+
 
                   </div>
 
@@ -352,11 +363,13 @@
                           <span>{{ section.settings.value_two }}</span>
                         </div>
                       {% endif %}
-                      
+
+{% comment %}
   {%- form 'product', product, id: form_id, class: 'product-single__form display-flex' -%}
-    {% comment %} added back Shop Pay language & popup {% endcomment %}
     <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
   {%- endform -%}
+{% endcomment %}
+
                       </div>
 
                   {%- when 'variant_picker' -%}
@@ -509,14 +522,21 @@
         {%- endunless -%}
       </div>
 
+      
+{% render 'media-drawer' %}
 
 <div>
   <br><br><br>
-  <a href="https://cdn.shopify.com/s/files/1/0056/9632/3651/files/IQ-Panel-4-Installation-Manual-4.0.1-210928-FINAL.pdf?v=1643217960">
-    <h3 style="color:red; text-align:center;">TRIGGER FOR MEDIA DRAWER</h3>
+  <a id="media-btn">
+    <h4  style="color:red; text-align:center; cursor:pointer;">TRIGGER FOR MEDIA DRAWER</h4>
   </a>
 </div>
-
+<!-- <div>
+  <br><br>
+  <a href="https://cdn.shopify.com/s/files/1/0056/9632/3651/files/IQ-Panel-4-Installation-Manual-4.0.1-210928-FINAL.pdf?v=1643217960" >
+    <h4 style="color: blue; text-align:center;">TRIGGER FOR MEDIA DRAWER</h4>
+  </a>
+</div> -->
 
 
       {% comment %} begin code change per 4.1.1 customization {% endcomment %}
