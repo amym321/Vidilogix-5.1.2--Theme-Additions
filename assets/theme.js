@@ -7040,16 +7040,16 @@ lazySizesConfig.expFactor = 4;
                 cartBtn.disabled = false;
                 cartBtnText.textContent = theme.strings.addToCartString;
             } else if (policyX === 'continue' && quantityX <= 0) {
-                // Pr-order, enable the submit button and change text
+                // Pre-order, enable the submit button and change text
                 cartBtn.classList.remove(classes.disabled);
                 cartBtn.disabled = false;
                 cartBtnText.textContent = theme.strings.preOrderString;
             } 
           } else {
               // Sold out, disable the submit button and change text
-              cartBtn.classList.add(classes.disabled);
+              // cartBtn.classList.add(classes.disabled); // styles button gray
               cartBtn.disabled = true;
-              cartBtnText.textContent = theme.strings.soldOut;
+              cartBtnText.textContent = theme.strings.getNotified;  // previously was  theme.strings.soldOut;
           }
         } else {
             // The variant doesn't exist, disable submit button
