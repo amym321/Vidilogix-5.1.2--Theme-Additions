@@ -72,6 +72,7 @@
         },
         "a1448bda-730b-4507-8fd1-2b0660b10919": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {
           }
         },
@@ -119,6 +120,8 @@
           "type": "question",
           "settings": {
             "title": "Lifetime Support",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p>Use the text to answer questions<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -130,6 +133,8 @@
           "type": "question",
           "settings": {
             "title": "Protection Plans",
+            "map_text": "<p>UPS Time In Transit Map<\/p>",
+            "map_popup": false,
             "text": "<p><strong>Our advisors have the answers<\/strong><\/p><p>We're deeply into the gear we sell. And we're the first to admit: it can sometimes seem complicated. That's why we have more than 150 friendly, knowledgeable advisors in New York ready to help by phone, text, or chat. If you ever feel stuck or need a second opinion, give 'em a call.<\/p><p><strong>The right advice – for you<\/strong><\/p><p>Our advisors are led by one defining principle: help our customers find the products that are right for their needs. Upselling and trying to push customers toward specific products that aren't a fit for them just isn't our thing.<\/p>",
             "button_link2": "",
             "button_text2": "Button text",
@@ -227,7 +232,6 @@
         "button_link": "",
         "button_style": "primary",
         "align_text": "left",
-        "align_button": "left",
         "button_popup": true,
         "button_chat": false,
         "disclaimer": "",
