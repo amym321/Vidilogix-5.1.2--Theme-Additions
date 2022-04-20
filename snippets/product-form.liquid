@@ -1,5 +1,8 @@
-{%- form 'product', product, id: form_id, class: 'product-single__form display-flex' -%}
-
+{% comment %} removed class: display-flex from form when QTY selector was removed - am {% endcomment %}
+{%- form 'product', product, id: form_id, class: 'product-single__form ' -%}
+<div class="shopify-payment-terms product__policies" >
+  {{ form | payment_terms }}
+</div>
   {%- liquid
     assign enable_dynamic_buttons = false
     if show_dynamic_checkout and template != 'product.preorder'
@@ -50,9 +53,6 @@
     </div>
   {%- endif -%}
 
-  {% comment %} removed Shop Pay language & popup {% endcomment %}
-  <!-- <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div> -->
-
   <select name="id" data-product-select class="product-single__variants no-js">
     {%- for variant in product.variants -%}
       {%- if variant.available -%}
@@ -78,9 +78,6 @@
     </textarea>
   {%- endif -%}
   
-  {% comment %} added back Shop Pay language & popup {% endcomment %}
-  <!-- <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div> -->
-
 {%- endform -%}
 
 <script>
