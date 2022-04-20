@@ -2302,9 +2302,11 @@ button[disabled],html input[disabled]{
 }
 
 .add-to-cart.btn--secondary{
+  /* border: 3px solid; */
   border:1px solid;
   border-color:{{ settings.color_body_text | default: "#1c1d1d" }};
-  border-color:var(--colorTextBody)
+  border-color:var(--colorTextBody);
+  /* border-color:var(--colorBtnPrimary); */
 }
 
 [data-button_style=angled] .add-to-cart.btn--secondary{
@@ -12604,7 +12606,7 @@ html[dir=rtl] .product-single__meta .rte{
 }
 
 .buy-width {
-  width: calc(100% - 120px);
+  /* width: calc(100% - 120px); */
   justify-content:flex-end;
   margin-bottom:0px;
 }
@@ -13088,6 +13090,7 @@ button#dummy-chat-button.chat-toggle {
   }
   #map-popup .why-rich-text {
     padding: 0 30px 10px 30px;
+  }
 }
 
 /* Smart Header */
@@ -13104,18 +13107,10 @@ button#dummy-chat-button.chat-toggle {
   font-size: var(--typeBaseSize); 
 }
 
-/* .shop-pay-logo {
-  margin-bottom: 15px !important;
-  vertical-align: baseline !important;
-}
-shop-pay-logo {
-  margin-bottom: 15px !important;
-}
 .shopify-payment-terms shop-pay-logo,
 .shopify-payment-terms .shop-pay-logo,
 .shopify-payment-terms svg,
 .shop-pay-logo,
-shop-pay-logo
- {   
+shop-pay-logo {   
   margin-bottom: 15px !important;
-} */
+}
