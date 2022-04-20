@@ -26,37 +26,21 @@
       endif
        
       if current_variant.inventory_policy == 'deny' and current_variant.inventory_quantity <= 0
-        assign default_text = 'products.product.notified' | t
-        assign button_text = 'products.product.notified' | t
-        assign subscribed_text = 'products.product.notified_subscribed' | t
+        assign default_text = 'products.product.sold_out' | t
+        assign button_text = 'products.product.sold_out' | t
       endif
     -%}
 
-    {% unless current_variant.inventory_policy == 'deny' and current_variant.inventory_quantity <= 0 %}
-      <button
-        {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
-        name="add"
-        data-add-to-cart
-        class="btn add-to-cart{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
-        {% unless current_variant.available %} disabled="disabled"{% endunless %}>
-        <span data-add-to-cart-text data-default-text="{{ default_text }}">
-          {{ button_text }}
-        </span>
-      </button>
-    {% endunless %}
-
-    {% if current_variant.inventory_policy == 'deny' and current_variant.inventory_quantity <= 0 %}
-      <button 
-        type="button"
-        data-pushowl-post-subscription-message="{{ subscribed_text }}"
-        data-pushowl-post-display="block"
-        style="display:none;"
-        class="btn add-to-cart js-pushowl--bis {% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}">
-        <span data-add-to-cart-text>
-          {{ button_text }}
-        </span>
-      </button>
-    {% endif %}
+    <button
+      {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+      name="add"
+      data-add-to-cart
+      class="btn add-to-cart{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
+      {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+      <span data-add-to-cart-text data-default-text="{{ default_text }}">
+        {{ button_text }}
+      </span>
+    </button>
 
     {%- if enable_dynamic_buttons -%}
       {{ form | payment_button }}

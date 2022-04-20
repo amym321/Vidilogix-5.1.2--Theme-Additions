@@ -7047,9 +7047,9 @@ lazySizesConfig.expFactor = 4;
             } 
           } else {
               // Sold out, disable the submit button and change text
-              // cartBtn.classList.add(classes.disabled); // styles button gray
+              cartBtn.classList.add(classes.disabled);
               cartBtn.disabled = true;
-              cartBtnText.textContent = theme.strings.getNotified;  // previously was  theme.strings.soldOut;
+              cartBtnText.textContent = theme.strings.soldOut;
           }
         } else {
             // The variant doesn't exist, disable submit button
