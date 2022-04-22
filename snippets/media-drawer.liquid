@@ -1,5 +1,8 @@
 {% comment %} media drawer - am {% endcomment %}
 {% style %}
+  #media-btn {
+    cursor:pointer;
+  }
   #media-drwr-overlay {
     height: 100%;
     width: 100%;
@@ -19,43 +22,36 @@
   .media-drwr-container .drawer--right {
     width: 997px;
   }
-  @media only screen and (max-width: 997px) {
+  @media screen and (max-width: 997px) {
     .media-drwr-container .drawer--right {
       width: 100vw;
     }
   }
 
   .media-drwr-inner {
-    height: 100%;
     padding: .25rem 0.625rem 0 2.5rem;
-  }
-  .media-iframe {
-    width: 100%;
-    /*height: 85vh;*/
-    border: none;
     height: calc(100vh - 5.3125rem);
   }
-
-  @media only screen and (max-width: 997px) {
-    /*.media-iframe {*/
+  @media screen and (max-width: 997px) {
     .media-drwr-inner {
-    /*#why-modal-inner {*/
-    /*#media-drawer {
-    /*.media-drwr-container{ */
-      overflow: auto!important; 
-      -webkit-overflow-scrolling: touch!important;
-      /*position:absolute; 
-      top:70px; 
-      left:0px; 
-      bottom:0px; 
-      right:0px; 
-      width:100%; 
-      height:100%; 
-      border:none; 
-      margin:0; 
-      padding:0; 
-      overflow:hidden;*/
+      padding: .25rem 0.625rem 0 .5rem;
     }
+  }
+
+  #media-iframe {
+    width: 100%;
+    border: none;
+    height: 100%;
+    overflow-y: scroll!important; 
+  }
+
+  #media-btn-desktop {
+    cursor: pointer;
+  }
+
+  .media-drwr-inner {
+    overflow: auto !important; 
+    overflow-y: scroll!important; 
   }
 {% endstyle %}
 
@@ -65,9 +61,46 @@
     <div id="why-modal-inner">
       <span class="close-why-popup">&times;</span>
       <div class="media-drwr-inner">
-        <iframe class="media-iframe"
-          src="https://cdn.shopify.com/s/files/1/0056/9632/3651/files/IQ-Panel-4-Installation-Manual-4.0.1-210928-FINAL.pdf?v=1643217960"></iframe>
+        <iframe id="media-iframe"></iframe>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+{% comment %}
+
+<ul>
+	<li>Warranty: 3-Years</li>
+	<li><span style="color: #000000;">&nbsp;
+    <a id="media-btn-mobile" href="https://cdn.shopify.com/s/files/1/0056/9632/3651/files/ELEV-8CHTX8MPKITIP-Specifications.pdf?29393" target="_blank" title="InVid Tech ELEV-8CHTX8MPKITIP Specifications">Specifications</a> 
+    <a id="media-btn-desktop" data-iframe-link="https://cdn.shopify.com/s/files/1/0056/9632/3651/files/ELEV-8CHTX8MPKITIP-Specifications.pdf?29393">Specifications</a>&nbsp;</span></li>
+	<li><span style="color: #000000;">Elevate Products 
+    <a id="media-btn-mobile" href="http://info.invidtech.com/dc-elevate" target="_blank" title="InVid Elevate Series Support Page">Support Page</a>
+    <a id="media-btn-desktop" data-iframe-link="http://info.invidtech.com/dc-elevate" title="InVid Elevate Series Support Page">Support Page</a>
+  </span></li>
+	<li>Free <a href="https://itunes.apple.com/us/app/invid-elevate/id1369690295?mt=8&ign-mpt=uo%3D4" target="_blank" title="InVid Tech Vision for iOS Mobile App">iOS</a> &amp; <a href="https://play.google.com/store/search?q=elevate%20invidtech&hl=en" target="_blank" title="InVid Tech Vision for Android Mobile App">Android</a> Apps for smartphones &amp; tablets</li>
+</ul>
+
+
+<ul>
+	<li>Warranty: 3-Years</li>
+	<li>
+    <span style="color: #000000;">
+      <a id="media-btn-mobile" href="https://cdn.shopify.com/s/files/1/0056/9632/3651/files/ELEV-8CHTX8MPKITIP-Specifications.pdf?29393" target="_blank" title="InVid Tech ELEV-8CHTX8MPKITIP Specifications">Specifications</a>
+      <a id="media-btn-desktop" data-iframe-link="https://cdn.shopify.com/s/files/1/0056/9632/3651/files/ELEV-8CHTX8MPKITIP-Specifications.pdf?29393" target="_blank" title="InVid Tech ELEV-8CHTX8MPKITIP Specifications">Specifications</a>
+    </span>
+  </li>
+	<li>
+    <span style="color: #000000;">Elevate Products 
+      <a id="media-btn-mobile" href="http://info.invidtech.com/dc-elevate" target="_blank" title="InVid Elevate Series Support Page">Support Page</a>
+      <a id="media-btn-desktop" data-iframe-link="http://info.invidtech.com/dc-elevate" target="_blank" title="InVid Elevate Series Support Page">Support Page</a>
+    </span>
+  </li>
+	<li>Free <a href="https://itunes.apple.com/us/app/invid-elevate/id1369690295?mt=8&ign-mpt=uo%3D4" target="_blank" title="InVid Tech Vision for iOS Mobile App">iOS</a> &amp; <a href="https://play.google.com/store/search?q=elevate%20invidtech&hl=en" target="_blank" title="InVid Tech Vision for Android Mobile App">Android</a> Apps for smartphones &amp; tablets</li>
+</ul>
+
+{% endcomment %}
