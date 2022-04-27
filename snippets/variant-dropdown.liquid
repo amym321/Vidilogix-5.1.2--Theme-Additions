@@ -1,9 +1,11 @@
 <div class="variant-wrapper variant-wrapper--dropdown js" data-type="dropdown">
-  {% comment %}added code - am.  option label specific titles {% endcomment %}
-  <!-- <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
+  {% comment %} no longer using option labels - am {% endcomment %}
+  {% comment %}
+  <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
     for="SingleOptionSelector-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
-  </label> -->
+  </label>
+  {% endcomment %}
   <div class="variant-input-wrap" data-index="option{{ forloop.index }}" data-handle="{{ option.name | handleize }}">
     <select
       form="{{ form_id }}"
