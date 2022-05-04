@@ -224,7 +224,7 @@
           "settings": {
             "code": "<p class=\"section-divider\"><\/p>",
             "width": "100%",
-            "alignment": "center"
+            "alignment": "top-middle"
           }
         }
       },
