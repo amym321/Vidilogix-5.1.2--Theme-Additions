@@ -216,6 +216,26 @@
         "space_around": true
       }
     },
+    "16516954945df67503": {
+      "type": "advanced-content",
+      "blocks": {
+        "165169549405095f98-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div><\/div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "165169549405095f98-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
     "text-and-image": {
       "type": "text-and-image",
       "settings": {
@@ -285,6 +305,7 @@
     "recently-viewed",
     "collection-return",
     "1637459177d4db9b86",
+    "16516954945df67503",
     "text-and-image",
     "1643590083d72e73b9"
   ]
