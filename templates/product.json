@@ -222,7 +222,7 @@
         "165169549405095f98-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div><\/div>",
+            "code": "",
             "width": "100%",
             "alignment": "center"
           }
