@@ -56,7 +56,7 @@
 
   {%- render 'product-template-variables', product: product, current_variant: current_variant -%}
 
-  <div class="page-content page-content--product">
+  <div class=" page-content--product">
     <div class="page-width">
 
       {% comment %} begin code change per 4.1.1 customization {% endcomment %}
@@ -649,7 +649,7 @@
           {% endif %}
 
            <!-- RECOMMENDED PRODUCTS ACCORDION -->
-          <div class="accordion opened opened-default recommended-products" id="recommended"><span class="accordion-title">Recommended</span> <span class="icon"></span></div>
+          <div class="accordion closed  recommended-products" id="recommended"><span class="accordion-title">Recommended</span> <span class="icon"></span></div>
           <div class="container" id="prod-recommended">
             <div class="content rte">
               {%- liquid
