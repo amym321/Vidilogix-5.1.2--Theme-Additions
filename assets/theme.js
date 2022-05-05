@@ -5037,6 +5037,21 @@ lazySizesConfig.expFactor = 4;
   
     items.forEach(product => {
       var image = theme.buildProductImage(product, imageSize);
+      var productPrice = theme.Currency.formatMoney(product.price, theme.settings.moneyFormat);
+      var productComparePrice = "";
+      var productPriceFrom = "";
+
+      if (product.compare_at_price > product.price) {
+        console.log('X) product.compare_at_price '+ product.compare_at_price+' product.price '+ product.price);
+        productComparePrice = theme.Currency.formatMoney(product.compare_at_price, theme.settings.moneyFormat);
+      } 
+
+      if (product.price_varies) {
+        productPriceFrom = "from";
+        productPrice = theme.Currency.formatMoney(product.price_min, theme.settings.moneyFormat);
+        console.log('Y) productPrice product.price_min = ' + productPrice);
+      }
+
       var markup = `
         <div class="grid__item grid-product ${gridWidth} aos-animate" data-aos="row-of-${rowOf}">
           <div class="grid-product__content">
@@ -5046,6 +5061,11 @@ lazySizesConfig.expFactor = 4;
               </div>
               <div class="grid-product__meta">
                 <div class="grid-product__title">${product.title}</div>
+                <div class="grid-product__price">
+                  <span>${productPriceFrom}</span>
+                  <span>${productPrice}</span>
+                  <span class="grid-product__price--original">${productComparePrice}</span>
+                </div>
               </div>
             </a>
           </div>
@@ -7908,9 +7928,12 @@ lazySizesConfig.expFactor = 4;
   
     RecentlyViewed.prototype = Object.assign({}, RecentlyViewed.prototype, {
       init: function() {
-        if (init) {
-          return;
-        }
+        // removed the return since this should run more than 1x on PDP with popup and section - am
+        // if (init) {
+        //   console.log('01) init=true, return'); // doesn't hit either from section on PDP or added to announcement bar separately 
+        //     // but DOES HIT when both are present on PDP
+        //   return;
+        // }
   
         init = true;
   
