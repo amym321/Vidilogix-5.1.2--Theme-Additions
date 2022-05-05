@@ -2,14 +2,13 @@
 Calls to this snippet need to quantify the {% endcomment %}
 
 {% assign recent_view_section = true %}
-{% render 'recently-viewed-snippet', recent_count: section.settings.recent_count, recent_view_section: recent_view_section %}
+<div class="">
+  {% render 'recently-viewed-snippet', recent_count: section.settings.recent_count, recent_view_section: recent_view_section %}
+</div>
 
 {% style %}
   .index-section--recently {
     margin-top: 0;
-  }
-  .recent-view-section {
-    margin-bottom: 100px;
   }
   .index-section--recently .section-header {
     text-align: left;
@@ -20,13 +19,20 @@ Calls to this snippet need to quantify the {% endcomment %}
     font-weight: 700;
     font-family: var(--typeBasePrimary),var(--typeBaseFallback);
   }
+
   @media screen and (min-width: 769px) {
-    .recent-view-section {
-      margin-bottom: 100px;
-    }
     .index-section--recently .section-header__title {
       font-size: 24px;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    .recently-header  {
+      padding: 0;
+    }
+  }
+  .recent-view-section .grid {
+    padding: 0 10px;
   }
 {% endstyle %}
 
