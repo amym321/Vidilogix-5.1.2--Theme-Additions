@@ -2,9 +2,7 @@
 Calls to this snippet need to quantify the {% endcomment %}
 
 {% assign recent_view_section = true %}
-<div class="">
-  {% render 'recently-viewed-snippet', recent_count: section.settings.recent_count, recent_view_section: recent_view_section %}
-</div>
+{% render 'recently-viewed-snippet', recent_count: section.settings.recent_count, recent_view_section: recent_view_section %}
 
 {% style %}
   .index-section--recently {
