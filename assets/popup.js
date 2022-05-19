@@ -16,7 +16,8 @@ window.onload = function(){
   var mediaBtnMobile = document.querySelectorAll('#media-btn-mobile');     // acf <a> for link
   var mediaLinkDesktop = [];
   // Recently Viewed popup
-  var recentViewModal = document.getElementById("recent-view-popup");
+  var recentViewModal = document.getElementById("recent-view-popup"); // recent view with history
+  // var recentViewModal2 = document.getElementById("none-recent-popup"); // no recent view avalable
   var recentViewBtn = document.getElementById("recent-view-btn");    // trigger
 
   Object.keys(mediaBtnDesktop).forEach((key) => {
@@ -51,11 +52,15 @@ window.onload = function(){
 
   if (recentViewBtn != null) {
     if (Object.keys(theme.recentlyViewed.recent).length <= 1 && theme.recentlyViewed.recent.constructor === Object) {
-      // No previous history on page load, so bail & don't display modal
-      return;
-    }
-    recentViewBtn.onclick = function() {
-      recentViewModal.style.display = "flex";
+      // add "NO RV history" popup here
+      // recentViewBtn.onclick = function() {
+      //   recentViewModal2.style.display = "flex";
+      // }
+      console.log('12) no history');
+    } else {
+      recentViewBtn.onclick = function() {
+        recentViewModal.style.display = "flex";
+      }
     }
   }
 
@@ -76,7 +81,6 @@ window.onload = function(){
       // If user either clicks X button OR clicks outside the modal window, then close modal 
       if (
         event.target.matches(".close-why-popup") ||
-        
         event.target.matches(".close-recent-popup") ||
 
         !event.target.closest("#why-modal-inner") &&
@@ -87,14 +91,6 @@ window.onload = function(){
 
         !event.target.closest("#recent-modal-inner") &&
         event.target.matches("#recent-outer-modal")
-
-        // ||
-        // (!event.target.closest("#recent-view-inner") 
-        // // && !event.target.matches("#recent-view-btn") 
-        // && event.target.matches("#recent-overlay-background")
-        // // !event.target.matches("#HeaderSearchForm") &&
-        // // !event.target.matches(".site-header__search-container") &&
-        //     )
       ) {
         closeModal()
       }
