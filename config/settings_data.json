@@ -158,6 +158,8 @@
           "announcement_compact": true,
           "announcement_above_header": true,
           "announcement_speed": 5,
+          "recently_viewed_header": false,
+          "recent_count_header": 4,
           "toolbar_menu": "",
           "toolbar_social": false,
           "show_locale_selector": false,
