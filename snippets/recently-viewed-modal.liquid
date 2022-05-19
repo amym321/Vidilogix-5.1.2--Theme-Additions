@@ -1,0 +1,84 @@
+{% comment %} this file handles the Recently Viewed modal, not the Recently Viewed section - am {% endcomment %}
+
+{% assign recent_view_modal = true %}
+
+<div id="recent-view-popup" class="why-modal">
+  <!-- <div id="recent-overlay-background"></div> -->
+  <div class="why-buy-popup" style="color:black;">
+    <div id="recent-outer-modal" class="modal modal--square modal--mobile-friendly">
+      <div id="recent-modal-inner" class="modal__inner">
+        <div  class="modal__centered ">
+          <span class="close-recent-popup">&times;</span>
+          <div  class="newsletter">
+            <div class=" page-width ">
+              <div class="theme-block why-rich-text">
+                <h2 class="section-header__title">Recently Viewed</h2>
+              </div>
+            </div>
+            {% render 'recently-viewed-snippet', recent_count: recent_count_header, recent_view_modal: recent_view_modal %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% style %}
+  /*#recent-overlay-background {
+    z-index: 20000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.507);
+    height: 100vh;
+    width: 100vw;
+}*/
+
+  @media only screen and (min-width: 769px) {
+    #recent-view-popup .modal {
+      /*top:200px;*/
+    }
+    #recent-view-popup .modal__inner {
+      /*margin-top: 0 !important;*/
+    }
+    #recent-view-popup .modal__inner {
+      max-width: 1200px;
+   }
+  }
+
+  #recent-view-popup .modal {
+    /*position:absolute !important;*/
+    /*background-color:#ffffff00;*/
+    align-items: center; 
+    /*bottom:unset;*/  
+  }
+
+  #recent-view-popup .modal__inner {
+     border: solid 2px darkgray;
+     min-width: 60%;
+  }
+
+  #recent-view-popup .modal .index-section--recently {
+    padding: 0 20px;
+  }
+
+  #recent-view-popup .why-buy-popup .modal__centered {
+    /*min-height: unset;*/
+  }
+
+  #recent-view-popup .section-header__title {
+    text-align: left;
+    border-top: none;
+  }
+
+  #recent-view-popup .section-header {
+    display: none;
+  }
+
+  #recent-view-popup .why-rich-text {
+    padding-bottom: 10px;
+  }
+
+{% endstyle %}

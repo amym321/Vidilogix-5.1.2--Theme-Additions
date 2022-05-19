@@ -12994,7 +12994,8 @@ font-weight:700;
 }
 
 /* The Close Button */
-.close-why-popup {
+.close-why-popup,
+.close-recent-popup {
   color: #000;
   z-index:3500000000 !important;
   background-color: #ffffff00;
@@ -13008,7 +13009,9 @@ font-weight:700;
 }
 
 .close-why-popup:hover,
-.close-why-popup:focus {
+.close-why-popup:focus,
+.close-recent-popup:hover,
+.close-recent-popup:focus {
   color: #000;
 }
 
@@ -13176,4 +13179,11 @@ shop-pay-logo {
 
 .sb-bundle-container .sb-bundle .sb-spinner {
   display: none !important;
+}
+
+/* header & announcement bar above RV modal overlay-background element */
+/* #shopify-section-header, */
+.announcement-bar,
+.header-sticky-wrapper {
+  z-index: 25000 ;
 }

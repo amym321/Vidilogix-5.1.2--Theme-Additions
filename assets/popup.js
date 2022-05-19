@@ -15,6 +15,9 @@ window.onload = function(){
   var mediaBtnDesktop = document.querySelectorAll("#media-btn-desktop");   // iframe trigger only
   var mediaBtnMobile = document.querySelectorAll('#media-btn-mobile');     // acf <a> for link
   var mediaLinkDesktop = [];
+  // Recently Viewed popup
+  var recentViewModal = document.getElementById("recent-view-popup");
+  var recentViewBtn = document.getElementById("recent-view-btn");    // trigger
 
   Object.keys(mediaBtnDesktop).forEach((key) => {
     mediaLinkDesktop[key] = mediaBtnDesktop[key].getAttribute("data-iframe-link");
@@ -46,6 +49,16 @@ window.onload = function(){
     }
   }
 
+  if (recentViewBtn != null) {
+    if (Object.keys(theme.recentlyViewed.recent).length <= 1 && theme.recentlyViewed.recent.constructor === Object) {
+      // No previous history on page load, so bail & don't display modal
+      return;
+    }
+    recentViewBtn.onclick = function() {
+      recentViewModal.style.display = "flex";
+    }
+  }
+
   // toggles display of iframe and <a> link if both are present in acf metafields
   if (mediaBtnDesktop != null && mediaBtnMobile != null){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -63,10 +76,25 @@ window.onload = function(){
       // If user either clicks X button OR clicks outside the modal window, then close modal 
       if (
         event.target.matches(".close-why-popup") ||
-        !event.target.closest("#why-modal-inner") && 
+        
+        event.target.matches(".close-recent-popup") ||
+
+        !event.target.closest("#why-modal-inner") &&
         event.target.matches("#why-outer-modal") ||
-        !event.target.closest("#why-modal-inner") && 
-        event.target.matches("#media-drwr-overlay")
+
+        !event.target.closest("#why-modal-inner") &&
+        event.target.matches("#media-drwr-overlay") ||
+
+        !event.target.closest("#recent-modal-inner") &&
+        event.target.matches("#recent-outer-modal")
+
+        // ||
+        // (!event.target.closest("#recent-view-inner") 
+        // // && !event.target.matches("#recent-view-btn") 
+        // && event.target.matches("#recent-overlay-background")
+        // // !event.target.matches("#HeaderSearchForm") &&
+        // // !event.target.matches(".site-header__search-container") &&
+        //     )
       ) {
         closeModal()
       }
@@ -84,6 +112,9 @@ window.onload = function(){
     if (mediaDrawer != null && mediaDrwrOverlay != null) {
       mediaDrawer.style.display = "none";
       mediaDrwrOverlay.style.display = "none";
+    }
+    if (recentViewModal != null) {
+      recentViewModal.style.display = "none";
     }
   }
 
