@@ -322,9 +322,15 @@
         "settings": {
         }
       },
+      "15028345350870318824": {
+        "type": "shopify:\/\/apps\/sellerbird-bundles\/blocks\/sb-product-bundler\/d5a8a777-b4ab-4e90-acb2-28d28663614e",
+        "disabled": false,
+        "settings": {
+        }
+      },
       "16275430657926763838": {
         "type": "shopify:\/\/apps\/incentivize-cart-upsell\/blocks\/upsell-cart\/ae66766b-0b4d-4801-a38e-5692b1140cb1",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "upsell_auto_rotate_upsells": true,
           "upsell_auto_rotate_speed": "4000",
@@ -345,12 +351,6 @@
           "upsell_terms_enable": false,
           "upsell_terms_page": "",
           "upsell_custom_css": ""
-        }
-      },
-      "15028345350870318824": {
-        "type": "shopify:\/\/apps\/sellerbird-bundles\/blocks\/sb-product-bundler\/d5a8a777-b4ab-4e90-acb2-28d28663614e",
-        "disabled": false,
-        "settings": {
         }
       }
     }
