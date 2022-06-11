@@ -69,7 +69,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "<div style=\"font-style:italic; margin-right:8px; \">\n<span style=\"color:#fff;\">SAVE<\/span> UP <br>TO 10%<\/div>",
+            "title": "<div style=\"font-style:italic; color:#F6C12F; margin-right:8px; \">\n<span style=\"color:#fff;\">SAVE<\/span> UP <br>TO 10%<\/div>",
             "title_size": 73,
             "subheading": "ON VOSKER V300 CELLULAR SECURITY CAMERA",
             "chat_widget": false,
@@ -78,7 +78,7 @@
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
-            "text_color": "#f6c12f",
+            "text_color": "#ffffff",
             "text_align": "vertical-center horizontal-right",
             "image": "shopify:\/\/shop_images\/Penji_banner_modified.jpg",
             "overlay_opacity": 0,
