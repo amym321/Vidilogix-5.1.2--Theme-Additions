@@ -71,7 +71,7 @@
             "top_subheading": "",
             "title": "<div style=\"font-style:italic; color:#F6C12F; margin-right:8px; \">\n<span style=\"color:#fff;\">SAVE<\/span> UP <br>TO 10%<\/div>",
             "title_size": 76,
-            "subheading": "<div style=\"font-style: italic; font-weight:bold;margin-bottom:20px !important;\">ON  <span style=\"color: #F6C12F; \">VOSKER V300<\/span> <br> CELLULAR SECURITY CAMERA<\/div>",
+            "subheading": "<div class=\"vosker\">ON   <span style=\"color: #F6C12F; \">VOSKER V300<\/span>  <br> CELLULAR SECURITY CAMERA<\/div> <style> .vosker {font-style: italic; font-weight:bold;margin-bottom:20px !important;} <\/endstyle><\/style>",
             "chat_widget": false,
             "link": "",
             "link_text": "",
