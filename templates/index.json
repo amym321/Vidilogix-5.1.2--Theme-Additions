@@ -64,12 +64,33 @@
             "overlay_opacity": 0,
             "focal_point": "80% 50%"
           }
+        },
+        "065aafec-7b81-4b02-a517-ac6f378c168a": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Two line\ntitle slide.",
+            "title_size": 80,
+            "subheading": "And optional subtext",
+            "chat_widget": false,
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_color": "#f6c12f",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Penji_banner_modified.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "20% 50%"
+          }
         }
       },
       "block_order": [
         "slideshow-0",
         "slideshow-1",
-        "8fa854c0-bd5b-445c-8c35-06ca7647c0ae"
+        "8fa854c0-bd5b-445c-8c35-06ca7647c0ae",
+        "065aafec-7b81-4b02-a517-ac6f378c168a"
       ],
       "settings": {
         "section_height": "550px",
