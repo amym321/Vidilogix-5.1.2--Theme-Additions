@@ -79,7 +79,7 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_color": "#f6c12f",
-            "text_align": "vertical-center horizontal-center",
+            "text_align": "vertical-center horizontal-right",
             "image": "shopify:\/\/shop_images\/Penji_banner_modified.jpg",
             "overlay_opacity": 0,
             "focal_point": "20% 50%"
