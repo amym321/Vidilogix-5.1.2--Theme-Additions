@@ -2884,8 +2884,10 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   z-index:26;
 }
 
+/* Archetype fix to prevent opaque background-color on modals */
 .js-drawer-open .main-content:after{
-  animation:overlay-on 0.35s forwards;
+  /* animation:overlay-on 0.35s forwards; */
+  opacity: 0.6;
 }
 
 .js-drawer-closing .main-content:after{
@@ -13193,6 +13195,7 @@ shop-pay-logo {
   text-align: center;
 }
 
+.cart-slider .flickity-button,  /* not enough room for buttons around announcement on cart drawer */
 .cart__item-ship, /* shipping cost in cart not working */
 .drawer__count,   /* # of items in cart not Ajax & ugly too */
 .cart__rewards {  /* slidebar showing $ away from free isn't working nor is it AJAX */
