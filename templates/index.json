@@ -42,11 +42,32 @@
             "overlay_opacity": 0,
             "focal_point": "bottom center"
           }
+        },
+        "8fa854c0-bd5b-445c-8c35-06ca7647c0ae": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "chat_widget": false,
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_color": "#000000",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Homepage-Banners-Outdoor_dfaf9b09-79f9-4d94-88a3-7176752fb6df.png",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
         }
       },
       "block_order": [
         "slideshow-0",
-        "slideshow-1"
+        "slideshow-1",
+        "8fa854c0-bd5b-445c-8c35-06ca7647c0ae"
       ],
       "settings": {
         "section_height": "550px",
