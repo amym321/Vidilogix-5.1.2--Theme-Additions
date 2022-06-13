@@ -707,9 +707,15 @@
         "default": "This is the date we reasonably expect to have this product in stock based on anticipated demand, communications from the manufacturer, and other factors. This is a good faith estimate, not a guarantee. You may cancel an order at any time prior to shipment at no cost to you. Orders fulfilled on a first-come first-serve basis."
       },
       {
+        "type": "textarea",
+        "id": "condition_new_tooltip",
+        "label": "Condition New tooltip",
+        "default": "Vidlogix does NOT sell gray market, open box, scratch & dent, or used items. Vidlogix is a manufacturer-authorized retailer for every product and every brand we offer. Shop with confidence and enjoy the security of a full manufacturer's warranty, along with our own great guarantees."
+      },
+      {
         "type": "image_picker",
         "id": "backstock_icon",
-        "label": "Backstock icon",
+        "label": "Tooltip icon",
         "info": "File size 40 x 40px. File type transaprent background png."
       },
       {
