@@ -12834,7 +12834,7 @@ font-weight:700;
 
 @media only screen and (max-width: 768px) {
   .why-buy-popup .modal {
-    height:90%;
+    height:88%;
   }
 }
 
@@ -13144,12 +13144,14 @@ shop-pay-logo {
 @media only screen and (min-width: 769px) {
   .condition-new-mobile {
     display:none;
+    /* width:150px; */
   }
 }
 
 @media only screen and (max-width: 768px) {
   .condition-new-desktop {
     display:none;
+    /* width:150px; */
   }
 }
 
@@ -13204,13 +13206,6 @@ shop-pay-logo {
   display: none !important;
 }
 
-/* header & announcement bar above RV modal overlay-background element */
-/* #shopify-section-header, */
-.announcement-bar,
-.header-sticky-wrapper {
-  z-index: 25000 ;
-}
-
 /* native cart drawer */
 .cart-slider {
   text-align: center;
@@ -13223,7 +13218,27 @@ shop-pay-logo {
   display: none;
 }
 
+/* header & announcement bar above RV modal overlay-background element */
+/* #shopify-section-header, */
+.announcement-bar,
+.header-sticky-wrapper {
+  z-index: 25000 ;
+}
+
 /* quiz for locks */
 .quizkit-popup {
   z-index: 60000 !important;
 }
+
+/* native modals mobile menu drawer, cart drawer, etc over header */
+.drawer, 
+.pswp,
+.modal {
+  z-index: 26000 ;
+}
+
+      /* set Z to 2700 so announcemnet bar is covered when cart drawer is open
+      but then have to change other modals like search */
+      /* .js-drawer-closing .main-content:after,.js-drawer-open .main-content:after{
+        z-index: 27000 ;
+      } */
