@@ -45,6 +45,7 @@
         },
         "8fa854c0-bd5b-445c-8c35-06ca7647c0ae": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "",
@@ -65,6 +66,7 @@
         },
         "065aafec-7b81-4b02-a517-ac6f378c168a": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "<div style=\"font-style:italic; font-weight:800; color:#F6C12F; margin-right:8px; \">\n<span style=\"color:#fff;\">SAVE<\/span> UP <br>TO 10%<\/div>",
